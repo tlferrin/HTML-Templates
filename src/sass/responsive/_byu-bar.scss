@@ -17,10 +17,6 @@ $byubarSearchHeight: 27px;
 	height:30px;
 	white-space: nowrap;
 
-	.svg & {
-		background-image: url($asset-base + '/img/byu-header-bg.svg');
-	}
-
 	h2 {
 		margin: 0;
 		padding:0;

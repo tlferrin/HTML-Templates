@@ -32,10 +32,6 @@ a.mybyu, a.sign-in, .open #search-button {
 	}
 }
 
-#site-name {
-	@include text-shadow(0 0 12px rgba($blue0, .5));
-}
-
 .parentlink {
 	@include text-shadow(0 0 6px rgba($blue0, .65));
 }
@@ -78,11 +74,8 @@ a.mybyu, a.sign-in, .open #search-button {
 @media all and (min-width:$med-width) { 
 
 	#main-header {
-		background: $blue2 url($asset-base + 'img/byu-header-bg.png') top left no-repeat;
+		background: $blue2;
 		background-size: 100% 100%;
-		.svg & {
-			background-image: url($asset-base + 'img/byu-header-bg.svg');
-		}
 	}
 
 	#header-top h1 {
