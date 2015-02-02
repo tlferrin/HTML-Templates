@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!-->
 <html lang="en" class="no-js">
   <!-- <![endif]-->
+  
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -24,23 +25,35 @@
     <script>
       // Use these settings to control the default scripts in the BYU template
       window.pageSettings = {
-       jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
-       jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
-       additionalScripts: [], // Array of strings specifying URLs for additional scripts to load
-       
-       loadslider:     false, // Whether the image slider is present on the page
-       gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
-       gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
-       
-       analytics_key:  'UA-XXXXX-X' // Insert your Google Analytics key
+      	jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+      	jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+      	additionalScripts: [], // Array of strings specifying URLs for additional scripts to load
+      
+      	loadslider:     false, // Whether the image slider is present on the page
+      	
+      	gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
+      	gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
+      
+      	analytics_key:  'UA-XXXXX-X' // Insert your Google Analytics key
       }
     </script>
     <script src="js/init.js"></script>
   </head>
   <body>
-    <!--[if lt IE 7]>
-    <p class="chromeframe">You are using an<strong>outdated</strong>browser. Please<a href="http://browsehappy.com/">upgrade your browser</a>or<a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a>to improve your experience.</p>
-    <![endif]-->
+    <!--if lt IE 7
+    p.chromeframe
+    	| You are using an
+    	strong outdated
+    	| browser. Please
+    	a(href='http://browsehappy.com/') upgrade your browser
+    	| or
+    	a(href='http://www.google.com/chromeframe/?redirect=true') activate Google Chrome Frame
+    	| to improve your experience.
+    
+    
+    
+    
+    -->
     <header id="main-header" role="banner">
       <div id="header-top" class="wrapper">
         <div id="logo">
@@ -53,8 +66,8 @@
     <div id="search-menu">
       <div id="search-container" role="search">
         <!--
-        The default search form, linking to BYU's search page. If a user does not have javascript enabled, they'll get this form.
-        If they have javascript, this content will be replaced with Google's custom search (from the script at the bottom of the page).
+        | The default search form, linking to BYU's search page. If a user does not have javascript enabled, they'll get this form.
+        | If they have javascript, this content will be replaced with Google's custom search (from the script at the bottom of the page).
         -->
         <form id="basic-search" action="http://home.byu.edu/home/search" role="form">
           <label for="search" class="visuallyhidden">Search</label>
@@ -88,109 +101,23 @@
       <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
       <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
       <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. </p>
+      <!-- Sidenav here, if needed-->
+      
     </div>
     <div class="nav-container">
       <!-- Primary Nav-->
       <nav id="primary-nav" role="navigation">
         <ul>
-          <li> <a href="#" class="single current">Current tab</a></li>
-          <li><a href="">Mega Dropdown Menu</a>
-            <div class="mega">
-              <ul class="links">
-                <li class="featured">
-                  <ul>
-                    <li><a href="">Featured Link 1</a></li>
-                    <li><a href="">Featured Link 2</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Menu item 1</a></li>
-                <li><a href="#">Menu item 2</a>
-                  <ul class="sublinks">
-                    <li><a href="">Submenu item 1</a></li>
-                    <li><a href="">Submenu item 2</a></li>
-                    <li><a href="">Submenu item 3</a></li>
-                  </ul>
-                </li>
-                <li><a href="">Menu item 3</a></li>
-                <li><a href="">Menu item 4</a></li>
-                <li><a href="">Menu item 5</a></li>
-                <li><a href="">Menu item 6</a></li>
-              </ul>
-              <div class="highlight"><a href="#"><img src="images/menu/menu1.jpg" alt="Menu image 1"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-              <div class="highlight"><a href="#"><img src="images/menu/menu2.jpg" alt="Menu image 2"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-            </div>
-          </li>
-          <li><a href="">Double Mega Dropdown Menu</a>
-            <div class="mega">
-              <ul class="links double">
-                <li class="featured">
-                  <ul>
-                    <li><a href="">Featured Link 1</a></li>
-                    <li><a href="">Featured Link 2</a></li>
-                  </ul>
-                </li>
-                <li class="left">
-                  <ul>
-                    <li><a href="#">Menu item 1</a></li>
-                    <li><a href="#">Menu item 2</a>
-                      <ul class="sublinks">
-                        <li><a href="">Submenu item 1</a></li>
-                        <li><a href="">Submenu item 2</a></li>
-                        <li><a href="">Submenu item 3</a></li>
-                        <li><a href="">Submenu item 4</a></li>
-                        <li><a href="">Submenu item 5</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="">Menu item 3</a></li>
-                    <li><a href="">Menu item 4</a></li>
-                    <li><a href="">Menu item 5</a></li>
-                    <li><a href="">Menu item 6</a></li>
-                  </ul>
-                </li>
-                <li class="left">
-                  <ul>
-                    <li><a href="">Menu item 7</a></li>
-                    <li><a href="">Menu item 8</a></li>
-                    <li><a href="">Menu item 9</a></li>
-                    <li><a href="">Menu item 10</a></li>
-                    <li><a href="">Menu item 11</a></li>
-                    <li><a href="">Menu item 12</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <div class="highlight"><a href="#"><img src="images/menu/menu1.jpg" alt="Menu image 3"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-              <div class="highlight"><a href="#"><img src="images/menu/menu2.jpg" alt="Menu image 4"></a>
-                <p><a href="#">Picture Link</a></p>
-                <p>Text text text text text.</p>
-              </div>
-            </div>
-          </li>
-          <li><a href="">Basic Dropdown Menu</a>
-            <div class="sub">
-              <ul class="links">
-                <li><a href="">Menu item 1</a></li>
-                <li><a href="">Menu item 2</a></li>
-                <li><a href="">Menu item 3</a></li>
-                <li><a href="">Menu item 4</a></li>
-              </ul>
-            </div>
-          </li>
-          <li><a href="" class="single">Direct Menu Link</a></li>
+          <li> <a href="#" class="single current">Home</a></li>
+          <li><a href="" class="single">Explore</a></li>
+          <li><a href="" class="single">Research</a></li>
+          <li><a href="" class="single">About Us</a></li>
         </ul>
       </nav>
       <!-- Secondary Nav-->
       <nav id="secondary-nav" role="navigation">
         <ul>
-          <li><a href="#">SecMenu1</a>
+          <li><a href="#">New Faculty Seminar</a>
             <ul class="sub">
               <li><a href="">Menu item 1</a></li>
               <li><a href="">Menu item 2</a></li>
@@ -198,15 +125,7 @@
               <li><a href="">Menu item 4</a></li>
             </ul>
           </li>
-          <li><a href="#">SecMenu2</a>
-            <ul class="sub">
-              <li><a href="">Menu item 1</a></li>
-              <li><a href="">Menu item 2</a></li>
-              <li><a href="">Menu item 3</a></li>
-              <li><a href="">Menu item 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#">SecMenu3</a>
+          <li><a href="#">Common Concerns</a>
             <ul class="sub">
               <li><a href="">Menu item 1</a></li>
               <li><a href="">Menu item 2</a></li>
@@ -244,7 +163,11 @@
         </div>
       </div>
     </footer>
-    <!--CONTENT END
+    <!--
+    | CONTENT END
+    
+    
+    
     -->
     <script>
       /* Google Analytics: change UA-XXXXX-X to be your site's ID. */
