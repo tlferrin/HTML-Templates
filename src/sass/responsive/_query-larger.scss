@@ -2,7 +2,8 @@
 /*** Larger width ***/
 @media all and ( min-width:$larger-width ) {
 	$display_width:1008px;
-	$side_padding: 12px;
+	$side_padding: 72px;
+	$side-padding-small: 12px;
 
 	#primary-nav {
 		width: $display_width;
@@ -13,10 +14,17 @@
 		}
 	}
 
-	#primary-nav, #secondary-nav {
+	#primary-nav{
 		a {
 			padding-left: $side_padding;
 			padding-right: $side_padding;
+		}
+	}
+	
+	#secondary-nav{
+		a {
+			padding-left: $side_padding-small;
+			padding-right: $side_padding-small;
 		}
 	}
 
