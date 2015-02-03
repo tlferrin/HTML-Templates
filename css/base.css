@@ -340,7 +340,7 @@ a.mybyu:hover, a.mybyu:active, a.sign-in:hover, a.sign-in:active, .open #search-
 #search-container #basic-search #search, #search-container input.gsc-input { margin-bottom: 0; vertical-align: top; border-radius: 15px; padding: 5px 10px !important; border: 0 !important; font-size: 13px; display: block; width: 100%; }
 
 /*** Navigation ***/
-.nav-container a { font-size: 14px; padding: .5em 0; display: block; font-weight: bold; padding-left: 5%; padding-right: 5%; }
+.nav-container a { font-size: 16px; padding: .5em 0; display: block; font-weight: bold; padding-left: 5%; padding-right: 5%; }
 .nav-container a:hover, .nav-container a:active { background-color: #eeebe9; color: #001948; }
 .nav-container .mega a, .nav-container .sub a, .nav-container .sublinks a { font-weight: normal; padding-left: 10%; }
 .nav-container .featured, .nav-container .highlight { display: none; }
@@ -416,8 +416,7 @@ a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top: 1.5em; p
 #footer-bottom a, #footer-bottom a:link, #footer-bottom a:visited { color: #595857; }
 
 @media all and (max-width: 939px) { .feature-description { border-left: none !important; background-color: transparent !important; -webkit-box-shadow: none !important; box-shadow: none !important; } }
-#byu-bar { font-size: 14px; font-family: "Palatino","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; width: 100%; padding: 2px 0; background-color: #001948; border-bottom: 1px solid black; min-width: 120px; height: 30px; white-space: nowrap; }
-.svg #byu-bar { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-header-bg.svg"); }
+#byu-bar { font-size: 14px; font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; width: 100%; padding: 2px 0; background-color: #001948; border-bottom: 1px solid black; min-width: 120px; height: 30px; white-space: nowrap; }
 #byu-bar h2 { margin: 0; padding: 0; float: left; position: absolute; font-size: 1em; width: 100%; }
 #byu-bar a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo-header.png"); width: 70px; }
 .svg #byu-bar a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo-header.svg"); }

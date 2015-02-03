@@ -32,9 +32,7 @@ a.mybyu, a.sign-in, .open #search-button {
 	}
 }
 
-.parentlink {
-	@include text-shadow(0 0 6px rgba($blue0, .65));
-}
+
 
 #site-name, .parentlink {
 	&:hover {
@@ -47,6 +45,7 @@ a.mybyu, a.sign-in, .open #search-button {
 #logo a.parentlink:hover {
 	color: #fff;
 }
+
 
 // Footer
 #page-footer {

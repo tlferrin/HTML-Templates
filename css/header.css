@@ -362,8 +362,7 @@ a.mybyu:hover, a.mybyu:active, a.sign-in:hover, a.sign-in:active, .open #search-
 #search-container #search-submit:hover, #search-container #search-submit:active { right: 7px; }
 #search-container #basic-search #search, #search-container input.gsc-input { margin-bottom: 0; vertical-align: top; border-radius: 15px; padding: 5px 10px !important; border: 0 !important; font-size: 13px; display: block; width: 100%; }
 
-#byu-bar { font-size: 14px; font-family: "Palatino","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; width: 100%; padding: 2px 0; background-color: #001948; border-bottom: 1px solid black; min-width: 120px; height: 30px; white-space: nowrap; }
-.svg #byu-bar { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-header-bg.svg"); }
+#byu-bar { font-size: 14px; font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; width: 100%; padding: 2px 0; background-color: #001948; border-bottom: 1px solid black; min-width: 120px; height: 30px; white-space: nowrap; }
 #byu-bar h2 { margin: 0; padding: 0; float: left; position: absolute; font-size: 1em; width: 100%; }
 #byu-bar a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo-header.png"); width: 70px; }
 .svg #byu-bar a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo-header.svg"); }
@@ -637,10 +636,6 @@ a.mybyu, a.sign-in, .open #search-button { -webkit-transition: background-color 
 #header-top a.sign-in { right: 3%; background: #4a79a7; background: -webkit-linear-gradient(top, #628cb6, #369); background: -webkit-gradient(linear, left top, left bottom, from(#628cb6), to(#336699)); background: -webkit-linear-gradient(top, #628cb6, #336699); background: linear-gradient(to bottom, #628cb6, #336699); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2); }
 #header-top a.sign-in:hover { border: none; margin: 0; background: #366797; background: -webkit-linear-gradient(top, #4a79a7, #225588); background: -webkit-gradient(linear, left top, left bottom, from(#4a79a7), to(#225588)); background: linear-gradient(to bottom, #4a79a7, #225588); }
 
-#site-name { text-shadow: 0 0 12px rgba(0, 25, 72, 0.5); }
-
-.parentlink { text-shadow: 0 0 6px rgba(0, 25, 72, 0.65); }
-
 #site-name:hover, .parentlink:hover { text-decoration: none; text-shadow: 0 0 20px #001948; }
 
 #logo a.parentlink:hover { color: #fff; }
@@ -650,8 +645,7 @@ a.mybyu, a.sign-in, .open #search-button { -webkit-transition: background-color 
 @media all and (min-width: 32em) { #logo a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png"); width: 350px; }
   .svg #logo a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); } }
 /* Medium width */
-@media all and (min-width: 600px) { #main-header { background: #036 url("//home.byu.edu/home/sites/default/files/global/img/byu-header-bg.png") top left no-repeat; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
-  .svg #main-header { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-header-bg.svg"); }
+@media all and (min-width: 600px) { #main-header { background: #036; -webkit-background-size: 100% 100%; background-size: 100% 100%; }
   #header-top h1 { margin: .25em 4% .4em; }
   #logo { background-color: transparent; padding-bottom: 0; border: none; }
   .parentlink { letter-spacing: 1px; }
@@ -693,7 +687,9 @@ width: 160px;
 /*** Small width ***/
 body, button, input, select, textarea, #search-container .gsc-control-cse, #search-container .gsc-control-cse .gsc-table-result { font-size: 14px; line-height: 19px; font-family: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
 
-#header-top h1 { font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 300; }
+#header-top h1 { font-family: "Requiem Text A", "Requiem Text B", "Palatino", Georgia, serif; font-weight: 400; }
+
+#tagline { color: white; font-family: "Requiem Text A", "Requiem Text B", "Palatino", Georgia, serif; font-weight: 400; position: relative; font-size: .9em; left: 300px; top: -15px; }
 
 h1, h2 { font-family: "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 500; }
 
@@ -743,8 +739,9 @@ body strong, body dt { font-weight: 600; }
 /*** Larger width ***/
 @media all and (min-width: 1146px) { #primary-nav { width: 1008px; margin: 0 auto; padding-left: 0; }
   #primary-nav .mega { width: 100%; }
-  #primary-nav a, #secondary-nav a { padding-left: 12px; padding-right: 12px; }
-  #logo { padding-left: 12px; }
+  #primary-nav a { padding-left: 72px; padding-right: 72px; }
+  #secondary-nav a { padding-left: 12px; padding-right: 12px; }
+  #logo { padding-left: 72px; }
   #header-top { max-width: 1008px; margin-right: auto; }
   #search-menu, #secondary-nav { right: 50%; margin-right: -504px; } }
 /*** Responsive Modal Markup ***/
