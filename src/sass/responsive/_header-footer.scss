@@ -51,6 +51,30 @@ a.mybyu, a.sign-in, .open #search-button {
 #page-footer {
 	@include box-shadow(0 -1px 0px $brown4);
 	border-top: 1px solid #fff;
+	ul {
+		margin-left: 0;
+		list-style-type: none;
+		}
+	#footer-links li {line-height: 12px;}
+	.site-links-small {font-size: .8em;}
+	.outboundlinks {
+		height: 30px;
+		.linklogo {
+			width: 40px;
+			float: left;
+			margin-right: .3em;
+			img {
+				height: 25px;
+				display: block;
+				margin: auto;
+			}
+		}
+		p {
+			float: left;
+			line-height: 25px
+		}
+			
+	}
 }
 
 
@@ -138,8 +162,8 @@ a.mybyu, a.sign-in, .open #search-button {
 
 
 @media all and (min-width: $large-width) {
-	$col-margin: 2%;
-	$col-width: (90% - ($col-margin * 4))/5;
+	$col-margin: 5%;
+	$col-width: (90% - ($col-margin * 2))/4;
 
 	#page-footer {
 		.wrapper {

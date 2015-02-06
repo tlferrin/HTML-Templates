@@ -641,6 +641,13 @@ a.mybyu, a.sign-in, .open #search-button { -webkit-transition: background-color 
 #logo a.parentlink:hover { color: #fff; }
 
 #page-footer { -webkit-box-shadow: 0 -1px 0px #dddddd; box-shadow: 0 -1px 0px #dddddd; border-top: 1px solid #fff; }
+#page-footer ul { margin-left: 0; list-style-type: none; }
+#page-footer #footer-links li { line-height: 12px; }
+#page-footer .site-links-small { font-size: .8em; }
+#page-footer .outboundlinks { height: 30px; }
+#page-footer .outboundlinks .linklogo { width: 40px; float: left; margin-right: .3em; }
+#page-footer .outboundlinks .linklogo img { height: 25px; display: block; margin: auto; }
+#page-footer .outboundlinks p { float: left; line-height: 25px; }
 
 @media all and (min-width: 32em) { #logo a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png"); width: 350px; }
   .svg #logo a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); } }
@@ -673,8 +680,8 @@ width: 160px;
   #page-footer #footer-bottom a#byuh { background-position: -110px 0; }
   #page-footer #footer-bottom a#byu { background-position: -8px -9px; margin-left: -6px; width: 80px; }
   #footer-links .wrapper { margin-right: 0; margin-left: 9%; }
-  #footer-links .col { display: inline-block; vertical-align: top; width: 16.4%; margin-left: 2%; padding-top: 1em; }
-  #footer-links .double { width: 34.8%; }
+  #footer-links .col { display: inline-block; vertical-align: top; width: 20%; margin-left: 5%; padding-top: 1em; }
+  #footer-links .double { width: 45%; }
   #footer-links .double .right, #footer-links .double .left { width: 43%; display: inline-block; }
   #footer-links .double .right { margin-left: 10%; }
   #footer-links .col.alpha, #footer-links .col:first-child { margin-left: 0; } }

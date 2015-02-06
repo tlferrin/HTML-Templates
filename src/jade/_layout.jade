@@ -1,31 +1,4 @@
 //-	===============
-//-	MIXINS
-//-	===============
-mixin secondaryMenuItem(title, num)
-	li
-		a(href='#') #{title}
-		ul.sub
-			mixin addListLinks(1,4)
-
-
-mixin addListLinks(start, end, title)
-	- if (title == undefined) title = 'Menu item';
-	- for (var i = start; i <= end; i++) {
-		li: a(href='') #{title} #{i}
-	- }
-
-mixin addLinks(start, end, title)
-	- if (title == undefined) title = 'Menu item';
-	- for (var i = start; i <= end; i++) {
-		a(href='') #{title} #{i}
-	- }
-	
-
-
-
-
-
-//-	===============
 //-	PAGE START
 //-	===============
 
@@ -220,10 +193,20 @@ html.no-js(lang="en")
 
 				// Secondary Nav
 				nav#secondary-nav(role='navigation'): ul
-					mixin secondaryMenuItem('New Faculty Seminar', 4)
-					mixin secondaryMenuItem('Common Concerns', 4)
+					li
+						a(href='#') New Faculty Seminar
+						//- ul.sub
+						//- 	li: a(href='') 2015
+						//- 	li: a(href='') 2014
+						//- 	li: a(href='') 2013
+					li
+						a(href='#') Common Concerns
+						//- ul.sub
+						//- 	li: a(href='') null
+						//- 	li: a(href='') null
+						//- 	li: a(href='') null
 
-		//-	===============
+		//- ===============
 		//-	FOOTER
 		//-	===============
 		block footer
@@ -231,29 +214,43 @@ html.no-js(lang="en")
 				#footer-links
 					.wrapper
 						.col.alpha
-							h2 Footer Column 1
-							mixin addLinks(1,4)
+							h2 Site Links
+							ul.sub
+								li: a(href='#') Home
+								li: a(href='explore.html') Explore
+								li: a(href='research.html') Research
+								li: a(href='about.html') About Us
+								li.site-links-small: a(href='nfseminar.html') New Faculty Seminar
+								li.site-links-small: a(href='faq.html') Common Concerns
+
 						.col
-							h2 Footer Column 2
-							mixin addLinks(1,4)
-						.col.double
-							h2 Footer Double Column
-							.left.alpha
-								mixin addLinks(1,4, "Left Link")
-							.right.omega
-								mixin addLinks(1,4, "Right Link")
-						.col.omega
-							h2 Footer Column 4
-							mixin addLinks(1,4)
+							h2 Contact Us
+							p BYU Faculty Center<br>4450 WSC<br>Provo, UT 84602
+							a(href="mailto:fc_frontdesk@byu.edu?Subject=Faith%20and%20Learning%20Initiative" target="_blank") fc_frontdesk@byu.edu
+							p (801)-422-7419
+						.col.omega.double
+							h2 Related Links
+							a.outboundlinks(href='http://ctl.byu.edu')
+								.linklogo: img(src='ctl_logo.png')
+								p Center for Teaching &amp; Learning
+							a.outboundlinks(href='https://www.youtube.com/user/bystudyandfaith')
+								.linklogo: img(src='YouTube-icon-full_color.png')
+								p ByStudyAndFaith
+							a.outboundlinks(href='http://speeches.byu.edu')
+								.linklogo: img(src='byu_speeches.png')
+								p BYU Speeches
+							a.outboundlinks(href='http://fwa.byu.edu/')
+								.linklogo: img(src='fwa_logo.png')
+								p Faculty Women's Association
 
-				#footer-bottom
-					.wrapper.clearfix
-						//a#byu(href='http://byu.edu/') Brigham Young University
-						a#byui.ir(href='http://byui.edu/') BYU-Idaho
-						a#byuh.ir(href='http://byuh.edu/') BYU-Hawaii
-						a#ldsbc.ir(href='http://www.ldsbc.edu/') LDS Business College
+				//- #footer-bottom
+				//- 	.wrapper.clearfix
+				//- 		a#byu(href='http://byu.edu/') Brigham Young University
+				//- 		//- a#byui.ir(href='http://byui.edu/') BYU-Idaho
+				//- 		//- a#byuh.ir(href='http://byuh.edu/') BYU-Hawaii
+				//- 		//- a#ldsbc.ir(href='http://www.ldsbc.edu/') LDS Business College
 
-						a#lds(href='http://lds.org/') The Church of Jesus Christ of Latter-day Saints
+				//- 		a#lds(href='http://lds.org/') The Church of Jesus Christ of Latter-day Saints
 
 			//
 				| CONTENT END
@@ -265,9 +262,4 @@ html.no-js(lang="en")
 		//- ===============
 		block end-scripts
 
-			script.
-				/* Google Analytics: change UA-XXXXX-X to be your site's ID. */
-				var _gaq=[['_setAccount', pageSettings.google_analytics_key],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-				g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
+
