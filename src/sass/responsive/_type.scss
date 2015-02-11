@@ -50,6 +50,23 @@ h3, h4, h5, h6 {
   font-family: $sans-font-stack;
   font-weight: 600; }
 
+#intro {
+	font-family: $serif-ssm-font-stack;
+	font-weight: $serif-ssm-font-weight;
+	font-size: 1.2em;
+	line-height: 1.7em;
+	letter-spacing: -.5px;
+	padding: 1px;
+	.justfull:first-letter {
+		font-size: 1.5em;
+	}
+	.justright {
+		font-size: .86em;
+		letter-spacing: 0px;
+		line-height: 1em;
+	}
+}
+
 h1 { font-size:    2em; margin:30px 0px 10px; }
 h2 { font-size: 1.65em; margin:25px 0px 10px; }
 h3 { font-size: 1.25em; margin:20px 0px 10px; line-height:1.25; }

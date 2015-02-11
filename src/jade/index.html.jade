@@ -1,0 +1,96 @@
+extends _layout
+
+block parentlink
+	a.byu(href='http://www.byu.edu/') Brigham Young University
+
+block settings
+	script.
+		var pageSettings = {
+			jQueryURL:     "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+			jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+			loadslider:    true, // Whether the image slider is present on the page
+			additionalScripts:   [], // Array of strings specifying URLs for additional scripts to load
+			gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
+			gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
+			analytics_key:  'UA-59389403-1' // Insert your Google Analytics key
+		}
+
+
+block breadcrumb
+
+block prepend contentwrapper
+	- var contentclasses = ''
+
+block content
+
+	#feature
+
+		//  Anything Slider
+		// NOTE: Slider images should be 699x393 px (16:9 aspect ratio).
+		
+		ul#slider
+			li.feature
+				.feature-image
+					img(src='images/slider/cheryl_esplin.jpg', alt='Cheryl A. Esplin', href='http://www.byutv.org/watch/8adc2424-f5fe-4042-8aa0-887a38c8acc5/byu-devotional-address-cheryl-a-esplin-primary-presidency-2315' target="_blank")
+				.feature-description(data-background="#d1e4f6", data-shadow="#91b2d2")
+					h2
+						a(href='http://www.byutv.org/watch/8adc2424-f5fe-4042-8aa0-887a38c8acc5/byu-devotional-address-cheryl-a-esplin-primary-presidency-2315' target="_blank") Living the Abundant Life
+					p A devotional address by Cheryl Esplin, second counselor in the Primary General Presidency 
+					p Given on Feb 3, 2015
+			li
+				.feature-image
+					img(src='images/slider/marilyn_berrett.jpg', alt='Marilyn Berrett', href='https://bystudyandfaith.wordpress.com/my-journey-as-a-scholar-of-faith-lecture-marilyn-berrett/' target="_blank")
+				.feature-description.lightText(data-background="#147", data-shadow="#036")
+					h2
+						a(href='https://bystudyandfaith.wordpress.com/my-journey-as-a-scholar-of-faith-lecture-marilyn-berrett/' target="_blank") My Journey as a Scholar of Faith
+					p Marilyn Berrett (Dance)
+					p Presented Nov 20, 2013
+			li
+				.feature-image
+					img(src="images/slider/be_the_whole_person.jpg", alt='Doug Prawitt in his office with a student', href='https://www.youtube.com/watch?v=WfaLeC0NNXU', target='_blank')
+				.feature-description.lightText(data-background="#339947", data-shadow="#006614")
+					h2
+						a(href='https://www.youtube.com/watch?v=WfaLeC0NNXU', target="_blank") Be the Whole Person
+					p Doug Prawitt (Accountancy) and his students discuss what happens when professors bring their whole self into the classroom and allow themselves to be vulnerable.
+
+	#smallside
+		#intro
+			p.justfull The Faith &amp; Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: &ldquo;to assist individuals in their quest for perfection and eternal life.&rdquo;
+			p.justright (See #[a(href="http://aims.byu.edu/mission_statement" target="_blank") Mission &amp; Aims])
+
+		#calendar
+			h2 Upcoming Events
+			.day
+				h3
+					span.date 12
+					| Feb, Thursday
+				.calendar-item
+					a(href="http://kennedy.byu.edu/wordpress/?p=2079" target="_blank") &ldquo;In Pursuit of a Just Society: New Challenges to a Faith-Based Education&rdquo;
+				.eventinfo
+					p WSC Varsity Theatre, 2:00 PM
+					a(href="../../images/events/simmons_12feb15.pdf" target="_blank") Flyer
+			.day
+				h3
+					span.date 19
+					| Feb, Thursday
+				.calendar-item
+					p Faith &amp; Scholarship Symposium#[br](Hosted by BYU Graduate Studies)
+				.eventinfo
+					p WSC Ballroom, 7:00 PM
+			strong
+				a(href='http://calendar.byu.edu/') Full BYU Calendar
+	#news
+		h2 New &amp; Popular
+		#news-container
+			.news-item
+				img(src='images/news/feature-1.jpg', alt='News feature 1 (REPLACE THIS WITH RELEVANT DESCRIPTIVE TEXT)')
+				h3
+					a(href='#') News 1
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.news-item.omega
+				img(src='images/news/feature-2.jpg', alt='News feature 2 (REPLACE THIS WITH RELEVANT DESCRIPTIVE TEXT)')
+				h3
+					a(href='#') News 2
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

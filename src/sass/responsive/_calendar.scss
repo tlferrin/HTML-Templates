@@ -1,5 +1,5 @@
 /*!
-* Calendar, News 
+* Calendar, New & Popular (#news), Intro
 *
 */
 
@@ -9,10 +9,17 @@
 @import "shared/mixins";
 
 
-#calendar, #news {
+#smallside, #news {
 	padding-top:1.5em;
 	padding-bottom:2em;
 	h2 { margin:0 0 .5em; }
+}
+
+#intro {
+	font-style: italic;
+	.justright {text-align: right;}
+	.justfull {text-align: justify;}
+
 }
 
 .day {
@@ -20,7 +27,7 @@
 	margin:0 0 .25em;
 	padding-left:14px;
 	span.date {
-		font-size:1.5em;
+		font-size:1.2em;
 		.wf-active & {
 			font-family: 'Crete Round', sans-serif;
 			font-weight: normal; } } 
@@ -29,24 +36,32 @@
 		clear: both;
 		margin-top: 0;
 		margin-left:-14px; }
-	a {
-		width:70%;
-		float: left;
+	a, p {
 		margin-bottom: .5em;
-		text-indent: -8px; }
-	.time {
-		float: right;
-		clear: right;
-		color: #666;
-		margin-bottom:0 !important; } }
+		text-indent: -8px;
+	}
+
+	.eventinfo {
+		// margin-bottom:0 !important;
+		padding-left: .5em;
+		font-size: .8em;
+		text-indent: 0;
+		line-height: 1em;
+		text-align: right;
+		float: right !important;
+		p {color: #666;}
+	}
+}
 		
-#calendars {
+#smallside {
 	margin:1.5em 0;
 	padding:.75em 0;
 	clear: both;
 	border-top: solid 1px #DDD;
 	border-bottom: solid 1px #DDD;
-	overflow: hidden; }
+	overflow: hidden;
+
+}
 
 
 .briefs-item { padding:.5em 0 1em; }
@@ -75,7 +90,7 @@
 
 @media all and (min-width: $med-width) {
 
-	#calendar, #news {
+	#smallside, #news {
 	  width:45%;
 	  float:left;
 	  border-top:none;
@@ -98,18 +113,18 @@
 	  .date {
 	    font-size:1.5em; }
 	  a {
-	    width:65%;
-	    float:left;
+	    // width:65%;
+	    // float:left;
 	    clear:both;
 	    margin-bottom:.75em; }
 	  .time {
 	    clear:none;
-	    width:34%;
+	    // width:34%;
 	    float:right;
 	    text-align:right; }
 	}
 
-	#calendars { clear:both; }
+	#smallside { clear:both; }
 	  
 	#news {
 	  padding-right:0;
@@ -131,15 +146,15 @@
 	.briefs-item h3 { font-size: 1em; }
 	.day { 
 		font-size: 1em;
-		a { width: 72%; }
-		.time { width: 27%; }
+		// a { width: 72%; }
+		// .time { width: 27%; }
 	}
 }
 
 
 @media all and (min-width: $large-width) {
 
-	#calendar { width:34.755%; }
+	#smallside { width:34.755%; }
 	  
 	#news { width:56.238%; }
 	.briefs-item {
@@ -156,9 +171,9 @@
 	}
 	.baseline {clear:both; }
 
-	.day {
-	  a { width:74%; }
-	  .time { width:25%; } 
-	}
+	// .day {
+	//   a { width:74%; }
+	//   .time { width:25%; } 
+	// }
 }
 
