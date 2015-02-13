@@ -1,0 +1,59 @@
+
+extends _layout
+
+block pageTitle
+	| Faith & Learning Initiative
+
+block parentlink
+	a.byu(href='http://www.byu.edu/') Brigham Young University
+
+block settings
+	script.
+		var pageSettings = {
+			jQueryURL:     "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+			jQueryVersion: "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+			loadslider:    true, // Whether the image slider is present on the page
+			additionalScripts:   [], // Array of strings specifying URLs for additional scripts to load
+			gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
+			gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
+			analytics_key:  'UA-59389403-1' // Insert your Google Analytics key
+		}
+
+
+block breadcrumb
+
+block prepend contentwrapper
+	- var contentclasses = ''
+
+block nav
+			.nav-container
+
+				// Primary Nav
+				nav#primary-nav(role='navigation'): ul
+					li 
+						a.single(href='index.html') Home
+					li
+						a.single(href='explore.html') Explore
+					li
+						a.single.current(href='research.html') Research
+					li
+						a.single(href='about.html') About Us
+
+				// Secondary Nav
+				nav#secondary-nav(role='navigation'): ul
+					li
+						a(href='nfseminar.html') New Faculty Seminar
+						//- ul.sub
+						//- 	li: a(href='') 2015
+						//- 	li: a(href='') 2014
+						//- 	li: a(href='') 2013
+					li
+						a(href='faq.html') Common Concerns
+						//- ul.sub
+						//- 	li: a(href='') null
+						//- 	li: a(href='') null
+						//- 	li: a(href='') null
+
+block content
+
+

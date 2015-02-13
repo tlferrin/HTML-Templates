@@ -60,6 +60,8 @@
 	display: block;
 	overflow: visible !important;
 	position: relative;
+	top: 20px;
+	margin-bottom: 20px;
 }
 /* anythingSlider viewport window */
 .anythingSlider .anythingWindow {
@@ -74,7 +76,6 @@
 	list-style: none;
 	position: absolute;
 	overflow: visible !important;
-	top: 20px;
 	left: 0;
 	margin: 0;
 	padding: 0;
