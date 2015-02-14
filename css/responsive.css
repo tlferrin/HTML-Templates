@@ -1659,7 +1659,8 @@ body.sideNav #main-header, body.sideNav #search-menu, body.sideNav #content, bod
   .baseline { clear: both; }
   #contribute { clear: both; text-align: center; padding: 4%; padding-bottom: 0; }
   #contribute p { font-size: 1.4em; line-height: 1.4em; }
-  #contribute button { width: 30%; font-size: 1.5em; line-height: 4em; color: #444; background-color: #abc8e4; border: none; border-radius: 15px; margin: 2% 1% 0; } }
+  #contribute button { width: 30%; font-size: 1.5em; line-height: 4em; color: #147; background-color: #abc8e4; border: none; border-radius: 15px; margin: 2% 1% 0; }
+  #contribute button:hover { color: #abc8e4; background-color: #147; } }
 /*!
 * Content 
 *

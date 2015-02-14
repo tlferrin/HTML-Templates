@@ -187,11 +187,15 @@
 			width: 30%;
 			font-size: 1.5em;
 			line-height: 4em;
-			color: #444;
+			color: $blue3;
 			background-color: $blue7;
 			border: none;
 			border-radius: 15px;
 			margin: 2% 1% 0;
+		}
+		button:hover {
+			color: $blue7;
+			background-color: $blue3;
 		}
 	}
 
