@@ -124,6 +124,8 @@
 	    text-align:right; }
 	}
 
+	#cal-submit {float: right; margin-top: -1em; margin-bottom: 1em;}
+	#full-cal {margin-bottom: -1.5em; display: block; text-align: center;}
 	#smallside { clear:both; }
 	  
 	#news {
@@ -182,6 +184,9 @@
 		p {
 			font-size: 1.4em;
 			line-height: 1.4em;
+		}
+		form {
+			display: inline;
 		}
 		button {
 			width: 30%;

@@ -225,8 +225,6 @@ a:hover { color: #025; text-decoration: underline; }
 
 a:active { color: #c00; }
 
-a:visited { color: #539; }
-
 /* Images */
 img { max-width: 100%; }
 

@@ -61,6 +61,9 @@ block content
 
 			#calendar
 				h2 Upcoming Events
+				strong
+					//- replace this link with a google form.
+					a#cal-submit(href='http://byu.edu') Submit an event&rarr;
 				.day
 					h3
 						span.date 12
@@ -87,7 +90,7 @@ block content
 					.eventinfo
 						p Education in Zion Auditorium,#[br]B192 JFSB 3:00 PM
 				strong
-					a(href='http://calendar.byu.edu/') Full BYU Calendar
+					a#full-cal(href='http://calendar.byu.edu/') Full BYU Calendar
 		#news
 			a.seeall(href="explore.html") see all &rarr;
 			h2 New &amp; Popular
@@ -125,7 +128,11 @@ block content
 		p Help us spread the light by sharing your thoughts, experiences, and efforts related to faith and learning at BYU.
 		strong: p Contribute as a&hellip;
 		#button-container
-			button Student
-			button Faculty/Staff
-			button Friend to BYU
+			//- replace these links with google form links
+			form(action="http://byu.edu")
+				button Student
+			form(action="http://byu.edu")
+				button Faculty/Staff
+			form(action="http://byu.edu")
+				button Friend to BYU
 
