@@ -26,32 +26,91 @@ block prepend contentwrapper
 	- var contentclasses = ''
 
 block nav
-			.nav-container
+	.nav-container
 
-				// Primary Nav
-				nav#primary-nav(role='navigation'): ul
-					li 
-						a.single(href='index.html') Home
-					li
-						a.single(href='explore.html') Explore
-					li
-						a.single(href='research.html') Research
-					li
-						a.single.current(href='about.html') About Us
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a.single(href='index.html') Home
+			li
+				a.single(href='explore.html') Explore
+			li
+				a.single(href='research.html') Research
+			li
+				a.single.current(href='about.html') About Us
 
-				// Secondary Nav
-				nav#secondary-nav(role='navigation'): ul
-					li
-						a(href='nfseminar.html') New Faculty Seminar
-						//- ul.sub
-						//- 	li: a(href='') 2015
-						//- 	li: a(href='') 2014
-						//- 	li: a(href='') 2013
-					li
-						a(href='faq.html') Common Concerns
-						//- ul.sub
-						//- 	li: a(href='') null
-						//- 	li: a(href='') null
-						//- 	li: a(href='') null
+		// Secondary Nav
+		nav#secondary-nav(role='navigation'): ul
+			li
+				a(href='nfseminar.html') New Faculty Seminar
+			li
+				a(href='faq.html') Common Concerns
 
 block content
+	#aboutus
+		#purpose
+			h1 Our Purpose
+			p is to support and inspire faculty in fulfilling their stewardships to help students grow both spiritually and intellectually.
+		#leaders
+			h2 Leadership
+			//- profile pictures should be 210x280 px
+			.profile
+				img(src="images/profile_pics/alan_wilkins.jpg" alt="Alan Wilkins")
+				article
+					span Alan Wilkins
+					p is the director of the faculty center and has invested oodles of time. He learned a lot from being Academic Vice President and a Mission President as well.
+			.profile
+				img(src="images/profile_pics/jane_birch.jpg" alt="Jane Birch")
+				article
+					span Jane Birch
+					p is the assistant director of the faculty center and works hard as the faculty database curator. She earned a PhD from BYU in Instructional Science.
+			.clearer
+		#team
+			h2 Research Team
+			//-profile pictures should be square, at least 200x200px
+			.profile
+				img(src="images/profile_pics/katherine_morris.jpg" alt="Katherine Morris")
+				article
+					span Katherine Morris (the interviewer)
+					p is a master’s student in communications disorders. She is interested in Mormon artists.
+			.profile
+				img(src="images/profile_pics/thomas_ferrin.jpg" alt="Thomas Ferrin")
+				article
+					span Thomas Ferrin (the organizer)
+					p is a master’s student in instructional psychology and technology. He wants to study moral agency and parenting.
+			.profile
+				img(src="images/profile_pics/melissa_hawkley.jpg" alt="Melissa Hawkley")
+				article
+					span Melissa Hawkley (the visionary)
+					p is a consultant and recently received her PhD in instructional psychology and technology from BYU.
+			.profile
+				img(src="images/profile_pics/david_dixon.jpg" alt="David Dixon")
+				article
+					span David Dixon (the stats guru)
+					p is a sociology major. He will be moving on soon to PhD studies in organizational behavior.
+			.profile
+				img(src="images/profile_pics/greg_williams.jpg" alt="Greg Williams")
+				article
+					span Greg Williams (the creative master)
+					p is a master’s student in instructional psychology and technology. He likes to read, eat, and watch Cary Grant movies.
+			.profile
+				img(src="images/profile_pics/michael_matthews.jpg" alt="Michael Matthews")
+				article
+					span Michael Matthews (the evaluator)
+					p is a PhD student in instructional psychology and technology at BYU. He also teaches psychology at UVU.
+			.profile
+				img(src="images/profile_pics/beth_wilkins.jpg" alt="Beth Wilkins")
+				article
+					span Beth Wilkins (the transformer)
+					p is a PhD student in instructional psychology and technology. She studies transformative learning.
+			.profile
+				img(src="images/profile_pics/justin_beard.jpg" alt="Justin Beard")
+				article
+					span Justin Beard (the video guy)
+					p is a mechanical engineering major. In his free time, he likes to watch movies, build LEGO, and try new foods.
+			.profile
+				img(src="images/profile_pics/donovan_gregory.jpg" alt="Donovan Gregory")
+				article
+					span Donovan Gregory (the email man)
+					p is a history major. He recently received and ORCA grant to study dispensations—cool, huh?
+			.clearer
