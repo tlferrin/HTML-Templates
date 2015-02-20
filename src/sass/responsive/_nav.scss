@@ -174,9 +174,13 @@ body.sideNav {
 	li.hover .mega, li.hover .sub { @extend %activemenu;}
 	.highlight, .featured, hr { display: none; }
 	a {
+		transition: all .2s;
+	}
+	a {
 		&.current, &:hover {
 			color: $blue3;
 			background-color: white;
+			transition: all .2s;
 		}
 	}
 

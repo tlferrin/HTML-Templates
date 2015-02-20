@@ -3,44 +3,46 @@
 *
 */
 
-
 @import "shared/variables";
 @import "shared/colors";
 @import "shared/mixins";
-
-
 #smallside, #news {
-	padding-top:1.5em;
-	padding-bottom:2em;
-	h2 { margin:0 0 .5em; }
+	padding-top: 1.5em;
+	padding-bottom: 2em;
+	h2 {
+		margin: 0 0 .5em;
+	}
 }
-
 #intro {
 	font-style: italic;
-	.justright {text-align: right;}
-	.justfull {text-align: justify;}
-
+	.justright {
+		text-align: right;
+	}
+	.justfull {
+		text-align: justify;
+	}
 }
-
 .day {
 	overflow: hidden;
-	margin:0 0 .25em;
-	padding-left:14px;
+	margin: 0 0 .25em;
+	padding-left: 14px;
 	span.date {
-		font-size:1.2em;
+		font-size: 1.2em;
 		.wf-active & {
 			font-family: 'Crete Round', sans-serif;
-			font-weight: normal; } } 
+			font-weight: normal;
+		}
+	}
 	h3 {
 		font-size: 1em;
 		clear: both;
 		margin-top: 0;
-		margin-left:-14px; }
+		margin-left: -14px;
+	}
 	a, p {
 		margin-bottom: .5em;
 		text-indent: -8px;
 	}
-
 	.eventinfo {
 		// margin-bottom:0 !important;
 		padding-left: .5em;
@@ -49,89 +51,99 @@
 		line-height: 1em;
 		text-align: right;
 		float: right !important;
-		p {color: #666;}
+		p {
+			color: #666;
+		}
 	}
 }
-		
 #smallside {
-	margin:1.5em 0;
-	padding:.75em 0;
+	margin: 1.5em 0;
+	padding: .75em 0;
 	clear: both;
 	border-top: solid 1px #DDD;
 	border-bottom: solid 1px #DDD;
 	overflow: hidden;
-
 }
-
-
-.briefs-item { padding:.5em 0 1em; }
+.briefs-item {
+	padding: .5em 0 1em;
+}
 .news-item {
 	padding: 1em 0;
-	border-bottom:1px solid #eee; }
-
-
-
-@media all and (min-width:450px) {
+	border-bottom: 1px solid #eee;
+}
+@media all and (min-width: 450px) {
 	.briefs-item {
-		padding:.25em 0;
+		padding: .25em 0;
 		@include clearfix();
 		img {
-			padding:0 1em 1em 0; }
+			padding: 0 1em 1em 0;
+		}
 		a {
 			float: left;
-			clear: both; }
-		h3 { margin: 0;
-			a {	float:none; }
+			clear: both;
+		}
+		h3 {
+			margin: 0;
+			a {
+				float: none;
+			}
 		}
 	}
 }
-
-
-
 @media all and (min-width: $med-width) {
-
 	#smallside, #news {
-	  width:45%;
-	  float:left;
-	  border-top:none;
-	  border-bottom:none;
-	  h2 {
-	    font-size: 1.5em;
-	    border-bottom:1px solid #ddd;
-	    margin-bottom:18px; }
+		width: 45%;
+		float: left;
+		border-top: none;
+		border-bottom: none;
+		h2 {
+			font-size: 1.5em;
+			border-bottom: 1px solid #ddd;
+			margin-bottom: 18px;
+		}
 	}
-	  
-
 	.day {
-	  font-size: .9em;
-	  clear:both;
-	  padding-top:0;
-	  margin-bottom:1.5em;
-	  overflow:hidden;
-	  h3 {
-	    margin-top:0; }
-	  .date {
-	    font-size:1.5em; }
-	  a {
-	    // width:65%;
-	    // float:left;
-	    clear:both;
-	    margin-bottom:.75em; }
-	  .time {
-	    clear:none;
-	    // width:34%;
-	    float:right;
-	    text-align:right; }
+		font-size: .9em;
+		clear: both;
+		padding-top: 0;
+		margin-bottom: 1.5em;
+		overflow: hidden;
+		h3 {
+			margin-top: 0;
+		}
+		.date {
+			font-size: 1.5em;
+		}
+		a {
+			// width:65%;
+			// float:left;
+			clear: both;
+			margin-bottom: .75em;
+		}
+		.time {
+			clear: none;
+			// width:34%;
+			float: right;
+			text-align: right;
+		}
 	}
-
-	#cal-submit {float: right; margin-top: -1em; margin-bottom: 1em;}
-	#full-cal {margin-bottom: -1.5em; display: block; text-align: center;}
-	#smallside { clear:both; }
-	  
+	#cal-submit {
+		float: right;
+		margin-top: -1em;
+		margin-bottom: 1em;
+	}
+	#full-cal {
+		margin-bottom: -1.5em;
+		display: block;
+		text-align: center;
+	}
+	#smallside {
+		clear: both;
+	}
 	#news {
-	  padding-right:0;
-	  float:right; }
-	  
+		padding-right: 0;
+		float: right;
+	}
 	// .briefs-item {
 	//   padding-bottom: 1em;
 	//   img { padding:0; }
@@ -142,44 +154,55 @@
 	//     margin-right:-.5em; } 
 	// }
 }
-
-
 @media all and (min-width: 50em) {
-	.day { 
+	.day {
 		font-size: 1em;
 		// a { width: 72%; }
 		// .time { width: 27%; }
 	}
 }
-
-
 @media all and (min-width: $large-width) {
 	// 
 	// HOME PAGE STYLES
 	// 
-	#smallside { width:34.755%; }
-	  
-	#news { width:56.238%; }
-		a.seeall {float:right;}
-	#news-container {
-	  clear:both; }
-	.news-item {
-	  width:100%;
-	  float:left;
-	  margin-right:5%;
-	  img {float: left; width: 47%;}
-	  .news-description {
-	  	float: left;
-	  	width: 53%;
-	  	padding: 2% 0;
-	  	h3, p {padding-left: 6%; margin-top: 1%;}
-	  	h3 {font-size: 1.2em;}
-	  }
+	#smallside {
+		width: 34.755%;
 	}
-	.baseline {clear:both; }
-
+	#news {
+		width: 56.238%;
+	}
+	a.seeall {
+		float: right;
+	}
+	#news-container {
+		clear: both;
+	}
+	.news-item {
+		width: 100%;
+		float: left;
+		margin-right: 5%;
+		img {
+			float: left;
+			width: 47%;
+		}
+		.news-description {
+			float: left;
+			width: 53%;
+			padding: 2% 0;
+			h3, p {
+				padding-left: 6%;
+				margin-top: 1%;
+			}
+			h3 {
+				font-size: 1.2em;
+			}
+		}
+	}
+	.baseline {
+		clear: both;
+	}
 	#contribute {
-		clear:both;
+		clear: both;
 		text-align: center;
 		padding: 4%;
 		padding-bottom: 0;
@@ -206,14 +229,14 @@
 			background-color: $blue3;
 		}
 	}
-
 	// .day {
 	//   a { width:74%; }
 	//   .time { width:25%; } 
 	// }
 
+	// ----——————------———————-------———————
 	//
-	// ABOUT US STYLES
+	// "ABOUT US" PAGE STYLES
 	//
 	#aboutus {
 		img, article {
@@ -223,17 +246,32 @@
 		}
 	}
 	#leaders, #team {
-		h2 {text-align: center; color: $blue4; margin-bottom: 1.3em;}
-		p, span {text-align: left;}
-		span {font-weight: bold;}
-		.profile {width: 50%;}
+		h2 {
+			text-align: center;
+			color: $blue4;
+			margin-bottom: 1.1em;
+			text-shadow: 1px 1px 5px $blue8;
+			font-size: 2em;
+		}
+		p, span {
+			text-align: left;
+		}
+		span {
+			font-weight: bold;
+		}
 	}
 	#purpose {
 		width: 60%;
 		margin: auto;
 		text-align: center;
-		h1 {color: $gray4; margin-bottom: 5px;}
-		p {font-size: 1.1em; font-style: italic;}
+		h1 {
+			color: $gray4;
+			margin-bottom: 5px;
+			text-shadow: 1px 1px 5px $grayC;
+		}
+		p {
+			font-style: italic;
+		}
 	}
 	#leaders {
 		width: 80%;
@@ -241,32 +279,81 @@
 		margin-top: 5%;
 		.profile {
 			float: left;
-			img, article {float: left;}
-			img {width: 35%}
+			width: 48%;
+			img, article {
+				float: left;
+			}
+			img {
+				width: 35%
+			}
 			article {
-				width: 50%;
+				width: 55%;
 				padding-left: 5%;
-				span, p {display: inline; font-size: 1.1vw;}
+				span, p {
+					display: inline;
+					font-size: 1.1vw;
+				}
 			}
 		}
+		#Alan {margin-right: 4%;}
 	}
-
 	#team {
-		width: 80%;
+		width: 90%;
 		margin: auto;
 		margin-top: 4em;
-		img {width: 25%}
+		img {
+			width: 25%
+		}
 		article {
 			width: 60%;
-			margin-left: 5%;
 			font-size: .9vw;
 		}
-		.profile {height: 8em; float: left;}
-	}
-	#team .profile:nth-child(2n) {
-		float: left;
+		.profile {
+			padding: 1% 0;
+			width: 49%;
+			img, article {vertical-align: middle;}
+		}
+		.profile:nth-child(2n) {
+			float: left;
+			margin-right: 1%;
+			img, article {
+				float: right;
+				margin-right: 2%;
+			}
+			p, span {
+				text-align: right;
+				float: right;
+			}
+		}
+		.profile:nth-child(2n+1) {
+			float: right;
+			margin-left: 1%;
+			img, article {
+				float: left;
+				margin-left: 2%;
+			}
+			p, span {
+				text-align: left;
+				float: left;
+			}
+		}
+		// PROFILE SIZE TRANSITIONS
+		.profile {
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-o-transition: all .3s;
+			transition: all .3s;
+		}
+		.profile:hover {
+			transform: scale(1.05);
+			background-color: $blue10;
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			-o-transition: all .3s;
+			transition: all .3s;
+		}
 	}
 }
-
-.clearer {clear:both;}
-
+.clearer {
+	clear: both;
+}
