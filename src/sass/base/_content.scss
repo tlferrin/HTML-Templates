@@ -101,9 +101,12 @@ a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top:1.5em; pa
     color: $brown1;
     display: block;
     padding:.35em 1%;
-    font-size:.95em; }
+    font-size:.95em;
+  }
   a:hover, a:active, a:focus {
-    color:$brown0; }
+    color:$brown0;
+  }
+  #fclink {padding-bottom: 0px;}
   h2 {
     color:$brown0;
     margin-top:1.5em;
