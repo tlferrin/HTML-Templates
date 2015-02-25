@@ -162,6 +162,54 @@
 	}
 }
 @media all and (min-width: $large-width) {
+	//
+	// ALL PAGE STYLES
+	//
+	.pageIntro {
+		width: 70%;
+		margin: auto;
+		text-align: center;
+		// h1 {
+		// 	color: $gray4;
+		// 	margin-bottom: 5px;
+		// 	text-shadow: 1px 1px 5px $grayC;
+		// }
+		p {
+			font-style: italic;
+			font-size: 1.3em;
+			line-height: 1.4em;
+			margin: 1em 0;
+		}
+	}
+	#contribute {
+		clear: both;
+		text-align: center;
+		padding: 4%;
+		padding-bottom: 0;
+		p {
+			font-size: 1.4em;
+			line-height: 1.4em;
+		}
+		form {
+			display: inline;
+		}
+		button {
+			width: 30%;
+			font-size: 1.5em;
+			line-height: 4em;
+			color: $blue3;
+			background-color: $blue7;
+			border: none;
+			border-radius: 15px;
+			margin: 2% 1% 0;
+			outline: none;
+			transition: all .2s;
+		}
+		button:hover {
+			color: $blue7;
+			background-color: $blue3;
+		}
+	}
 	// 
 	// HOME PAGE STYLES
 	// 
@@ -201,35 +249,6 @@
 	.baseline {
 		clear: both;
 	}
-	#contribute {
-		clear: both;
-		text-align: center;
-		padding: 4%;
-		padding-bottom: 0;
-		p {
-			font-size: 1.4em;
-			line-height: 1.4em;
-		}
-		form {
-			display: inline;
-		}
-		button {
-			width: 30%;
-			font-size: 1.5em;
-			line-height: 4em;
-			color: $blue3;
-			background-color: $blue7;
-			border: none;
-			border-radius: 15px;
-			margin: 2% 1% 0;
-			outline: none;
-			transition: all .2s;
-		}
-		button:hover {
-			color: $blue7;
-			background-color: $blue3;
-		}
-	}
 	// .day {
 	//   a { width:74%; }
 	//   .time { width:25%; } 
@@ -261,23 +280,9 @@
 			font-weight: bold;
 		}
 	}
-	#purpose {
-		width: 60%;
-		margin: auto;
-		text-align: center;
-		h1 {
-			color: $gray4;
-			margin-bottom: 5px;
-			text-shadow: 1px 1px 5px $grayC;
-		}
-		p {
-			font-style: italic;
-		}
-	}
 	#leaders {
 		width: 80%;
 		margin: auto;
-		margin-top: 5%;
 		.profile {
 			float: left;
 			width: 48%;
@@ -338,7 +343,7 @@
 				float: left;
 			}
 		}
-		// PROFILE SIZE TRANSITIONS
+		// PROFILE HOVER TRANSITIONS
 		.profile {
 			-webkit-transition: all .3s;
 			-moz-transition: all .3s;
@@ -354,7 +359,50 @@
 			transition: all .3s;
 		}
 	}
+	// --------------------
+	// RESEARCH PAGE STYLES
+	// --------------------
+	.sortBox {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.sortBy {
+		width: 100%;
+		* {
+			outline: none;
+		}
+		.option, input {
+			display: block;
+			float: left;
+			width: 19%;
+			font-size: .9em;
+			input, select {
+				float: left;
+				height: 2em;
+				background-color: $blue8;
+				width: 90%;
+				padding: 0 5%;
+				font-size: .9em;
+				border: 1px solid $blue7;
+				border-radius: 3px;
+			}
+			input[type="submit"], input[type="button"] {
+				padding: 0 2%;
+				color: white;
+				background-color: $blue6;
+				border: 1px solid $blue5;
+			}
+		}
+		.option.submit {
+			width: 4%;
+			padding-left: 1%;
+			vertical-align: middle;
+		}
+	}
 }
+
+
+
 .clearer {
 	clear: both;
 }

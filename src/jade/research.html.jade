@@ -44,16 +44,64 @@ block nav
 					li
 						a(href='nfseminar.html') New Faculty Seminar
 						//- ul.sub
-						//- 	li: a(href='') 2015
-						//- 	li: a(href='') 2014
-						//- 	li: a(href='') 2013
+							//- li: a(href='') 2015
+							//- li: a(href='') 2014
+							//- li: a(href='') 2013
 					li
 						a(href='faq.html') Common Concerns
 						//- ul.sub
-						//- 	li: a(href='') null
-						//- 	li: a(href='') null
-						//- 	li: a(href='') null
-
+							//- li: a(href='') null
+							//- li: a(href='') null
+							//- li: a(href='') null
 block content
+	.pageIntro
+		p Research and discussions on topics related to faith and learning happen all over campus. See what people are doing&mdash;and get involved!
+	.sortBox
+		p Sort by&hellip;
+		form.sortBy(action="sortResearch.js")
+			.option
+				input.sortSelected(type="button" value="Most Recent")
+			.option
+				select(name="person")
+					option(value="all") All People
+					option(value="alanWilkins") Alan Wilkins
+					option(value="janeBirch") Jane Birch
+					option(value="stephenYanchar") Stephen Yanchar
+					option(value="jeffreyReber") Jeffrey Reber
+			.option
+				select(name="college")
+					option(value="all") All Colleges
+					option(value="Bus") Business
+					option(value="Edu") Education
+					option(value="EngTech") Engineering &amp; Technology
+					option(value="FHSS") Family, Home, &amp; Social Sciences
+					option(value="FAC") Fine Arts &amp; Communications
+					option(value="Hum") Humanities
+					option(value="IntStud") International Studies
+					option(value="Law") Law
+					option(value="LifeSci") Life Sciences
+					option(value="Nurs") Nursing
+					option(value="PMS") Physical &amp; Mathematical Sciences
+					option(value="RelEd") Religious Education
+			.option
+				select(name="status")
+					option(value="all") All Projects
+					option(value="current") Current Projects
+					option(value="completed") Completed Projects
+			.option
+				input(type="text" width=10 name="keyword" placeholder="Keyword")
+			.option.submit
+				input(type="submit" value="Go")
+			.clearer
+		.clearer
+	#contribute
+		#button-container
+		//- replace these links with google form links
+		form(action="http://byu.edu")
+			button Add your own project
+
+
+
+
 
 
