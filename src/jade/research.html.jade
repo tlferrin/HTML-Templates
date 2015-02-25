@@ -57,18 +57,13 @@ block content
 	.pageIntro
 		p Research and discussions on topics related to faith and learning happen all over campus. See what people are doing&mdash;and get involved!
 	.sortBox
-		p Sort by&hellip;
-		form.sortBy(action="sortResearch.js")
-			.option
+		p Filter by&hellip;
+		form.sortBy(action="#")
 				input.sortSelected(type="button" value="Most Recent")
-			.option
-				select(name="person")
-					option(value="all") All People
-					option(value="alanWilkins") Alan Wilkins
-					option(value="janeBirch") Jane Birch
-					option(value="stephenYanchar") Stephen Yanchar
-					option(value="jeffreyReber") Jeffrey Reber
-			.option
+				select(name="status")
+					option(value="all") All Projects
+					option(value="current") Current Projects
+					option(value="completed") Completed Projects
 				select(name="college")
 					option(value="all") All Colleges
 					option(value="Bus") Business
@@ -83,22 +78,21 @@ block content
 					option(value="Nurs") Nursing
 					option(value="PMS") Physical &amp; Mathematical Sciences
 					option(value="RelEd") Religious Education
-			.option
-				select(name="status")
-					option(value="all") All Projects
-					option(value="current") Current Projects
-					option(value="completed") Completed Projects
-			.option
-				input(type="text" width=10 name="keyword" placeholder="Keyword")
-			.option.submit
+				select(name="person")
+					option(value="all") All People
+					option(value="alanWilkins") Alan Wilkins
+					option(value="janeBirch") Jane Birch
+					option(value="stephenYanchar") Stephen Yanchar
+					option(value="jeffreyReber") Jeffrey Reber
+				input(type="text" width=10 name="keywords" placeholder="Keyword")
 				input(type="submit" value="Go")
 			.clearer
 		.clearer
 	#contribute
 		#button-container
-		//- replace these links with google form links
-		form(action="http://byu.edu")
-			button Add your own project
+			//- replace these links with google form links
+			form(action="#")
+				button Add your own project
 
 
 
