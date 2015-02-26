@@ -408,15 +408,15 @@
 	}
 	#button-container {
 		button {
-			width: 40%;
-			line-height: 2.5em;
-			color: $blue7;
-			background-color: $blue3;
+			width: 30%;
+			line-height: 3em;
+			color: $blue3;
+			background-color: $blue7;
 			transition: all .2s;
 		}
 		button:hover {
-			color: $blue3;
-			background-color: $blue7;
+			color: $blue7;
+			background-color: $blue3;
 		}
 	}
 }
