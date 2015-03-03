@@ -35,7 +35,7 @@ block nav
 					li
 						a.single(href='explore.html') Explore
 					li
-						a.single.current(href='research.html') Research
+						a.single.current(href='research.html#completedResearch') Research
 					li
 						a.single(href='about.html') About Us
 
@@ -54,45 +54,182 @@ block nav
 							//- li: a(href='') null
 							//- li: a(href='') null
 block content
-	.pageIntro
-		p Research and discussions on topics related to faith and learning happen all over campus. See what people are doing&mdash;and get involved!
-	.sortBox
-		p Filter by&hellip;
-		form.sortBy(action="#")
-				input.sortSelected(type="button" value="Most Recent")
-				select(name="status")
-					option(value="all") All Projects
-					option(value="current") Current Projects
-					option(value="completed") Completed Projects
-				select(name="college")
-					option(value="all") All Colleges
-					option(value="Bus") Business
-					option(value="Edu") Education
-					option(value="EngTech") Engineering &amp; Technology
-					option(value="FHSS") Family, Home, &amp; Social Sciences
-					option(value="FAC") Fine Arts &amp; Communications
-					option(value="Hum") Humanities
-					option(value="IntStud") International Studies
-					option(value="Law") Law
-					option(value="LifeSci") Life Sciences
-					option(value="Nurs") Nursing
-					option(value="PMS") Physical &amp; Mathematical Sciences
-					option(value="RelEd") Religious Education
-				select(name="person")
-					option(value="all") All People
-					option(value="alanWilkins") Alan Wilkins
-					option(value="janeBirch") Jane Birch
-					option(value="stephenYanchar") Stephen Yanchar
-					option(value="jeffreyReber") Jeffrey Reber
-				input(type="text" width=10 name="keywords" placeholder="Keyword")
-				input(type="submit" value="Go")
-			.clearer
-		.clearer
-	#contribute
-		#button-container
-			//- replace these links with google form links
-			form(action="#")
-				button Add your own project
+	#research
+		.pageIntro
+			p Research and discussions on topics related to faith and learning happen all over campus. See what people are doing&mdash;and get involved!
+		#completedResearch
+			h2 Completed Research
+			p.researchLink
+				a(href="#currentProjects") Go to <strong>Current Projects &rarr;</strong>
+			.sortBox
+				form.sortBy(action="#")
+					p Filter by&hellip;
+					input.sortSelected(type="button" value="Most Recent")
+					select(name="college")
+						option(value="all") All Colleges
+						option(value="edu") Education
+						option(value="et") Engineering &amp; Technology
+						option(value="fhss") Family, Home, &amp; Social Sciences
+						option(value="fac") Fine Arts &amp; Communications
+						option(value="hbll") Harold B. Lee Library
+						option(value="hum") Humanities
+						option(value="law") Law School
+						option(value="lifesci") Life Sciences
+						option(value="marriott") Marriott School
+						option(value="nursing") Nursing College
+						option(value="cpms") Physical &amp; Mathematical Sciences
+						option(value="RelEd") Religious Education
+						option(value="studlife") Student Life
+					select(name="person")
+						option(value="all") All People
+						option(value="awilkins") Alan Wilkins
+						option(value="jbirch") Jane Birch
+						option(value="syanchar") Stephen Yanchar
+						option(value="jreber") Jeffrey Reber
+					input(type="text" width=10 name="keywords" placeholder="Keyword")
+					input(type="submit" value="Go")
+					input.clearfilters(type="button" value="Clear All Filters")
+					.clearer
+				.clearer
+			.scrollcontainer
+				.scrolltop
+				.scrollbar
+					article
+						p.title Three Questions Students Seem to be Asking
+						p.author The Faith &amp; Learning Initiative, 2014
+						p.dept BYU Faculty Center
+					article
+						p.title Spiritually and Intellectually Strengthening: What Separates the Most from the Least Successful Professors?
+						p.author The Faith &amp; Learning Initiative, 2013
+						p.dept BYU Faculty Center
+					article
+						p.title A Paper Title that is Related to Faith &amp; Learning in an Academic Department
+						p.author An Author &amp; His Buddy, 2013
+						p.dept The Relevant Department
+					article
+						p.title Agency and Learning: Some Implications for Educational Technology and Research
+						p.author Stephen Yanchar &amp; Jonathan Spackman, 2012
+						p.dept Instructional Psychology &amp; Technology
+					article
+						p.title A Second Paper Title that is Related to Faith &amp; Learning in an Academic Department
+						p.author An Author &amp; His Buddy, 2012
+						p.dept The Relevant Department
+					article.selected
+						p.title Spiritually Strengthening and Intellectually Enlarging Faculty: What Students Want
+						p.author Alan Wilkins &amp; Jane Birch, 2010
+						p.dept BYU Faculty Center
+					article
+						p.title A Third Paper Title that is Related to Faith &amp; Learning in an Academic Department
+						p.author An Author &amp; His Buddy, 2009
+						p.dept The Relevant Department
+				.scrollbottom
+			.detailBox
+				p.title Spiritually Strengthening and Intellectually Enlarging Faculty: What Students Want
+				p.author Alan Wilkins &amp; Jane Birch, 2010 (BYU Faculty Center)
+				article.abstract
+					p ABSTRACT: 
+					p What makes for a quality education at a religious university? In this research study, we asked both faculty and students at Brigham Young University to describe the factors that make a difference in an education that is both “spiritually strengthening and intellectually enlarging.” We explore the role that the gospel can play in secular learning and what students consider important in their courses and in their professors. One conclusion we draw from the data is that who the professor is (faculty characteristics) is more important that what the professors does (faculty techniques).
+					hr
+				article.snippet
+					p The founding charge of BYU is to teach every subject with the Spirit of God. As he sent Karl G. Maeser to Provo to lead the fledgling Brigham Young Academy, Brigham Young told him: “Brother Maeser, I want you to remember that you ought not to teach even the alphabet or the multiplication tables without the Spirit of God.” Reflecting on that charge, Elder Spencer W. Kimball explained that it is not intended “that all of the faculty should be categorically teaching religion constantly in their classes, but . . . that every . . . teacher in this institution would keep his subject matter bathed in the light and color of the restored gospel.”
+					p We have heard faculty across campus who desire to provide educational experiences to their students that are both “spiritually strengthening and intellectually enlarging” (Aims of a BYU Education) in the spirit of Brigham Young’s charge but who wonder how it can be done. Some have asked how they can cover everything necessary in their classes and still have time to incorporate gospel ideas. Others are concerned that praying in class or bringing up gospel topics may lead to less critical thinking and lower expectations for performance (a “Sunday School” approach). Still others are concerned that the &hellip;
+				p.moreLink To continue reading, #[a(href="#file") download the PDF]
+			#contribute
+				#button-container
+					//- replace these links with google form links
+					form(action="#")
+						p Have completed research related to faith &amp; learning?
+						button Tell us about it!
+		#currentProjects
+			h2 Current Projects
+			p.researchLink
+				a(href="#completedResearch") Go to <strong>Completed Research&rarr;</strong>
+			.sortBox
+				form.sortBy(action="#")
+					p Filter by&hellip;
+					input.sortSelected(type="button" value="Most Recent")
+					select(name="college")
+						option(value="all") All Colleges
+						option(value="edu") Education
+						option(value="et") Engineering &amp; Technology
+						option(value="fhss") Family, Home, &amp; Social Sciences
+						option(value="fac") Fine Arts &amp; Communications
+						option(value="hbll") Harold B. Lee Library
+						option(value="hum") Humanities
+						option(value="law") Law School
+						option(value="lifesci") Life Sciences
+						option(value="marriott") Marriott School
+						option(value="nursing") Nursing College
+						option(value="cpms") Physical &amp; Mathematical Sciences
+						option(value="RelEd") Religious Education
+						option(value="studlife") Student Life
+					select(name="person")
+						option(value="all") All People
+						option(value="awilkins") Alan Wilkins
+						option(value="jbirch") Jane Birch
+						option(value="syanchar") Stephen Yanchar
+						option(value="jreber") Jeffrey Reber
+					input(type="text" width=10 name="keywords" placeholder="Keyword")
+					input(type="submit" value="Go")
+					input.clearfilters(type="button" value="Clear All Filters")
+					.clearer
+				.clearer
+			.scrollcontainer
+				.scrolltop
+				.scrollbar
+					article
+						p.title Research: Character Study
+						p.author The Faith &amp; Learning Initiative
+						p.dept BYU Faculty Center
+					article.selected
+						p.title Case Study Research: Transformative Learning Experiences
+						p.author Beth Wilkins (PhD student)
+						p.dept Instuctional Psychology &amp; Technology
+					article
+						p.title Experiment: How Does Sharing Oneself in the Classroom Affect Learning and Character Growth?
+						p.author Jeffrey Reber &amp; Matt Hiatt
+						p.dept Psychology
+					article
+						p.title Theoretical Research: How Can We Treat Students as Agents?
+						p.author Stephen Yanchar
+						p.dept Instructional Psychology &amp; Technology
+					article
+						p.title Weekly Meeting: A Spiritual Approach to Psychotherapy
+						p.author Tim Smith &amp; Robert Gleave
+						p.dept Counseling Psychology
+					article
+						p.title Online Discussion Board: How do we Engage Students Spiritually in GE Classes?
+						p.author George Handley &amp; His Cool Friend
+						p.dept The Relevant Department
+					article
+						p.title Something that is Related to Faith &amp; Learning in an Academic Department
+						p.author An Author &amp; His Buddy
+						p.dept The Relevant Department
+				.scrollbottom
+			.detailBox
+				p.title Case Study Research: Transformative Learning Experiences
+				.authorPic
+				p.author Beth Wilkins#[br](PhD student, Instructional Psychology &amp; Technology)
+				article.abstract
+					p Description:
+					p I am interviewing a small number of professors to identify the transformative experiences that helped them become who they are today. There is more information I’d put here, but I don’t actually know that much about Beth’s project. The paragraph will be at least this long in most cases, so I’m still writing. Is that long enough? Probably. I’ll stop now.
+					hr
+				article.status
+					p Status:
+					p I’ve interviewed 3 different professors and am getting closer to finding the themes I will need to write my dissertation. I am learning a lot about this thing and that and having a lot of fun.
+				article.needs
+					p Needs:
+					p I need 2 more professors to interview about the cool stuff they did when they were undergrads and graduate students.
+				article.interests
+					p Other Research Interests:
+					p A few, but not a lot. In general, I like to be specific about the few things that I know relatively a moderate amount about.
+				p.moreLink To get involved, #[a(href="#email") contact Beth]
+			#contribute
+				#button-container
+					//- replace these links with google form links
+					form(action="#")
+						p Are you doing something related to faith &amp; learning?
+						button Let us know!
 
 
 
