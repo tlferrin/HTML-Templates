@@ -3,7 +3,7 @@
 */
 
 // Variables and mixins
-@import "compass";
+// @import "compass";
 @import "shared/colors";
 @import "shared/mixins";
 @import "shared/variables";
@@ -11,14 +11,12 @@
 // Normalize
 @import "base/normalize"; // Great place to start
 @import "base/h5bp"; // Good defaults from HTML5 Boilerplate
-@import "base/prettify";
 
 // Base styles
 @import "base/basics";
 @import "base/type";
 @import "base/header";
-@import "base/search";
 @import "base/nav";
 @import "base/content";
 
-@import "responsive/byu-bar";
+// @import "responsive/byu-bar";

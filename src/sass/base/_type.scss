@@ -39,7 +39,3 @@ h6 { font-size:   .9em; } // 12.6px
 p, pre { margin: 10px 0; }
 
 code {color:#d14}
-
-a {
-  @include transition( background .1s ease );
-}

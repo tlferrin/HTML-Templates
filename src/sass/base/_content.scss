@@ -11,41 +11,20 @@
 
 // Slider
 #feature {
-  margin: -1em -5.55% 0;
-  ul {
-    list-style: none;
-    margin:0;
-    padding-bottom:20px;
-  }
-  li {
-    display: none;
-    &.feature {
-      display: block;
-    }
-  }
+  margin: 1em 0;
+  display: block;
   .feature-image {
     text-align: center;
   }
-}
-
-.feature-description {
-  margin:0 5%;
-  h2 {
-    font-size:18px;
-    line-height: 20px;
-    margin: 20px 0px 10px;
+  .feature-description {
+    margin:0 5%;
+    h2 {
+      font-size:18px;
+      line-height: 20px;
+      margin: 20px 0px 10px;
+    }
   }
 }
-
-
-
-// Breadcrumb
-.breadcrumb {
-  display: none;
-}
-
-
-
 
 // Calendar
 #calendar {
@@ -78,19 +57,8 @@ ul#calendars{ list-style: none}
 .day { padding:.75em 0 0}
 a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top:1.5em; padding-bottom:1.5em; display: block;}
 
-
-
-
-
-
 // News
 .news-item {padding:.25em 0 0}
-.briefs-item {padding:.1em 0 0}
-#briefs-container {border-bottom:1px solid #eee; padding-bottom:.75em; margin-bottom:.5em;}
-
-
-
-
 
 // Footer
 #page-footer {
@@ -147,16 +115,5 @@ a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top:1.5em; pa
     color: $brown0;
   }
  }
-
-
-
-
-@media all and( max-width:939px ) {
-  .feature-description {
-    border-left: none !important;
-    background-color: transparent !important;
-    @include box-shadow(none !important);
-  }
-}
 
 

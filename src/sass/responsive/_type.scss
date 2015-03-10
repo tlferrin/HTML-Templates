@@ -6,36 +6,15 @@
 
 @import "shared/variables";
 
+$fontSize:15px;
+$lineHeight:20px;
 
 
 
-
-/*** Small width ***/
-
-$fontSize:14px; 
-$lineHeight:19px;
-
-body, button, input, select, textarea, 
-#search-container .gsc-control-cse, 
-#search-container .gsc-control-cse .gsc-table-result {
-  font-size: $fontSize;
-  line-height: $lineHeight;
-  font-family: $sans-font-stack;
-  font-weight: $sans-font-weight; }
-
-#header-top h1 {
-	font-family: $byu-font-stack;
-	font-weight: $byu-font-weight; }
-
-
-#tagline {
+#header-top h1, #tagline {
 	color: white;
 	font-family: $byu-font-stack;
 	font-weight: $byu-font-weight;
-	position: relative;
-	font-size: .9em;
-	left: 300px;
-	top: -15px;
 }
 
 h1, h2 {
@@ -67,97 +46,26 @@ h3, h4, h5, h6 {
 	}
 }
 
-h1 { font-size:    2em; margin:30px 0px 10px; }
-h2 { font-size: 1.65em; margin:25px 0px 10px; }
-h3 { font-size: 1.25em; margin:20px 0px 10px; line-height:1.25; }
-h4 { font-size:  1.1em; margin:15px 0px 10px; line-height:1.3; }
-h5 { font-size:    1em; margin:10px 0px 10px; line-height:1.3; }
-h6 { font-size:   .9em; margin:10px 0px 10px; line-height:1.3; }
-
-
-a.mybyu, a.sign-in, .open #search-button, #search-submit, .gcse-wrapper input.gsc-search-button, .nav-container a {
+a.sign-in, .nav-container a {
 	font-family: $sans-font-stack;
 	font-weight: $sans-font-weight; }
 
-.nav-container .mega a, .nav-container .sub a {
-	font-weight: $sans-font-weight; }
-
-#primary-nav .mega li.featured a {
-	font-weight: $sans-font-weight-bold; }
-
-body {
-	th, tfoot {
-		font-weight: $sans-font-weight; }
-	strong, dt {
-		font-weight: $sans-font-weight-bold; } }
-
-.sc, .small-caps {
-	font-family: 'Whitney SSm SC A', 'Whitney SSm SC B', $sans-font-stack;
-	font-weight: $sans-font-weight; 
-	font-style: normal;
-}
-.lnum, .lining-numbers {
-	font-family: 'Whitney SSm Lining Num A', 'Whitney SSm Lining Num B', $sans-font-stack;
-	font-weight: $sans-font-weight; 
-	font-style: normal;
-}
+strong {font-weight: $sans-font-weight-bold; }
 
 #page-footer h2 {
 	font-family: $sans-font-stack;
 	font-weight: $sans-font-weight-bold;
 }
 
+body, button, input, select, textarea {
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	font-family: $sans-font-stack;
+	font-weight: $sans-font-weight; }
 
-/*** Medium width ***/
-@media all and ( min-width: $med-width ) {
-
-	$fontSize:15px;
-	$lineHeight:20px;
-
-	body, button, input, select, textarea {
-		font-size: $fontSize;
-		line-height: $lineHeight; }
-
-	h1 { font-size:  2.2em; line-height:40px; margin:30px 0px 20px; } // 33px
-	h2 { font-size:  1.8em; line-height:30px; margin:30px 0px 20px; } // 27px
-	h3 { font-size:  1.3em; line-height:25px; margin:25px 0px 10px; } // 19.5px
-	h4 { font-size: 1.15em; line-height:20px; margin:25px 0px 10px; } // 17.25px
-	h5 { font-size:    1em; line-height:20px; margin:20px 0px 10px; } // 15px
-	h6 { font-size:   .9em; line-height:20px; margin:15px 0px 10px; } // 13.5px
-
-}
-
-
-
-
-
-
-
-/*** Large width ***/
-@media all and ( min-width: $large-width ) {
-
-}
-
-
-
-
-
-/*** Larger width ***/
-@media all and ( min-width: $larger-width ) {
-
-}
-
-
-
-
-
-/*** Extra large width ***/
-@media all and ( min-width:$extralarge-width ) {
-
-	$fontSize:16px;
-	$lineHeight:22px;
-
-	body, button, input, select, textarea {
-		font-size:$fontSize;
-		line-height: $lineHeight; }
-}
+h1 { font-size:  2.2em; line-height:40px; margin:30px 0px 20px; } // 33px
+h2 { font-size:  1.8em; line-height:30px; margin:30px 0px 20px; } // 27px
+h3 { font-size:  1.3em; line-height:25px; margin:25px 0px 10px; } // 19.5px
+h4 { font-size: 1.15em; line-height:20px; margin:25px 0px 10px; } // 17.25px
+h5 { font-size:    1em; line-height:20px; margin:20px 0px 10px; } // 15px
+h6 { font-size:   .9em; line-height:20px; margin:15px 0px 10px; } // 13.5px

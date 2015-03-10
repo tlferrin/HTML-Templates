@@ -10,11 +10,6 @@
 */
 
 
-
- 
-
-
-
 (function ($) {
 
 	"use strict";
@@ -26,7 +21,6 @@
 		executeAfterBreakpoint( initializeSlider, 250 );
 
 	});
-
 
 
 	/* Func: initializeSlider
@@ -152,10 +146,7 @@
 
 
 
-
 }(jQuery));
-
-
 
 
 

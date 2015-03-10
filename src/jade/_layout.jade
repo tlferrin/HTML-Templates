@@ -6,51 +6,42 @@ doctype html
 //[if lt IE 7]> <html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]
 //[if IE 7]>    <html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]
 //[if IE 8]>    <html lang="en" class="no-js oldie lt-ie9"><![endif]
-//[if gt IE 8]><!
-html.no-js(lang="en")
-	// <![endif]
+//[if gt IE 8]> <! html.no-js(lang="en")<![endif]
 
-	//-	===============
-	//-	HEAD
-	//-	===============
-	block head
-		head
-			meta(charset='UTF-8')
-			meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-			title
-				block pageTitle
-					| Faith & Learning Initiative
-			meta(name='description', content='The part of the Faculty Center focused on achieving the unique mission of BYU')
-			meta(name='author', content='The Faith & Learning Initiative')
-			meta(name='keywords', content='faith, learning, study')
-			meta(name='viewport', content='width=device-width, , initial-scale=1')
 
-			// Place favicon.ico and apple-touch-icon.png in the root directory
-			link(rel='shortcut icon', href='favicon.ico')
+block head
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		title
+			block pageTitle
+				| Faith & Learning Initiative
+		meta(name='description', content='The Faith & Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: “to assist individuals in their quest for perfection and eternal life.”')
+		meta(name='author', content='The Faith & Learning Initiative')
+		meta(name='keywords', content='faith, learning, study, BYU, Brigham, Young, University')
+		meta(name='viewport', content='width=device-width, , initial-scale=1')
 
-			// Styles
-			link(rel='stylesheet', href='//cloud.typography.com/75214/740862/css/fonts.css')
-			link(rel='stylesheet', href='css/base.css')
-			link(rel='stylesheet', href='css/responsive.css', media='all and (min-width:16em)')
+		// Place favicon.ico and apple-touch-icon.png in the root directory
+		link(rel='shortcut icon', href='favicon.ico')
 
-			// Scripts loaded via script loader. See notes in init.js file.
-			script(src='js/modernizr.js')
-			block settings
-				script.
-					// Use these settings to control the default scripts in the BYU template
-					window.pageSettings = {
-						jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
-						jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
-						additionalScripts: [], // Array of strings specifying URLs for additional scripts to load
+		// Scripts loaded via script loader. See notes in init.js file.
+		script(src='js/modernizr.js')
+		block settings
+			script.
+				// Use these settings to control the default scripts in the BYU template
+				window.pageSettings = {
+					jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+					jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+					loadslider:     false, // Whether the image slider is present on the page
+					gcse_search:    false, // Use the Google Custom Search Engine for the site's search?
+					analytics_key:  'UA-59389403-1' // Insert your Google Analytics key
+				}
+		script(src='js/init.js')
 
-						loadslider:     false, // Whether the image slider is present on the page
-						
-						gcse_search:    true, // Use the Google Custom Search Engine for the site's search?
-						gcse_search_id: '009932716493032633443:hlqjz33kfkc',  // Use this BYU GCSE id, or insert your own
-
-						analytics_key:  'UA-59389403-1' // Insert your Google Analytics key
-					}
-			script(src='js/init.js')
+		// Styles
+		link(rel='stylesheet', href='//cloud.typography.com/75214/740862/css/fonts.css')
+		link(rel='stylesheet', href='css/base.css')
+		link(rel='stylesheet', href='css/responsive.css', media='all and (min-width:16em)')
 
 
 	//-	===============
@@ -83,95 +74,25 @@ html.no-js(lang="en")
 
 					// This should link to your organization's home page
 					h1
-						a#site-name(href='#', title="The Faith & Learning Initiative")
+						a#site-name(href='index.html', title="The Faith & Learning Initiative")
 							block heading
 								| The Faith & Learning Initiative
-					#tagline
-						p Achieving the Unique Mission of BYU
+					p#tagline Achieving the Unique Mission of BYU
+
 					block sign-in
 						a.sign-in.button(href='http://home.byu.edu/home/cas') Sign in
-
-
-
-
-		//-	===============
-		//-	SEARCH
-		//-	===============
-		block search-menu
-			#search-menu
-				#search-container(role='search')
-
-					//
-						| The default search form, linking to BYU's search page. If a user does not have javascript enabled, they'll get this form.
-						| If they have javascript, this content will be replaced with Google's custom search (from the script at the bottom of the page).
-					form#basic-search(action='http://home.byu.edu/home/search', role='form')
-						label.visuallyhidden(for='search') Search
-						input#search(type='search', name='search')
-						input#search-submit(type='submit', value='Search')
-
-					// This container holds the Google custom search, if enabled
-					.gcse-wrapper
-						gcse:search
-
-
-				//-	===============
-				//-	MENU BUTTON
-				//-	===============
-				block menu-button
-					a.menu-button(href="#primary-nav") Menu
-
-
-
-
 
 		//-	===============
 		//-	MAIN CONTENT WRAPPER
 		//-	===============
 		block contentwrapper
 			- if( typeof(contentclasses) == 'undefined') { var contentclasses = '' }
-			#content(class='wrapper clearfix #{contentclasses}', role='main')
-				
-
-
-
-				//-	===============
-				//-	BREADCRUMB
-				//-	===============
-
-				block breadcrumb
-					// Breadcrumb
-					ul.breadcrumb
-						li
-							.dropdown
-								a.home.dropdown-toggle.needsclick(href="", data-toggle="dropdown")
-									i.fa.fa-home.fa-lg
-									span.visuallyhidden Home
-									i.fa.fa-caret-down
-								ul.dropdown-menu
-									li: a(href='www.byu.edu') BYU Home
-									li: a(href='#') Organization Home
-									li: a(href='#') Two Pages Above
-								i.divider.fa.fa-angle-right
-						li
-							a(href="#") One page above
-							i.divider.fa.fa-angle-right
-						li.active Current Page
-						
-						
+			#content(class='wrapper clearfix #{contentclasses}', role='main')								
 				//-	===============
 				//-	CONTENT
 				//-	===============
 				block content
 					// Content goes here, if any
-
-
-
-				//-	===============
-				//-	SIDENAV
-				//-	===============
-				block sidenav
-					// Sidenav here, if needed
-
 
 		//-	===============
 		//-	NAV
@@ -184,7 +105,7 @@ html.no-js(lang="en")
 					li 
 						a.single.current(href='index.html') Home
 					li
-						a.single(href='explore.html') Explore
+						a.single(href='examples.html') Examples
 					li
 						a.single(href='research.html#completedResearch') Research
 					li

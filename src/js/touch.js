@@ -31,7 +31,7 @@
 		}
 
 		//Enable swiping...
-		$("#main-header, #search-menu, #content, #page-footer, .nav-container").swipe( {
+		$("#main-header, #menu-button, #content, #page-footer, .nav-container").swipe( {
 
 			
 			// Swipe left: close the side nav if it's open

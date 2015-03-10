@@ -43,7 +43,7 @@ b, strong { font-weight: bold; }
 dfn { font-style: italic; }
 
 /** Address differences between Firefox and other browsers. */
-hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+hr { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
 /** Address styling not present in IE 8/9. */
 mark { background: #ff0; color: #000; }
@@ -101,7 +101,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] { -
 button[disabled], html input[disabled] { cursor: default; }
 
 /** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+input[type="checkbox"], input[type="radio"] { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
 
 /** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
 input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
@@ -136,33 +136,8 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin:
 /* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
 img { vertical-align: middle; }
 
-/* Remove default fieldset styles. */
-fieldset { border: 0; margin: 0; padding: 0; }
-
-/* Allow only vertical resizing of textareas. */
-textarea { resize: vertical; }
-
-/* ========================================================================== Chrome Frame prompt ========================================================================== */
-.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0; }
-
-/* ========================================================================== Author's custom styles ========================================================================== */
-/* ========================================================================== Helper classes ========================================================================== */
-/* Image replacement */
-.ir { background-color: transparent; border: 0; overflow: hidden; /* IE 6/7 fallback */ *text-indent: -9999px; }
-
-.ir:before { content: ""; display: block; width: 0; height: 150%; }
-
 /* Hide from both screenreaders and browsers: h5bp.com/u */
 .hidden { display: none !important; visibility: hidden; }
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-
-/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-
-/* Hide visually and from screenreaders, but maintain layout */
-.invisible { visibility: hidden; }
 
 /* Clearfix: contain floats  For modern browsers 1. The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that receive the `clearfix` class. 2. The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
 .clearfix:before, .clearfix:after { content: " "; /* 1 */ display: table; /* 2 */ }
@@ -171,32 +146,6 @@ textarea { resize: vertical; }
 
 /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
 .clearfix { *zoom: 1; }
-
-/** Prettify **/
-.com { color: #93a1a1; }
-
-.lit { color: #195f91; }
-
-.pun, .opn, .clo { color: #93a1a1; }
-
-.fun { color: #dc322f; }
-
-.str, .atv { color: #D14; }
-
-.kwd, .prettyprint .tag { color: #1e347b; }
-
-.typ, .atn, .dec, .var { color: teal; }
-
-.pln { color: #48484c; }
-
-.prettyprint { padding: 8px; background-color: #f7f7f9; border: 1px solid #e1e1e8; }
-
-.prettyprint.linenums { -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0; -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0; box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0; }
-
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums { margin: 0 0 0 33px; /* IE indents via margin-left */ }
-
-ol.linenums li { padding-left: 12px; color: #bebec5; line-height: 20px; text-shadow: 0 1px 0 #fff; }
 
 /*** Base tags ***/
 html, body { width: 100%; overflow-x: hidden; }
@@ -301,10 +250,8 @@ p, pre { margin: 10px 0; }
 
 code { color: #d14; }
 
-a { -moz-transition: background 0.1s ease; -o-transition: background 0.1s ease; -webkit-transition: background 0.1s ease; transition: background 0.1s ease; }
-
 /** Positioning **/
-#main-header, #search-menu, #content, #page-footer, .nav-container { position: relative; }
+#main-header, #content, #page-footer, .nav-container { position: relative; }
 
 /*** Header ***/
 #main-header { background-color: #036; border-bottom: 1px solid #036; }
@@ -314,47 +261,21 @@ a { -moz-transition: background 0.1s ease; -o-transition: background 0.1s ease; 
 #header-top h1 a { color: #fff; }
 #header-top a.sign-in { position: absolute; top: .35em; right: 5%; }
 
-#logo, #byu-bar { padding: .35em 0 .45em; }
-#logo a.byu, #logo a.byulink, #byu-bar a.byu, #byu-bar a.byulink { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; display: inline-block; height: 26px; width: 70px; background: transparent url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png") 0px 0px no-repeat; }
-.svg #logo a.byu, .svg #logo a.byulink, .svg #byu-bar a.byu, .svg #byu-bar a.byulink { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); }
-#logo a.parentlink, #byu-bar a.parentlink { text-transform: uppercase; font-size: 14px; display: inline-block; padding: 6px 3px 2px; color: #e0edf9; line-height: 1.2; letter-spacing: 2px; vertical-align: top; }
-#logo h2, #byu-bar h2 { margin: 0; margin-right: 100px; line-height: 26px; }
-#logo a, #byu-bar a { display: block; }
+#logo { padding: .35em 0 .45em; }
+#logo a.byu, #logo a.byulink { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; display: inline-block; height: 26px; width: 70px; background: transparent url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png") 0px 0px no-repeat; }
+.svg #logo a.byu, .svg #logo a.byulink { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); }
+#logo a.parentlink { text-transform: uppercase; font-size: 14px; display: inline-block; padding: 6px 3px 2px; color: #e0edf9; line-height: 1.2; letter-spacing: 2px; vertical-align: top; }
+#logo h2 { margin: 0; margin-right: 100px; line-height: 26px; }
+#logo a { display: block; }
 
-a.mybyu, a.sign-in, .open #search-button, #search-submit, .search-submit, .gcse-wrapper input.gsc-search-button { background-color: #628cb6; border: none; color: #fff; font-weight: bold; padding: 5px 18px; text-decoration: none; -moz-border-radius: 14px; -webkit-border-radius: 14px; border-radius: 14px; }
-a.mybyu:hover, a.mybyu:active, a.sign-in:hover, a.sign-in:active, .open #search-button:hover, .open #search-button:active, #search-submit:hover, #search-submit:active, .search-submit:hover, .search-submit:active, .gcse-wrapper input.gsc-search-button:hover, .gcse-wrapper input.gsc-search-button:active { margin: -2px; background-color: #369; border: 2px solid #abc8e4; cursor: pointer; -moz-border-radius: 16px; -webkit-border-radius: 16px; border-radius: 16px; }
-
-.menu-button { display: none; }
-
-/*** Search ***/
-/* Search box styling for mobile */
-#search-menu { width: 100%; position: relative; display: block; background-color: #001948; border-top: 1px solid #147; border-bottom: 1px solid #147; height: 36px; padding-top: 1px; padding-bottom: 4px; }
-
-#search-container textarea:hover, #search-container input:hover, #search-container textarea:active, #search-container input:active, #search-container textarea:focus, #search-container input:focus { outline: 0px !important; -webkit-appearance: none; }
-#search-container #basic-search { position: relative; padding-right: 77px; padding-left: 5px; }
-#search-container #basic-search label { color: #fff; }
-#search-container #search-submit { background-image: url(../img/search_box_icon.png); background-position: 50% 50%; background-repeat: no-repeat; overflow: hidden; text-indent: -1000px; padding: 5px; display: block; width: 50px; position: absolute; top: 0px; right: 5px; }
-#search-container #search-submit:hover, #search-container #search-submit:active { right: 7px; }
-#search-container #basic-search #search, #search-container input.gsc-input { margin-bottom: 0; vertical-align: top; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; padding: 5px 10px !important; border: 0 !important; font-size: 13px; display: block; width: 100%; }
+a.sign-in { background-color: #628cb6; border: none; color: #fff; font-weight: bold; padding: 5px 18px; text-decoration: none; border-radius: 14px; }
+a.sign-in:hover, a.sign-in:active { margin: -2px; background-color: #369; border: 2px solid #abc8e4; cursor: pointer; border-radius: 16px; }
 
 /*** Navigation ***/
 .nav-container a { font-size: 16px; padding: .5em 0; display: block; font-weight: bold; padding-left: 5%; padding-right: 5%; }
 .nav-container a:hover, .nav-container a:active { background-color: #eeebe9; color: #001948; }
-.nav-container .mega a, .nav-container .sub a, .nav-container .sublinks a { font-weight: normal; padding-left: 10%; }
-.nav-container .featured, .nav-container .highlight { display: none; }
-.nav-container .sublinks { list-style: none; font-size: 13px; }
-.nav-container .sublinks a { padding-left: 15%; }
 
 #primary-nav, #secondary-nav { border-top: 1px solid #ddd; padding: 10px 0; }
-
-/* Sidebar nav */
-nav.sidebar { display: none; }
-
-.sidebar-navigation nav.sidebar { border-top: 1px solid #ddd; display: block; padding-top: .5em; margin-top: 1em; }
-.sidebar-navigation nav.sidebar a { padding: .2em 0; display: block; color: #036; }
-.sidebar-navigation nav.sidebar a:hover { text-decoration: underline; background-color: #eeebe9; color: #001948; }
-.sidebar-navigation nav.sidebar .current a { color: #666; }
-.sidebar-navigation nav.sidebar .current a:hover { text-decoration: none; }
 
 /*** Main Content ***/
 .wrapper { margin: 0; }
@@ -362,16 +283,10 @@ nav.sidebar { display: none; }
 #content { padding: 1em 5% 2em; }
 #content h1 { color: #025; }
 
-#feature { margin: -1em -5.55% 0; }
-#feature ul { list-style: none; margin: 0; padding-bottom: 20px; }
-#feature li { display: none; }
-#feature li.feature { display: block; }
+#feature { margin: 1em 0; display: block; }
 #feature .feature-image { text-align: center; }
-
-.feature-description { margin: 0 5%; }
-.feature-description h2 { font-size: 18px; line-height: 20px; margin: 20px 0px 10px; }
-
-.breadcrumb { display: none; }
+#feature .feature-description { margin: 0 5%; }
+#feature .feature-description h2 { font-size: 18px; line-height: 20px; margin: 20px 0px 10px; }
 
 #calendar h2 { margin-bottom: 0; }
 
@@ -394,13 +309,10 @@ a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top: 1.5em; p
 
 .news-item { padding: .25em 0 0; }
 
-.briefs-item { padding: .1em 0 0; }
-
-#briefs-container { border-bottom: 1px solid #eee; padding-bottom: .75em; margin-bottom: .5em; }
-
 #page-footer { background-color: #e8e8e8; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
 #page-footer a, #page-footer a:link, #page-footer a:visited { color: #6b6a69; display: block; padding: .35em 1%; font-size: .95em; }
 #page-footer a:hover, #page-footer a:active, #page-footer a:focus { color: #595857; }
+#page-footer #fclink { padding-bottom: 0px; }
 #page-footer h2 { color: #595857; margin-top: 1.5em; font-size: 1em; border-bottom: 1px solid #c7c7c7; }
 #page-footer h3 { font-weight: normal; color: #595857; font-size: .95em; margin: 1em 0 0; }
 #page-footer p { color: #6b6a69; font-size: .95em; }
@@ -414,32 +326,5 @@ a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top: 1.5em; p
 
 #footer-bottom { background-color: #dddddd; border-top: 1px solid #fff; padding-bottom: 1.5em; }
 #footer-bottom a, #footer-bottom a:link, #footer-bottom a:visited { color: #595857; }
-
-@media all and (max-width: 939px) { .feature-description { border-left: none !important; background-color: transparent !important; -moz-box-shadow: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; } }
-#byu-bar { font-size: 14px; font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Helvetica,Arial,sans-serif; width: 100%; padding: 2px 0; background-color: #001948; border-bottom: 1px solid black; min-width: 120px; height: 30px; white-space: nowrap; }
-#byu-bar h2 { margin: 0; padding: 0; float: left; position: absolute; font-size: 1em; width: 100%; }
-#byu-bar a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo-header.png"); width: 70px; }
-.svg #byu-bar a.byu { background-image: url("//home.byu.edu/home/sites/default/files/global//img/byu-logo-header.svg"); }
-#byu-bar a.parentlink { font-family: "Requiem Text A", "Requiem Text B", "Palatino", Georgia, serif; width: 100%; white-space: nowrap; display: block; position: absolute; width: 100%; top: 0; left: 0; padding-left: 73px; padding-right: 6px; overflow: hidden; text-overflow: ellipsis; letter-spacing: 2px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-#byu-bar.button a.parentlink { padding-right: 110px; }
-#byu-bar.search a.parentlink { padding-right: 40%; }
-#byu-bar.search.button a.parentlink { width: 65%; padding-right: 100px; }
-#byu-bar #search-container { height: 27px; position: absolute; top: 4px; right: 6px; width: 60%; min-width: 120px; max-width: 400px; }
-#byu-bar #basic-search #search { height: 27px; }
-#byu-bar #search-submit { top: 0; }
-#byu-bar #search-submit:active, #byu-bar #search-submit:hover { right: 5px; }
-#byu-bar.search .sign-in { margin-right: 35%; }
-#byu-bar.button #search-container { width: 35%; }
-
-@media all and (min-width: 400px) { #byu-bar a.byu { width: 350px; }
-  #byu-bar #search-container { width: 75%; }
-  #byu-bar.search a.byu, #byu-bar.button a.byu { width: 70px; } }
-@media all and (min-width: 500px) { #byu-bar.button a.byu { width: 350px; }
-  #byu-bar.search.button a.byu { width: 70px; } }
-@media all and (min-width: 600px) { #byu-bar.search a.byu { width: 350px; }
-  #byu-bar.search #search-container { width: 40%; }
-  #byu-bar.search.button a.byu { width: 70px; }
-  #byu-bar.search.button #search-container { width: 35%; } }
-@media all and (min-width: 720px) { #byu-bar.search.button a.byu { width: 350px; } }
 
 /*# sourceMappingURL=base.css.map */

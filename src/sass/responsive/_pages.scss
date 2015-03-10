@@ -1,94 +1,11 @@
 @import "shared/variables";
 @import "shared/colors";
 @import "shared/mixins";
-#smallside, #news {
-    padding-top: 1.5em;
-    padding-bottom: 2em;
-    h2 {
-        margin: 0 0 .5em;
-    }
-}
-#intro {
-    font-style: italic;
-    .justright {
-        text-align: right;
-    }
-    .justfull {
-        text-align: justify;
-    }
-}
-.day {
-    overflow: hidden;
-    margin: 0 0 .25em;
-    padding-left: 14px;
-    span.date {
-        font-size: 1.2em;
-        .wf-active & {
-            font-family: 'Crete Round', sans-serif;
-            font-weight: normal;
-        }
-    }
-    h3 {
-        font-size: 1em;
-        clear: both;
-        margin-top: 0;
-        margin-left: -14px;
-    }
-    a, p {
-        margin-bottom: .5em;
-        text-indent: -8px;
-    }
-    .eventinfo {
-        // margin-bottom:0 !important;
-        padding-left: .5em;
-        font-size: .8em;
-        text-indent: 0;
-        line-height: 1em;
-        text-align: right;
-        float: right !important;
-        p {
-            color: #666;
-        }
-    }
-}
-#smallside {
-    margin: 1.5em 0;
-    padding: .75em 0;
-    clear: both;
-    border-top: solid 1px #DDD;
-    border-bottom: solid 1px #DDD;
-    overflow: hidden;
-}
-.briefs-item {
-    padding: .5em 0 1em;
-}
-.news-item {
-    padding: 1em 0;
-    border-bottom: 1px solid #eee;
-}
-@media all and (min-width: 450px) {
-    .briefs-item {
-        padding: .25em 0;
-        @include clearfix();
-        img {
-            padding: 0 1em 1em 0;
-        }
-        a {
-            float: left;
-            clear: both;
-        }
-        h3 {
-            margin: 0;
-            a {
-                float: none;
-            }
-        }
-    }
-}
-@media all and (min-width: $med-width) {
-    #smallside, #news {
+
+@media all and (min-width: $large-width) {
+    #news {
         width: 45%;
-        float: left;
+        float: right;
         border-top: none;
         border-bottom: none;
         h2 {
@@ -96,31 +13,26 @@
             border-bottom: 1px solid #ddd;
             margin-bottom: 18px;
         }
+        padding-top: 1.5em;
+        padding-bottom: 2em;
+        padding-right: 0;
     }
-    .day {
-        font-size: .9em;
-        clear: both;
-        padding-top: 0;
-        margin-bottom: 1.5em;
-        overflow: hidden;
-        h3 {
-            margin-top: 0;
-        }
-        .date {
-            font-size: 1.5em;
-        }
-        a {
-            // width:65%;
-            // float:left;
-            clear: both;
-            margin-bottom: .75em;
-        }
-        .time {
-            clear: none;
-            // width:34%;
-            float: right;
+    .news-item {
+        padding: 1em 0;
+        border-bottom: 1px solid #eee;
+    }
+    #intro {
+        font-style: italic;
+        .justright {
             text-align: right;
         }
+        .justfull {
+            text-align: justify;
+        }
+    }
+    #calendar {
+        width: 40%;
+        float: left;
     }
     #cal-submit {
         float: right;
@@ -132,34 +44,57 @@
         display: block;
         text-align: center;
     }
-    #smallside {
+    .day {
+        font-size: .9em;
         clear: both;
+        padding-top: 0;
+        margin-bottom: 1.5em;
+        overflow: hidden;
+        h3 {margin-top: 0;}
+        .date {font-size: 1.5em;}
+        a {
+            // width:65%;
+            // float:left;
+            clear: both;
+            // margin-bottom: .75em;
+        }
+        .time {
+            clear: none;
+            // width:34%;
+            float: right;
+            text-align: right;
+        }
+        overflow: hidden;
+        margin: 0 0 .25em;
+        padding-left: 14px;
+        span.date {font-size: 1.2em;}
+        h3 {
+            font-size: 1em;
+            clear: both;
+            margin-top: 0;
+            margin-left: -14px;
+        }
+        a, p {
+            margin-bottom: .5em;
+            text-indent: -8px;
+        }
+        .eventinfo {
+            // margin-bottom:0 !important;
+            padding-left: .5em;
+            font-size: .8em;
+            text-indent: 0;
+            line-height: 1em;
+            text-align: right;
+            float: right !important;
+            p {
+                color: #666;
+            }
+        }
     }
-    #news {
-        padding-right: 0;
-        float: right;
-    }
-    // .briefs-item {
-    //   padding-bottom: 1em;
-    //   img { padding:0; }
-    //   a { float: none; }
-    //   h3 {
-    //     margin-top: .25em;
-    //     font-size:.9em; 
-    //     margin-right:-.5em; } 
-    // }
-}
-@media all and (min-width: 50em) {} @media all and (min-width: $large-width) {
+
     //
     // ALL PAGE STYLES
     //
-    h2 {
-        text-align: center;
-        color: $blue4;
-        margin-bottom: 1.1em;
-        text-shadow: 1px 1px 5px $blue8;
-        font-size: 2.2em;
-    }
     .pageIntro {
         width: 70%;
         margin: auto;
@@ -244,10 +179,7 @@
     .baseline {
         clear: both;
     }
-    // .day {
-    //   a { width:74%; }
-    //   .time { width:25%; } 
-    // }
+
     // ----——————------———————-------———————
     //
     // "ABOUT US" PAGE STYLES
@@ -259,7 +191,14 @@
             font-weight: $sans-font-weight;
         }
     }
-    #leaders, #team {
+    #leaders, #team, #research {
+        h2 {
+            text-align: center;
+            color: $blue4;
+            margin-bottom: 1.1em;
+            text-shadow: 1px 1px 5px $blue8;
+            font-size: 2.2em;
+        }
         p, span {
             text-align: left;
         }
@@ -361,8 +300,8 @@
         #completedResearch {
         	display: none;
             &:target {display: block;}
-        }
-        p.researchLink {
+        }   
+        p.researchLink a {
             font-size: .9em;
             display: block;
             width: 50%;
@@ -452,12 +391,12 @@
                     margin-top: 1em;
                     p {
                         margin: 0;
-                        font-size: .9em;
+                        font-size: .8em;
                     }
                     p.title {
                         font-weight: bold;
                         color: $blue4;
-                        font-size: 1em;
+                        font-size: .9em;
                     }
                     p.author {
                         font-style: italic;
@@ -533,8 +472,8 @@
             	margin-bottom: 1em;
             }
         }
-        // different colors for the completed research page
-        #completedResearch {
+        // different colors for the Current Projects page
+        #currentProjects {
 	        h2 {
 		        color: $tan0;
 		        text-shadow: 1px 1px 5px $tan10;
@@ -584,6 +523,7 @@
 	                a {color: $tan2;}
 	            }
 	        }
+
         #currentProjects {
 			article.abstract {font-size: 1em;}
 			p.author:first-line {font-weight: bold;}

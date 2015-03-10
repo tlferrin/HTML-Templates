@@ -15,6 +15,13 @@
 	padding-left:3%;
 	h2 { margin-left: -9px;	}
 }
+#tagline {
+	position: relative;
+	font-size: .95em;
+	// left: 100px;
+	top: -15px;
+}
+
 
 // Buttons
 a.mybyu, a.sign-in, .open #search-button { 
@@ -37,7 +44,6 @@ a.mybyu, a.sign-in, .open #search-button {
 #site-name, .parentlink {
 	&:hover {
 		text-decoration: none;
-		@include text-shadow(0 0 20px rgba($blue0, 1))
 	}
 }
 
@@ -101,7 +107,7 @@ a.mybyu, a.sign-in, .open #search-button {
 		background-size: 100% 100%;
 	}
 
-	#header-top h1 {
+	#header-top h1, #tagline {
 		margin:.25em 4% .4em;
 	}
 

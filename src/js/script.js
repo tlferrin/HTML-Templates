@@ -36,7 +36,7 @@ var byu_template = (function ($) {
 	 * Args: none
 	 */
 	function activateMenus() {
-		$('#search-menu').delegate('.menu-button', 'click', function (e) {
+		$('#menu-button').delegate('.menu-button', 'click', function (e) {
 			e.stopPropagation();
 			e.preventDefault();
 			$('body').toggleClass('sideNav');

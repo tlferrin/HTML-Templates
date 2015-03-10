@@ -1,240 +1,40 @@
 
 @import "shared/variables";
 
-
-.anythingSlider,
-.anythingSlider #slider,
-.anythingSlider .fade .panel {
-	width:100% !important;
-}
-
-#feature .anythingSlider {
-	ul {
-		padding-bottom:0;
-	}
-	li {
-		display: list-item;
+#feature {
+	border-bottom: none;
+	.feature-image {
+		text-align: left;
 	}
 }
 
-.anythingSlider {
-	padding-bottom:20px;
-
-
-
-	.anythingControls, .arrow a, .arrow:after {
-		@include transition(opacity 0.2s ease);
-		opacity: 0;
-	}
-	&.anythingSlider-hovered, .touch & {
-		.arrow a {
-			opacity: 0;
-		}
-		.anythingControls,
-		.arrow:after {
-			opacity: 1;
-		}
-	}
-
-	li {
-		display: block;
-	}
-
-	.arrow {
-		display: block;
-		position: absolute;
-		z-index: 3;
-		top: 196px;
-		left: 0;
-		width: 50px;
-		height: 60px;
-		margin-top:-30px;
-
-		&:after {
-			pointer-events: none;
-			display: block;
-			content: "";
-			color: white;
-			text-indent: 0;
-			font-size: 50px;
-			@include text-shadow( 0 0 5px rgba(black, .5) );
-			position: absolute;
-			width: 30px;
-			height: 40px;
-			background: transparent url('../img/slider-nav.png') top left no-repeat;
-			top: 50%;
-			left: 40%;
-			margin: -20px 0 0 -10px;
-			.svg & {
-				background-image: url('../img/slider-nav.svg');
-			}
-		}
-
-		$border-radius: 20%;
-		a {
-			text-indent: -999em;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: black;
-
-			&:hover {
-				text-decoration: none;
-				opacity: .25;
-			}
-		}
-		&.back {
-			a {
-				@include border-top-right-radius( $border-radius );
-				@include border-bottom-right-radius( $border-radius );
-			}
-		}
-		&.forward {
-			left: auto;
-			right: 0;
-
-			a {
-				@include border-top-left-radius( $border-radius );
-				@include border-bottom-left-radius( $border-radius );
-			}
-
-			&:after {
-				background-position: -30px 0;
-			}
-		}
-		&:hover {
-			opacity: 1;
-		}
-	}
-
-}
-
-
-.anythingControls {
+.feature-description {
 	position: absolute;
-	width: 100%;
-	height:20px;
-	bottom:0px;
-	z-index: 2;
-	text-align:center;
-	.thumbNav {
-		display: inline-block;
-		margin:0 auto;
+	top: 0;
+	right: 0;
+	width: 190px;
+	margin: 0;
+	background-color: $blue9;
+	height: 393px;
+	padding: 0 25px;
+	border-left:1px solid $blue9;
+	@include box-shadow( inset 0 0 110px 5px rgba($blue6, .5), 0 0 12px rgba(black, .25) );
+	h2 {
+		font-size:24px;
+		line-height: 30px;
+		margin: 20px 0px 10px;
 	}
-	li {
-		display: inline-block !important;
-		margin:0 5px;
+	a, a:link, a:visited, a:active, a:hover, a:focus {
+		color: $blue4;
 	}
-	a {
-		@include transition(opacity 0.2s ease);
-		display: block;
-		width:  20px;
-		height: 20px;
-		background-color: black;
-		text-indent: -999em;
-		overflow: hidden;
-		opacity: .15;
-		&.cur, &:hover {
-			opacity: .3;
+	&.lightText {
+		color: white;
+		* {
+			opacity: 0.75;
 		}
-	}
-}
-
-
-
-
-
-@media all and ( min-width:$med-width ) {
-	#feature {
-		margin: -1em -11% 0;
-	}
-	.feature-description {
-		margin:0 8% 0 9%;
-		h2 {
-			font-size:24px;
-			line-height: 30px;
-			margin: 20px 0px 10px;
-		}
-	}
-}
-
-
-
-
-
-@media all and( max-width:939px ) {
-	.feature-description {
-		border-left: none !important;
-		background-color: transparent !important;
-		@include box-shadow(none !important);
-	}
-}
-
-@media all and ( min-width:940px ) {
-	#feature {
-		border-bottom: none;
-		.feature-image {
-			text-align: left;
-		}
-	}
-
-	#feature #slider {
-		width: 940px;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
-		padding-bottom:0;
-	}
-
-	.anythingSlider {
-		padding-bottom: 0;
-	}
-
-	.anythingWindow {
-		width: 940px !important;
-		height: 393px !important;
-		margin:0 auto;
-		position: relative;
-	}
-
-	.anythingControls {
-		width: 240px;
-		right:50%;
-		bottom:15px;
-		margin-right: -470px;
-	}
-
-	.feature-description {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 190px;
-		margin: 0;
-		background-color: $blue9;
-		height: 393px;
-		padding: 0 25px;
-		border-left:1px solid $blue9;
-		@include box-shadow( inset 0 0 110px 5px rgba($blue6, .5), 0 0 12px rgba(black, .25) );
-
 		a, a:link, a:visited, a:active, a:hover, a:focus {
-			color: $blue4;
-		}
-		&.lightText {
 			color: white;
-			* {
-				opacity: 0.75;
-			}
-			a, a:link, a:visited, a:active, a:hover, a:focus {
-				color: white;
-				opacity: 1;
-			}
-
+			opacity: 1;
 		}
 	}
-
-}
-
-
-@media all and ( min-width:$larger-width ) {
-
 }
