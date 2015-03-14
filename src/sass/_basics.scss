@@ -1,0 +1,146 @@
+@import "variables";
+@import "colors";
+@import "mixins";
+
+body {
+  background: url("../img/background-patterns/" + $body-bg + ".png") top center repeat;
+  color: #444; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#content {
+  position: relative;
+  min-height:100%;
+  width: 940px;
+  padding-left: 103px;
+  padding-right: 103px;
+  padding:1em 5% 2em;
+  @include box-shadow(0 0 30px 0px rgba(222, 222, 222, 0.7));
+  h1{color: $blue1;}
+}
+
+/*** Base tags ***/
+html, body { width:100%; overflow-x:hidden; }
+body em { font-style:italic; }
+body strong { font-weight:bold; }
+body, select, input, textarea { color: #444 }
+p a { text-decoration: underline}
+	/* Blockquotes */
+blockquote { 
+  margin:1.5em 10px; 
+  padding:.5em 10px;
+  color:#333; 
+  margin:25px 20px 25px 0; 
+  padding:3px 25px;
+  position: relative;
+}
+blockquote:before { 
+  color:#bbb; 
+  content:"\201C"; 
+  font-size:3em; 
+  line-height:.1em; 
+  vertical-align:-.4em;
+  display: block;
+  position: absolute;
+  top:15px;
+  left:1px;
+}
+blockquote:after { color:#bbb; content:"\201D"; font-size:3em; line-height:.1em; vertical-align:-.45em;}
+blockquote :first-child { display:inline}
+
+
+/* Links */
+a, a:link { color:$blue4; text-decoration:none;}
+a:hover { color:$blue1; text-decoration:underline;}
+a:active { color: #c00}
+
+// Font styling
+$fontSize:15px;
+$lineHeight:20px;
+
+/* Make this the same color as the bottom footer */
+html {
+  background-color: $brown4;
+}
+body {
+  background-color: #fff;
+}
+
+#header-top h1, #tagline {
+  color: white;
+  font-family: $byu-font-stack;
+  font-weight: $byu-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  margin: 10px 0; 
+  line-height:1.2;
+}
+h2, h3, h4, h5, h6 { color: #444; }
+h1, h2 {
+  font-family: $serif-font-stack;
+  font-weight: $serif-font-weight; }
+
+h2 .parentlink {
+  font-family: $byu-font-stack;
+  font-weight: $byu-font-weight; }
+
+h3, h4, h5, h6 { 
+  font-family: $sans-font-stack;
+  font-weight: 600; }
+
+#intro {
+  font-family: $serif-ssm-font-stack;
+  font-weight: $serif-ssm-font-weight;
+  font-size: 1.2em;
+  line-height: 1.7em;
+  letter-spacing: -.5px;
+  padding: 1px;
+  .justfull:first-letter {
+    font-size: 1.5em;
+  }
+  .justright {
+    font-size: .86em;
+    letter-spacing: 0px;
+    line-height: 1em;
+  }
+}
+
+a.sign-in, .nav-container a {
+  font-family: $sans-font-stack;
+  font-weight: $sans-font-weight; }
+
+strong {font-weight: $sans-font-weight-bold; }
+
+#page-footer h2 {
+  font-family: $sans-font-stack;
+  font-weight: $sans-font-weight-bold;
+}
+
+body, button, input, select, textarea {
+  color: #444;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-family: $sans-font-stack;
+  font-weight: $sans-font-weight;
+  -webkit-text-size-adjust:100%; }
+
+h1 { font-size:  2.2em; line-height:40px; margin:30px 0px 20px; } // 33px
+h2 { font-size:  1.8em; line-height:30px; margin:30px 0px 20px; } // 27px
+h3 { font-size:  1.3em; line-height:25px; margin:25px 0px 10px; } // 19.5px
+h4 { font-size: 1.15em; line-height:20px; margin:25px 0px 10px; } // 17.25px
+h5 { font-size:    1em; line-height:20px; margin:20px 0px 10px; } // 15px
+h6 { font-size:   .9em; line-height:20px; margin:15px 0px 10px; } // 13.5px
+
+
+
+// p, pre { margin: 10px 0; }
+
+
+code {color:#d14}
+
+
+

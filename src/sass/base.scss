@@ -1,22 +1,4 @@
-/* Base.css
-* The lowest common demoninator style definitions which all browsers will load. No CSS3.
-*/
-
-// Variables and mixins
-// @import "compass";
-@import "shared/colors";
-@import "shared/mixins";
-@import "shared/variables";
-
-// Normalize
-@import "base/normalize"; // Great place to start
-@import "base/h5bp"; // Good defaults from HTML5 Boilerplate
-
-// Base styles
-@import "base/basics";
-@import "base/type";
-@import "base/header";
-@import "base/nav";
-@import "base/content";
-
-// @import "responsive/byu-bar";
+@import "normalize"; // Great place to start
+@import "h5bp"; // Good defaults from HTML5 Boilerplate
+@import "layout";
+@import "basics";

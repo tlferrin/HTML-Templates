@@ -1,0 +1,74 @@
+@import "colors";
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// // Image replacement
+// @mixin ir() {
+// 	display: block;
+// 	text-indent: -999em;
+// 	overflow: hidden;
+// 	background-repeat: no-repeat;
+// 	text-align: left;
+// 	direction: ltr;
+// }
+
+// simple linear gradient
+@mixin vertical-gradient($top, $bottom, $topStop:0%, $bottomStop:100%) {
+	@if $topStop == 0% and $bottomStop == 100% {
+		background: mix($top, $bottom); // Old browsers
+		background:-webkit-linear-gradient(top, $top, $bottom); // Chrome10+,Safari5.1+
+		background:	  -moz-linear-gradient(top, $top, $bottom); // FF3.6+
+		background:	   -ms-linear-gradient(top, $top, $bottom); // IE10+
+		background:		-o-linear-gradient(top, $top, $bottom); // Opera 11.10+
+		background:		   linear-gradient(top, $top, $bottom); // W3C
+	}
+	@else {
+		background: mix($top, $bottom); // Old browsers
+		background:-webkit-linear-gradient(top, $top $topStop, $bottom $bottomStop); // Chrome10+,Safari5.1+
+		background:	  -moz-linear-gradient(top, $top $topStop, $bottom $bottomStop); // FF3.6+
+		background:	   -ms-linear-gradient(top, $top $topStop, $bottom $bottomStop); // IE10+
+		background:		-o-linear-gradient(top, $top $topStop, $bottom $bottomStop); // Opera 11.10+
+		background:		   linear-gradient(top, $top $topStop, $bottom $bottomStop); // W3C
+	}
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+// // Transitions
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}

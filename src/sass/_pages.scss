@@ -1,0 +1,52 @@
+//
+// Shared styling for all pages
+//
+
+@import "variables";
+@import "colors";
+@import "mixins";
+
+.pageIntro {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    p {
+        font-style: italic;
+        font-size: 1.3em;
+        line-height: 1.4em;
+        margin: 1em 0;
+    }
+}
+#contribute {
+    clear: both;
+    text-align: center;
+    padding: 4%;
+    padding-bottom: 0;
+    p {
+        font-size: 1.4em;
+        line-height: 1.4em;
+    }
+    form {
+        display: inline;
+    }
+    button {
+        width: 30%;
+        font-size: 1.5em;
+        line-height: 4em;
+        color: $blue3;
+        background-color: $blue7;
+        border: none;
+        border-radius: 15px;
+        margin: 2% 1% 0;
+        outline: none;
+        transition: all .2s;
+    }
+    button:hover {
+        color: $blue7;
+        background-color: $blue3;
+    }
+}
+
+.clearer {
+    clear: both;
+}

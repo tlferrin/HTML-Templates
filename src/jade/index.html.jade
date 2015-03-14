@@ -1,13 +1,12 @@
 extends _layout
 
+block append styling
+	link(rel='stylesheet', href='css/index.css')
+
 block prepend contentwrapper
 	- var contentclasses = ''
 
 block content
-
-	#intro
-		p.justfull The Faith &amp; Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: &ldquo;to assist individuals in their quest for perfection and eternal life.&rdquo;
-		p.justright (See #[a(href="http://aims.byu.edu/mission_statement" target="_blank") Mission &amp; Aims])
 
 	#feature
 		.feature-image
@@ -16,75 +15,75 @@ block content
 			h2
 				a(href='https://www.youtube.com/watch?v=WfaLeC0NNXU', target="_blank") Be the Whole Person
 			p Doug Prawitt (Accountancy) and his students discuss what happens when professors bring their whole self into the classroom and allow themselves to be vulnerable.
-
+	
+	#smallside
+		#intro
+				p.justfull The Faith &amp; Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: &ldquo;to assist individuals in their quest for perfection and eternal life.&rdquo;
+				p.justright (See #[a(href="http://aims.byu.edu/mission_statement" target="_blank") Mission &amp; Aims])	
+		#calendar
+			h2 Upcoming Events
+				//- replace this link with a google form.
+				a.more(href='http://byu.edu') Submit an event&rarr;
+			.day
+				h3
+					span.date 12
+					| Feb, Thursday
+				.calendar-item
+					a(href="http://kennedy.byu.edu/wordpress/?p=2079" target="_blank") &ldquo;In Pursuit of a Just Society: New Challenges to a Faith-Based Education&rdquo;
+				.eventinfo
+					p WSC Varsity Theatre, 2:00 PM
+					a(href="../../images/events/simmons_12feb15.pdf" target="_blank") Flyer
+			.day
+				h3
+					span.date 19
+					| Feb, Thursday
+				.calendar-item
+					p Faith &amp; Scholarship Symposium#[br](Hosted by BYU Graduate Studies)
+				.eventinfo
+					p WSC Ballroom, 7:00 PM
+			.day
+				h3
+					span.date 20
+					| Mar, Wednesday
+				.calendar-item
+					p A Title About my Presentation,#[br]A "My Journey as a Scholar of Faith" lecture by Joe Smith
+				.eventinfo
+					p Education in Zion Auditorium,#[br]B192 JFSB 3:00 PM
+			a#full-cal(href='http://calendar.byu.edu/') Full BYU Calendar
 	
 	#news
-		a.seeall(href="explore.html") see all &rarr;
-		h2 New &amp; Popular
-		#news-container
-			// NOTE: news images should be 262x157px
-			.news-item
-				img(src='images/news/jeffbarrow.jpg', alt='Jeff Barrow')
-				.news-description
-					h3
-						a(href='#') “It all started from knowing their name”
-					p In&nbsp;
-						a(href='#') Video Highlights
-			.news-item
-				img(src='images/news/researcharticle.jpg', alt='Research Article')
-				.news-description
-					h3
-						a(href='#') “What separates most from least successful professors”
-					p In&nbsp;
-						a(href='#') Research Articles
-			.news-item
-				img(src='images/news/sarahcoyne.jpg', alt='Sarah Coyne')
-				.news-description
-					h3
-						a(href='#') “He suggested I share myself”
-					p In&nbsp;
-						a(href='#') Video Highlights
-			.news-item
-				img(src='images/news/kentblad.jpg', alt='Kent Blad')
-				.news-description
-					h3
-						a(href='#') What Really Matters: Helping Students See Their Potential
-					p In&nbsp;
-						a(href='#') Video Highlights
+		h2 Recently Added
+			a.more(href="explore.html") see all &rarr;
+		// NOTE: news images should be 262x157px
+		.news-item
+			img(src='images/news/jeffbarrow.jpg', alt='Jeff Barrow')
+			.news-description
+				h3
+					a(href='#') “It all started from knowing their name”
+				p In&nbsp;
+					a(href='#') Video Highlights
+		.news-item
+			img(src='images/news/researcharticle.jpg', alt='Research Article')
+			.news-description
+				h3
+					a(href='#') “What separates most from least successful professors”
+				p In&nbsp;
+					a(href='#') Research Articles
+		.news-item
+			img(src='images/news/sarahcoyne.jpg', alt='Sarah Coyne')
+			.news-description
+				h3
+					a(href='#') “He suggested I share myself”
+				p In&nbsp;
+					a(href='#') Video Highlights
+		.news-item
+			img(src='images/news/kentblad.jpg', alt='Kent Blad')
+			.news-description
+				h3
+					a(href='#') What Really Matters: Helping Students See Their Potential
+				p In&nbsp;
+					a(href='#') Video Highlights
 	
-	#calendar
-		h2 Upcoming Events
-		strong
-			//- replace this link with a google form.
-			a#cal-submit(href='http://byu.edu') Submit an event&rarr;
-		.day
-			h3
-				span.date 12
-				| Feb, Thursday
-			.calendar-item
-				a(href="http://kennedy.byu.edu/wordpress/?p=2079" target="_blank") &ldquo;In Pursuit of a Just Society: New Challenges to a Faith-Based Education&rdquo;
-			.eventinfo
-				p WSC Varsity Theatre, 2:00 PM
-				a(href="../../images/events/simmons_12feb15.pdf" target="_blank") Flyer
-		.day
-			h3
-				span.date 19
-				| Feb, Thursday
-			.calendar-item
-				p Faith &amp; Scholarship Symposium#[br](Hosted by BYU Graduate Studies)
-			.eventinfo
-				p WSC Ballroom, 7:00 PM
-		.day
-			h3
-				span.date 20
-				| Mar, Wednesday
-			.calendar-item
-				p A Title About my Presentation,#[br]A "My Journey as a Scholar of Faith" lecture by Joe Smith
-			.eventinfo
-				p Education in Zion Auditorium,#[br]B192 JFSB 3:00 PM
-		strong
-			a#full-cal(href='http://calendar.byu.edu/') Full BYU Calendar
-
 	#contribute
 		p Help us spread the light by sharing your thoughts, experiences, and efforts related to faith and learning at BYU.
 		strong: p Contribute as a&hellip;

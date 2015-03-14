@@ -1,0 +1,258 @@
+@import "variables";
+@import "colors";
+@import "mixins";
+
+
+$header-top-height: 130px;
+$menu-height: 38px;
+$display_width:1008px;
+
+
+#main-header, #content, #page-footer, .nav-container {
+    position: relative;
+}
+
+#content {background-color: white;}
+
+
+// Header
+#main-header {
+    background-color: $blue2;
+    background-size: 100% 120px;
+    border-bottom: 1px solid $blue2;
+    #header-top {
+        position: relative;
+        max-width: $display_width;
+        height: $header-top-height;
+        margin-right: auto;
+        margin-bottom: $menu-height;
+        h1 {
+            position: relative;
+            font-size: 2.3em;
+            margin: 0 5% .25em;
+            a {color: #fff;}
+            #tagline {
+                position: absolute;
+                font-size: .44em;
+                top: 15px;
+            }
+        }
+
+    }
+}
+
+#logo {
+    padding: .35em 0 .45em 1%;
+    display: inline-block;
+    margin: 0 100px 0 -9px;
+    line-height: 30px;
+    img {
+        height: 30px;
+        width: 70px; // use this width to just show "BYU".
+        width: 350px;
+    }
+}
+
+a.sign-in {
+    position: absolute;
+    top: .35em;
+    right: 5%;
+    background-color: $blue5;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 18px;
+    text-decoration: none;
+    border-radius: 14px;
+    right: 3%;
+    @include transition(background-color .3s);
+    @include vertical-gradient($blue5,$blue4);
+    @include box-shadow( 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2) );
+    &:hover, &:active {
+        background-color: $blue4;
+        @include vertical-gradient(mix($blue5,$blue4),mix($blue4,$blue3));
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+    }
+}
+#site-name:hover {text-decoration: none;}
+
+
+
+// Navigation bar
+#primary-nav, #secondary-nav {
+    border-top: none;
+    padding: 0;
+}
+
+.nav-container {
+    width: 100%;
+    position: absolute;
+    font-size: .9em;
+    display: block;
+    top: $header-top-height;
+    height: $menu-height;
+    z-index: 5;
+    background-color: $blue3;
+    border-top: 1px solid $blue5;
+    border-bottom: 1px solid $blue5;
+    box-shadow: 0 1px 5px $blue4-5;
+    a {
+        font-size: 16px;
+        padding:.5em 0;
+        display: block;
+        font-weight: bold;
+        padding-left: 5%;
+        padding-right: 5%;
+        &:hover, &:active {
+          background-color: #eeebe9;
+          color: $blue0;
+        }
+    }
+}
+
+
+#primary-nav {
+    width: $display_width;
+    margin:0 auto;
+    padding-left: 0;
+    font-size: 1em;
+    ul {
+        border: none;
+        padding: 0;
+        margin: 0 auto;
+        position: relative;
+    }
+    li {
+        display: block;
+        float: left;
+        padding: 0;
+        border: none;
+    }
+    a {
+        padding: .6em 72px;
+        color: white;
+        display: block;
+        font-weight: bold;
+        transition: all .2s;
+        &.current, &:hover {
+            color: white;
+            background-color: $blue5;
+            text-decoration: none;
+        }
+    }
+}
+
+
+#secondary-nav {
+    right:50%;
+    margin-right: -$display_width/2;
+    position: absolute;
+    top: -41px;
+    font-size: 1em;
+    ul {
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+    li {
+        display: block;
+        float: left;
+        border: none;
+        padding: 0;
+        overflow: hidden;
+    }
+    a {
+        padding: 0 12px;
+        display: inline-block;
+        font-weight: bold;
+        color: $blue8;
+        &:hover {
+          text-decoration: none;
+          background-color: transparent;
+            color: #fff;
+        }
+    }
+}
+
+
+// Footer
+#page-footer {
+    @include box-shadow(0 -1px 0px $brown4);
+    font-family: $sans-font-stack;
+    font-weight: $sans-font-weight;
+    border-top: 1px solid #fff;
+    background-color: $brown5;
+    border-top:1px solid $brown4;
+    border-bottom:1px solid $brown4;
+    h2 {
+    color:$brown0;
+    margin-top:1.5em;
+    font-size:1em;
+    border-bottom:1px solid $brown3;
+    }
+}
+
+#footer-links{
+    border-bottom:1px solid #ccc;
+    padding-bottom:1.5em;
+    .wrapper {
+        width: 1146px;
+        max-width: 1146px;
+        padding-left: 103px;
+        margin: 9px 5%;
+        @include box-sizing(border-box);
+    }
+    .col {
+        display:inline-block;
+        vertical-align:top;
+        width: 20%;
+        margin-left: 5%;
+        padding-top:1em;
+        ul {
+            padding-left: 2%;
+            margin-top: -.5em;
+            margin-left: 0;
+            list-style-type: none;
+            li {line-height: 12px;}
+            a, a:link, a:visited {
+                color: $brown1;
+                display: block;
+                padding:.35em 1%;
+                font-size:.95em;
+            }
+            a:hover, a:active, a:focus {color:$brown0;}
+            p {
+                color:$brown1;
+                font-size:.95em;
+            }
+        }
+    }
+    .double {width: 45%;}
+    .col.alpha, .col:first-child {
+        margin-left: 0;
+        margin-top: 0;
+        border-top: none;
+    }
+    .site-links-small {font-size: .8em;}
+    #fclink {padding-bottom: 0px;}
+    .outboundlinks {
+        height: 30px;
+        .linklogo {
+            width: 40px;
+            float: left;
+            margin-right: .3em;
+            img {
+                height: 25px;
+                display: block;
+                margin: auto;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+}
+
+
+

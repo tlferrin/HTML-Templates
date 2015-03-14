@@ -1,0 +1,116 @@
+//
+// "ABOUT US" PAGE STYLES
+//
+
+@import "variables";
+@import "colors";
+@import "mixins";
+@import "pages";
+
+#aboutus {
+    img, article {
+        float: left;
+        font-family: $sans-font-stack;
+        font-weight: $sans-font-weight;
+    }
+}
+
+#leaders, #team, #research {
+    h2 {
+        text-align: center;
+        color: $blue4;
+        margin-bottom: 1.1em;
+        text-shadow: 1px 1px 5px $blue8;
+        font-size: 2.2em;
+    }
+    p, span {
+        text-align: left;
+    }
+    span {
+        font-weight: bold;
+    }
+}
+
+#leaders {
+    width: 80%;
+    margin: auto;
+    .profile {
+        float: left;
+        width: 48%;
+        img, article {
+            float: left;
+        }
+        img {
+            width: 35%
+        }
+        article {
+            width: 55%;
+            padding-left: 5%;
+            span, p {
+                display: inline;
+                font-size: 1.1vw;
+            }
+        }
+    }
+    #Alan {
+        margin-right: 4%;
+    }
+}
+#team {
+    width: 90%;
+    margin: auto;
+    margin-top: 4em;
+    img {
+        width: 25%
+    }
+    article {
+        width: 60%;
+        font-size: .9vw;
+    }
+    .profile {
+        padding: 1% 0;
+        width: 49%;
+        img, article {
+            vertical-align: middle;
+        }
+    }
+    .profile:nth-child(2n) {
+        float: left;
+        margin-right: 1%;
+        img, article {
+            float: right;
+            margin-right: 2%;
+        }
+        p, span {
+            text-align: right;
+            float: right;
+        }
+    }
+    .profile:nth-child(2n+1) {
+        float: right;
+        margin-left: 1%;
+        img, article {
+            float: left;
+            margin-left: 2%;
+        }
+        p, span {
+            text-align: left;
+            float: left;
+        }
+    }
+    // PROFILE HOVER TRANSITIONS
+    .profile {
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+    .profile:hover {
+        transform: scale(1.05);
+        background-color: $blue10;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+}

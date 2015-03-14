@@ -39,10 +39,9 @@ block head
 		script(src='js/init.js')
 
 		// Styles
-		link(rel='stylesheet', href='//cloud.typography.com/75214/740862/css/fonts.css')
-		link(rel='stylesheet', href='css/base.css')
-		link(rel='stylesheet', href='css/responsive.css', media='all and (min-width:16em)')
-
+		block styling
+			link(rel='stylesheet', href='//cloud.typography.com/75214/740862/css/fonts.css')
+			link(rel='stylesheet', href='css/base.css')
 
 	//-	===============
 	//-	BODY START
@@ -59,40 +58,24 @@ block head
 				| to improve your experience.
 
 
-
-
 		//-	===============
 		//-	HEADER
 		//-	===============
 		block header
 			header#main-header(role='banner')
 				#header-top.wrapper
-					#logo
-						h2
-							block parentlink
-								a.byu(href='http://www.byu.edu/') Brigham Young University
+					a#logo(href='http://www.byu.edu/')
+						img(src="http://home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg")
 
 					// This should link to your organization's home page
 					h1
 						a#site-name(href='index.html', title="The Faith & Learning Initiative")
 							block heading
 								| The Faith & Learning Initiative
-					p#tagline Achieving the Unique Mission of BYU
+						p#tagline Achieving the Unique Mission of BYU
 
 					block sign-in
 						a.sign-in.button(href='http://home.byu.edu/home/cas') Sign in
-
-		//-	===============
-		//-	MAIN CONTENT WRAPPER
-		//-	===============
-		block contentwrapper
-			- if( typeof(contentclasses) == 'undefined') { var contentclasses = '' }
-			#content(class='wrapper clearfix #{contentclasses}', role='main')								
-				//-	===============
-				//-	CONTENT
-				//-	===============
-				block content
-					// Content goes here, if any
 
 		//-	===============
 		//-	NAV
@@ -115,16 +98,20 @@ block head
 				nav#secondary-nav(role='navigation'): ul
 					li
 						a(href='nfseminar.html') New Faculty Seminar
-						//- ul.sub
-						//- 	li: a(href='') 2015
-						//- 	li: a(href='') 2014
-						//- 	li: a(href='') 2013
 					li
 						a(href='faq.html') Common Concerns
-						//- ul.sub
-						//- 	li: a(href='') null
-						//- 	li: a(href='') null
-						//- 	li: a(href='') null
+
+		//-	===============
+		//-	MAIN CONTENT WRAPPER
+		//-	===============
+		block contentwrapper
+			- if( typeof(contentclasses) == 'undefined') { var contentclasses = '' }
+			#content(class='wrapper clearfix #{contentclasses}', role='main')								
+				//-	===============
+				//-	CONTENT
+				//-	===============
+				block content
+					// Content goes here, if any
 
 		//- ===============
 		//-	FOOTER
@@ -135,7 +122,7 @@ block head
 					.wrapper
 						.col.alpha
 							h2 Site Links
-							ul.sub
+							ul
 								li: a(href='#') Home
 								li: a(href='explore.html') Explore
 								li: a(href='research.html') Research
@@ -145,33 +132,21 @@ block head
 
 						.col
 							h2 Contact Us
-							a#fclink(href="http://facultycenter.byu.edu") BYU Faculty Center
-							p 4450 WSC<br>Provo, UT 84602
-							a(href="mailto:fc_frontdesk@byu.edu?Subject=Faith%20and%20Learning%20Initiative" target="_blank") fc_frontdesk@byu.edu
-							p (801)-422-7419
+							ul
+								li: a#fclink(href="http://facultycenter.byu.edu") BYU Faculty Center
+								li: p 4450 WSC
+								li: p Provo, UT 84602
+								li: a(href="mailto:fc_frontdesk@byu.edu?Subject=Faith%20and%20Learning%20Initiative" target="_blank") fc_frontdesk@byu.edu
+								li: p (801)-422-7419
 						.col.omega.double
 							h2 Related Links
-							a.outboundlinks(href='http://ctl.byu.edu/gospel-perspectives-on-teaching')
-								.linklogo: img(src='images/ctl_logo.png')
-								p Gospel Perspectives on Teaching
-							a.outboundlinks(href='https://www.youtube.com/c/byufaithandlearning')
-								.linklogo: img(src='images/YouTube-icon-full_color.png')
-								p BYU Faith &amp; Learning on Youtube
-							//- a.outboundlinks(href='http://speeches.byu.edu')
-							//- 	.linklogo: img(src='images/byu_speeches.png')
-							//- 	p BYU Speeches
-							//- a.outboundlinks(href='http://film.byu.edu/home/fwa/')
-							//- 	.linklogo: img(src='images/fwa_logo.png')
-							//- 	p Faculty Women's Association
-
-				//- #footer-bottom
-				//- 	.wrapper.clearfix
-				//- 		a#byu(href='http://byu.edu/') Brigham Young University
-				//- 		//- a#byui.ir(href='http://byui.edu/') BYU-Idaho
-				//- 		//- a#byuh.ir(href='http://byuh.edu/') BYU-Hawaii
-				//- 		//- a#ldsbc.ir(href='http://www.ldsbc.edu/') LDS Business College
-				//- 		a#lds(href='http://lds.org/') The Church of Jesus Christ of Latter-day Saints
-
+							ul
+								li: a.outboundlinks(href='http://ctl.byu.edu/gospel-perspectives-on-teaching')
+									.linklogo: img(src='images/ctl_logo.png')
+									p Gospel Perspectives on Teaching
+								li: a.outboundlinks(href='https://www.youtube.com/c/byufaithandlearning')
+									.linklogo: img(src='images/YouTube-icon-full_color.png')
+									p BYU Faith &amp; Learning on Youtube
 			//
 				| CONTENT END
 
