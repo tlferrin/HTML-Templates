@@ -62,8 +62,8 @@ block content
 			h2 Completed Research
 			p.researchLink
 				a(href="#currentProjects") Go to <strong>Current Projects &rarr;</strong>
-			.sortBox
-				form.sortBy(action="#")
+			.sortBox.clearfix
+				form.sortBy(action="#").clearfix
 					p Filter by&hellip;
 					input.sortSelected(type="button" value="Most Recent")
 					select(name="college")
@@ -90,8 +90,6 @@ block content
 					input(type="text" width=10 name="keywords" placeholder="Keyword")
 					input(type="submit" value="Go")
 					input.clearfilters(type="button" value="Clear All Filters")
-					.clearer
-				.clearer
 			.scrollcontainer
 				.scrolltop
 				.scrollbar
@@ -145,8 +143,8 @@ block content
 			h2 Current Projects
 			p.researchLink
 				a(href="#completedResearch") Go to <strong>Completed Research&rarr;</strong>
-			.sortBox
-				form.sortBy(action="#")
+			.sortBox.clearfix
+				form.sortBy(action="#").clearfix
 					p Filter by&hellip;
 					input.sortSelected(type="button" value="Most Recent")
 					select(name="college")
@@ -173,8 +171,6 @@ block content
 					input(type="text" width=10 name="keywords" placeholder="Keyword")
 					input(type="submit" value="Go")
 					input.clearfilters(type="button" value="Clear All Filters")
-					.clearer
-				.clearer
 			.scrollcontainer
 				.scrolltop
 				.scrollbar

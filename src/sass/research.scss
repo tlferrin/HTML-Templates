@@ -15,7 +15,12 @@
     #completedResearch {
     	display: none;
         &:target {display: block;}
-    }   
+    }
+    h2 {
+        color: $blue4;
+        text-shadow: 1px 1px 5px $blue8;
+        text-align: center;
+    }
     p.researchLink a {
         font-size: .9em;
         display: block;
