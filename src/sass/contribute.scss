@@ -1,0 +1,14 @@
+// 
+// CONTRIBUTE PAGES STYLES
+// 
+@import "variables";
+@import "colors";
+@import "mixins";
+@import "pages";
+
+#contribute {
+	button {
+		width: 45%;
+		text-align: center;
+	}
+}

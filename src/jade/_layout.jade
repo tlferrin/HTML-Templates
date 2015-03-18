@@ -85,14 +85,17 @@ block head
 
 				// Primary Nav
 				nav#primary-nav(role='navigation'): ul
-					li 
-						a.single.current(href='index.html') Home
-					li
-						a.single(href='examples.html') Examples
-					li
-						a.single(href='research.html#completedResearch') Research
-					li
-						a.single(href='about.html') About Us
+					block navlinks
+						li 
+							a.single.current(href='index.html') Home
+						li
+							a.single(href='examples.html') Examples
+						li
+							a.single(href='research.html#completedResearch') Research
+						li
+							a.single(href='about.html') About Us
+						li
+							a.single(href='contribute.html') Contribute
 
 				// Secondary Nav
 				nav#secondary-nav(role='navigation'): ul

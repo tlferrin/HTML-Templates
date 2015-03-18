@@ -3,26 +3,17 @@ extends _layout
 block pageTitle
 	| BYU - Page not found
 
-block nav
-	.nav-container
-
-		// Primary Nav
-		nav#primary-nav(role='navigation'): ul
-			li 
-				a.single(href='index.html') Home
-			li
-				a.single(href='examples.html') Examples
-			li
-				a.single(href='research.html#completedResearch') Research
-			li
-				a.single(href='about.html') About Us
-
-		// Secondary Nav
-		nav#secondary-nav(role='navigation'): ul
-			li
-				a(href='nfseminar.html') New Faculty Seminar
-			li
-				a(href='faq.html') Common Concerns
+block navlinks
+	li 
+		a.single(href='index.html') Home
+	li
+		a.single(href='examples.html') Examples
+	li
+		a.single(href='research.html#completedResearch') Research
+	li
+		a.single(href='about.html') About Us
+	li
+		a.single(href='contribute.html') Contribute
 
 block content
 	h1 Oops, we couldn&rsquo;t find that page on our server

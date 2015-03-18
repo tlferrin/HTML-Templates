@@ -1,0 +1,33 @@
+
+extends _layout
+
+block append styling
+	link(rel='stylesheet', href='css/contribute.css')
+
+block prepend contentwrapper
+	- var contentclasses = ''
+
+block nav
+	.nav-container
+
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a.single(href='index.html') Home
+			li
+				a.single(href='examples.html') Examples
+			li
+				a.single(href='research.html#completedResearch') Research
+			li
+				a.single(href='about.html') About Us
+			li
+				a.single.current(href='contribute.html') Contribute
+
+				
+block content
+		.pageIntro
+			p Help us spread the light by sharing your thoughts, experiences, and efforts related to faith and learning at BYU.
+			strong: p What do you want to contribute?
+		#contribute
+			button A faculty example
+			button A research article or project
