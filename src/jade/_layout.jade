@@ -15,7 +15,7 @@ block head
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		title
 			block pageTitle
-				| Faith & Learning Initiative
+				| Faith &amp; Learning Initiative
 		meta(name='description', content='The Faith & Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: “to assist individuals in their quest for perfection and eternal life.”')
 		meta(name='author', content='The Faith & Learning Initiative')
 		meta(name='keywords', content='faith, learning, study, BYU, Brigham, Young, University')
@@ -87,15 +87,15 @@ block head
 				nav#primary-nav(role='navigation'): ul
 					block navlinks
 						li 
-							a.single.current(href='index.html') Home
+							a.current(href='index.html') Home
 						li
-							a.single(href='examples.html') Examples
+							a(href='examples.html') Examples
 						li
-							a.single(href='research.html#completedResearch') Research
+							a(href='research.html') Research
 						li
-							a.single(href='about.html') About Us
+							a(href='getinvolved.html') Get Involved
 						li
-							a.single(href='contribute.html') Contribute
+							a(href='about.html') About Us
 
 				// Secondary Nav
 				nav#secondary-nav(role='navigation'): ul

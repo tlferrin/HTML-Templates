@@ -3,12 +3,6 @@ extends _layout
 block pageTitle
 	| BYU - Error
 
-block parentlink
-	a.byu(href='http://www.byu.edu/') Brigham Young University
-
-block heading
-	| Primary Organization
-
 block append head
 
 		style.
@@ -43,6 +37,3 @@ block content
 			label.visuallyhidden(for='search') Search
 			input(type='search', name='search')
 			input.search-submit(type='submit', value='Search')
-
-
-block breadcrumb

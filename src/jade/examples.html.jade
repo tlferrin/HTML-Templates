@@ -1,5 +1,8 @@
 extends _layout
 
+block append settings
+	script(src='js/examples.js')
+
 block append styling
 	link(rel='stylesheet', href='css/examples.css')
 
@@ -8,28 +11,125 @@ block prepend contentwrapper
 
 block navlinks
 	li 
-		a.single(href='index.html') Home
+		a(href='index.html') Home
 	li
-		a.single.current(href='examples.html') Examples
+		a.current(href='examples.html') Examples
 	li
-		a.single(href='research.html#completedResearch') Research
+		a(href='research.html') Research
 	li
-		a.single(href='about.html') About Us
+		a(href='getinvolved.html') Get Involved
 	li
-		a.single(href='contribute.html') Contribute
+		a(href='about.html') About Us
+
 
 block content
+	.pageIntro
+		p Every faculty member combines faith and learning in a unique way.
+	#examples.clearfix
+		#mediatypes.clearfix
+			.mediatype.selected(onclick="switchMediaType(this, 'mediatype')", onload="switchMediaType(this, 'mediatype')")
+				img(src="images/examples/highlights.png")
+				p Highlight Videos
+			.mediatype(onclick="switchMediaType(this, 'mediatype')")
+				img(src="images/examples/speeches.png")
+				p Speeches
+			.mediatype(onclick="switchMediaType(this, 'mediatype')")
+				img(src="images/examples/quotes.png")
+				p Text &amp; Quotes
 
-	#trialvideos
-		iframe(width="560" height="315" margin="auto" src="https://www.youtube.com/embed/ZFzuZeKZaGc?rel=0" frameborder="0" allowfullscreen)
-		iframe(width="560" height="315" margin="auto" src="https://www.youtube.com/embed/44UKjoRbMXU?rel=0" frameborder="0" allowfullscreen)
-		iframe(width="560" height="315" margin="auto" src="https://www.youtube.com/embed/FcWh7s9wJpA?rel=0" frameborder="0" allowfullscreen)
-		iframe(width="560" height="315" margin="auto" src="https://www.youtube.com/embed/HtlSkpH-TF0?rel=0" frameborder="0" allowfullscreen)
+		#examplecontent
+			form.clearfix(action="#")
+				p Filter by&hellip;
+				input.sortSelected(type="button" value="Most Recent")
+				select(name="college" onchange="filterBy(0);")
+					option(value="all") All Colleges
+					option(value="edu") Education
+					option(value="et") Engineering &amp; Technology
+					option(value="fhss") Family, Home, &amp; Social Sciences
+					option(value="fac") Fine Arts &amp; Communications
+					option(value="hbll") Harold B. Lee Library
+					option(value="hum") Humanities
+					option(value="law") Law School
+					option(value="lifesci") Life Sciences
+					option(value="marriott") Marriott School
+					option(value="nursing") Nursing College
+					option(value="cpms") Physical &amp; Mathematical Sciences
+					option(value="RelEd") Religious Education
+					option(value="studlife") Student Life
+				select(name="person" onchange="filterBy(1)")
+					option(value="all") All People
+					option(value="awilkins") Alan Wilkins
+					option(value="jbirch") Jane Birch
+					option(value="syanchar") Stephen Yanchar
+					option(value="jreber") Jeffrey Reber
+				select(name="tag" onchange="filterBy(2)")
+					option(value="all") All Tags
+					option(value="faculty") Faculty voices
+					option(value="students") Student voices
+					option(value="share") Sharing yourself
+					option(value="gettoknow") Getting to know students
+				input.clearfilters(type="button" value="Clear All Filters")
+			#previewbox
+				#highlight.previewOption
+					//-
+					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
+					//-
+					//- iframe(src="https://www.youtube.com/embed/oezXLQqLVj0?rel=0" frameborder="0" allowfullscreen)
+				#speech.previewOption
+					//-
+					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
+					//-
+					//- iframe(src="https://www.youtube.com/embed/I5HOTZj1oWI?rel=0" frameborder="0" allowfullscreen)
+				#quote.previewOption
+					//-
+					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
+					//-
+					//- h2 &ldquo;
+					//- #quoteText
+					//- 	p "It is not enough to offer—or even require—our students to take courses in religious education. If the only insights that students receive on gospel truths are in their religion classes, we will not be that different from other good universities to which an institute of religion is attached. What will truly make us unique—and what we must uniquely do well—is to meet the challenge set forth by President Spencer W. Kimball: 
+					//- 	p That every professor and teacher in this institution would keep his [or her] subject matter bathed in the light and color of the restored gospel and have all his [or her] subject matter perfumed lightly with the spirit of the gospel (BYU Annual University Conference, August 2014)”
+					//- 	p Kevin J. Worthen, President of BYU
+					//- h2 &rdquo;
+			#highlights.articlebox
+					//-
+					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
+					//-
+					//- article.item.selected(onclick="bgSelect(this, 'item')")
+					//- 	.picture
+					//- 		img(src="https://i.ytimg.com/vi_webp/oezXLQqLVj0/mqdefault.webp")
+					//- 	.description
+					//- 		h3 How do you show students you care?
+					//- 		p Jeffrey Barrow
+					//- 		p Physiology &amp; Developmental Biology
+					//- 		p Added 17 Dec 2014
+			#speeches.articlebox
+					//-
+					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
+					//-
+					//- article.item(onclick="bgSelect(this, 'item')")
+					//- 	.picture
+					//- 		img(src="")
+					//- 	.description
+					//- 		h3 Lecture: ”My Journey as a Scholar of Faith”
+					//- 		p Larry St. Clair
+					//- 		p Biology
+					//- 		p Given on ? Month 201?
+			#quotes.articlebox
+					//-
+					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
+					//-
+					//- article.item.selected(onclick="bgSelect(this, 'item')")
+					//- 	.picture
+					//- 		img(src="")
+					//- 	.description
+					//- 		h3 Kevin J. Worthen
+					//- 		p President of BYU
+					//- 		p "It is not enough to offer—or even require—our students to take courses in religious education. If the only insights that students receive on &hellip;”
 	#contribute
-		p Help us spread the light by sharing your thoughts, experiences, and efforts related to faith and learning at BYU.
-		strong: p Contribute as a&hellip;
-		#button-container
-			button Student
-			button Faculty/Staff
-			button Friend to BYU
-		
+		p Is there a faculty member or question you would like to see featured here?
+		a(href="getinvolved.html") Let us know!
+
+
+
+
+

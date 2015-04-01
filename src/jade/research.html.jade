@@ -1,5 +1,8 @@
 extends _layout
 
+block append settings
+	script(src='js/research.js')
+
 block append styling
 	link(rel='stylesheet', href='css/research.css')
 
@@ -8,29 +11,29 @@ block prepend contentwrapper
 
 block navlinks
 	li 
-		a.single(href='index.html') Home
+		a(href='index.html') Home
 	li
-		a.single(href='examples.html') Examples
+		a(href='examples.html') Examples
 	li
-		a.single.current(href='research.html#completedResearch') Research
+		a.current(href='research.html') Research
 	li
-		a.single(href='about.html') About Us
+		a(href='getinvolved.html') Get Involved
 	li
-		a.single(href='contribute.html') Contribute
+		a(href='about.html') About Us
 
 block content
-	#research
+	#research.clearfix
 		.pageIntro
 			p Research and discussions on topics related to faith and learning happen all over campus. See what people are doing&mdash;and get involved!
-		#completedResearch
+		#completedResearch.hidden
 			h2 Completed Research
 			p.researchLink
-				a(href="#currentProjects") Go to <strong>Current Projects &rarr;</strong>
+				a(onclick="switchPages('current')") View <strong>Current Projects</strong>
 			.sortBox.clearfix
 				form.sortBy(action="#").clearfix
 					p Filter by&hellip;
 					input.sortSelected(type="button" value="Most Recent")
-					select(name="college")
+					select(name="college" onchange="filterBy(0)")
 						option(value="all") All Colleges
 						option(value="edu") Education
 						option(value="et") Engineering &amp; Technology
@@ -45,7 +48,7 @@ block content
 						option(value="cpms") Physical &amp; Mathematical Sciences
 						option(value="RelEd") Religious Education
 						option(value="studlife") Student Life
-					select(name="person")
+					select(name="person" onchange="filterBy(1)")
 						option(value="all") All People
 						option(value="awilkins") Alan Wilkins
 						option(value="jbirch") Jane Birch
@@ -77,7 +80,7 @@ block content
 						p.title A Second Paper Title that is Related to Faith &amp; Learning in an Academic Department
 						p.author An Author &amp; His Buddy, 2012
 						p.dept The Relevant Department
-					article.selected
+					article
 						p.title Spiritually Strengthening and Intellectually Enlarging Faculty: What Students Want
 						p.author Alan Wilkins &amp; Jane Birch, 2010
 						p.dept BYU Faculty Center
@@ -87,31 +90,93 @@ block content
 						p.dept The Relevant Department
 				.scrollbottom
 			.detailBox
-				p.title Spiritually Strengthening and Intellectually Enlarging Faculty: What Students Want
-				p.author Alan Wilkins &amp; Jane Birch, 2010 (BYU Faculty Center)
-				article.abstract
-					p ABSTRACT: 
-					p What makes for a quality education at a religious university? In this research study, we asked both faculty and students at Brigham Young University to describe the factors that make a difference in an education that is both “spiritually strengthening and intellectually enlarging.” We explore the role that the gospel can play in secular learning and what students consider important in their courses and in their professors. One conclusion we draw from the data is that who the professor is (faculty characteristics) is more important that what the professors does (faculty techniques).
-					hr
-				article.snippet
-					p The founding charge of BYU is to teach every subject with the Spirit of God. As he sent Karl G. Maeser to Provo to lead the fledgling Brigham Young Academy, Brigham Young told him: “Brother Maeser, I want you to remember that you ought not to teach even the alphabet or the multiplication tables without the Spirit of God.” Reflecting on that charge, Elder Spencer W. Kimball explained that it is not intended “that all of the faculty should be categorically teaching religion constantly in their classes, but . . . that every . . . teacher in this institution would keep his subject matter bathed in the light and color of the restored gospel.”
-					p We have heard faculty across campus who desire to provide educational experiences to their students that are both “spiritually strengthening and intellectually enlarging” (Aims of a BYU Education) in the spirit of Brigham Young’s charge but who wonder how it can be done. Some have asked how they can cover everything necessary in their classes and still have time to incorporate gospel ideas. Others are concerned that praying in class or bringing up gospel topics may lead to less critical thinking and lower expectations for performance (a “Sunday School” approach). Still others are concerned that the &hellip;
-				p.moreLink To continue reading, #[a(href="#file") download the PDF]
-			#contribute
-				#button-container
-					//- replace these links with google form links
-					form(action="#")
-						p Have completed research related to faith &amp; learning?
-						button Tell us about it!
+				.details(style="height: 100%; background-image: url('images/research/introBox.png')")
+				.details.hidden
+					p.title Spiritually Strengthening and Intellectually Enlarging Faculty: What Students Want
+					p.author Alan Wilkins &amp; Jane Birch, 2010 (BYU Faculty Center)
+					article.abstract
+						p ABSTRACT: 
+						p What makes for a quality education at a religious university? In this research study, we asked both faculty and students at Brigham Young University to describe the factors that make a difference in an education that is both “spiritually strengthening and intellectually enlarging.” We explore the role that the gospel can play in secular learning and what students consider important in their courses and in their professors. One conclusion we draw from the data is that who the professor is (faculty characteristics) is more important that what the professors does (faculty techniques).
+						hr
+					article.snippet
+						p The founding charge of BYU is to teach every subject with the Spirit of God. As he sent Karl G. Maeser to Provo to lead the fledgling Brigham Young Academy, Brigham Young told him: “Brother Maeser, I want you to remember that you ought not to teach even the alphabet or the multiplication tables without the Spirit of God.” Reflecting on that charge, Elder Spencer W. Kimball explained that it is not intended “that all of the faculty should be categorically teaching religion constantly in their classes, but . . . that every . . . teacher in this institution would keep his subject matter bathed in the light and color of the restored gospel.”
+						p We have heard faculty across campus who desire to provide educational experiences to their students that are both “spiritually strengthening and intellectually enlarging” (Aims of a BYU Education) in the spirit of Brigham Young’s charge but who wonder how it can be done. Some have asked how they can cover everything necessary in their classes and still have time to incorporate gospel ideas. Others are concerned that praying in class or bringing up gospel topics may lead to less critical thinking and lower expectations for performance (a “Sunday School” approach). Still others are concerned that the &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui. Duis rhoncus velit nec est condimentum feugiat. Donec aliquam augue nec gravida lobortis. Nunc arcu mi, pretium quis dolor id, iaculis euismod ligula. Donec tincidunt gravida lacus eget lacinia. Cras et dui mollis, tempus velit placerat, sodales tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque et venenatis sapien. Maecenas sem diam, lacinia in ipsum et, fermentum rutrum lacus.
+						hr
+					article.snippet
+						p Nulla nec varius dui. Aliquam erat volutpat. Nunc at viverra nisi, id lobortis quam. Aenean hendrerit fermentum nibh nec lobortis.
+						p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum. Nam auctor eget quam vitae fringilla. Vestibulum quam orci, porttitor in nisl aliquam, placerat gravida ligula. Quisque sed malesuada velit. Proin vulputate velit sed cursus feugiat.
+						p Mauris scelerisque nulla ut mauris iaculis, a euismod nulla eleifend. Maecenas consequat interdum nibh, at tincidunt justo commodo eget. Pellentesque ut pharetra tellus, eu pulvinar ligula. Duis ac nisl rhoncus, ultrices eros sed, consequat orci. Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Integer et rutrum leo, sed ornare velit.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Integer et rutrum leo, sed ornare velit. Donec et sollicitudin arcu, at luctus nibh. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices.
+						hr
+					article.snippet
+						p Maecenas sem diam, lacinia in ipsum et, fermentum rutrum lacus. Nulla facilisis, arcu ac facilisis tincidunt, tortor est congue ligula, eu adipiscing quam ligula ut purus.
+						p Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Ut sit amet magna orci. Integer sit amet varius ipsum.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum. Nam auctor eget quam vitae fringilla.
+						hr
+					article.snippet
+						p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum. Nam auctor eget quam vitae fringilla. Vestibulum quam orci, porttitor in nisl aliquam, placerat gravida ligula. Quisque sed malesuada velit. Proin vulputate velit sed cursus feugiat. Mauris scelerisque nulla ut mauris iaculis, a euismod nulla eleifend. Maecenas consequat interdum nibh, at tincidunt justo commodo eget.
+						p Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Fusce semper odio et gravida interdum. Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Fusce semper odio et gravida interdum. Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis.
+						hr
+					article.snippet
+						p Ut posuere elit non convallis blandit. Donec commodo fermentum neque, at sagittis libero faucibus nec. Nam dictum imperdiet dolor vel tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam mi orci, pellentesque a est id, rutrum luctus lacus. Nunc nec euismod risus, a vehicula nisi. Nunc porta velit vitae tortor vehicula, non ullamcorper enim pellentesque. Proin dapibus odio ut nisl porttitor pharetra. In et iaculis justo, a bibendum quam. Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper. Proin et accumsan felis, scelerisque molestie sapien. In vestibulum sapien sed eros cursus lacinia. Cras convallis nulla vitae est vestibulum sodales. Nullam congue ipsum diam, a volutpat lacus sollicitudin in. Ut posuere elit non convallis blandit. Donec commodo fermentum neque, at sagittis libero faucibus nec. Nam dictum imperdiet dolor vel tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam mi orci, pellentesque a est id, rutrum luctus lacus. Nunc nec euismod risus, a vehicula nisi. Nunc porta velit vitae tortor vehicula, non ullamcorper enim pellentesque. Proin dapibus odio ut nisl porttitor pharetra. In et iaculis justo, a bibendum quam. Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper. Proin et accumsan felis, scelerisque molestie sapien. In vestibulum sapien sed eros cursus lacinia. Cras convallis nulla vitae est vestibulum sodales. Nullam congue ipsum diam, a volutpat lacus sollicitudin in. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien. Vivamus massa odio, dignissim ac ante at, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue.
+						hr
+					article.snippet
+						p Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Vestibulum venenatis risus ut ligula lacinia malesuada. Pellentesque pulvinar ligula vitae tellus ornare, vitae suscipit est pretium. Sed vitae tincidunt mauris. Maecenas posuere, augue vitae bibendum commodo, ante mi laoreet nibh, a pulvinar massa metus eget arcu. Phasellus fermentum purus ac diam sodales dignissim. Nullam consequat at metus nec gravida. Sed dictum nisl sit amet lobortis ultricies. Vivamus non venenatis enim, sed fringilla tellus.
+						p Suspendisse rutrum quam vitae leo tempus luctus. Nullam sapien leo, egestas eget diam ac, vestibulum malesuada ipsum. Phasellus eget felis quam. Mauris ut lorem vel tortor ornare fermentum in non justo. Cras vel varius ligula. Vestibulum varius adipiscing tortor. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Sed vitae tincidunt mauris
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Proin nibh arcu, consectetur a odio nec, aliquet suscipit enim. Suspendisse aliquam, libero ac tincidunt suscipit, lacus quam commodo odio, nec faucibus arcu ante in odio. Proin ornare luctus massa, id hendrerit tellus auctor eu. Nullam eget egestas orci. Proin feugiat, leo in sagittis suscipit, enim lorem adipiscing magna, id pellentesque ante quam nec quam.
+						hr
+					article.snippet
+						p Morbi lacus mi, pretium quis dolor viverra, imperdiet imperdiet ligula. Integer et rutrum leo, sed ornare velit. Donec et sollicitudin arcu, at luctus nibh. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. Mauris congue mi eu mollis faucibus.
+						p Vivamus felis tellus, imperdiet nec luctus id, sodales a dolor. Mauris est dolor, consequat sit amet ante ac, lobortis accumsan dui. In hac habitasse platea dictumst. Aenean nec velit et nibh cursus blandit. Nam nec augue quis nulla hendrerit consectetur a accumsan nulla. Aliquam ac dolor id nulla lobortis adipiscing id quis mauris. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
 		#currentProjects
 			h2 Current Projects
 			p.researchLink
-				a(href="#completedResearch") Go to <strong>Completed Research&rarr;</strong>
+				a(onclick="switchPages('completed')") View <strong>Completed Research</strong>
 			.sortBox.clearfix
 				form.sortBy(action="#").clearfix
 					p Filter by&hellip;
 					input.sortSelected(type="button" value="Most Recent")
-					select(name="college")
+					select(name="college" onchange="filterBy(2)")
 						option(value="all") All Colleges
 						option(value="edu") Education
 						option(value="et") Engineering &amp; Technology
@@ -126,7 +191,7 @@ block content
 						option(value="cpms") Physical &amp; Mathematical Sciences
 						option(value="RelEd") Religious Education
 						option(value="studlife") Student Life
-					select(name="person")
+					select(name="person" onchange="filterBy(3)")
 						option(value="all") All People
 						option(value="awilkins") Alan Wilkins
 						option(value="jbirch") Jane Birch
@@ -142,7 +207,7 @@ block content
 						p.title Research: Character Study
 						p.author The Faith &amp; Learning Initiative
 						p.dept BYU Faculty Center
-					article.selected
+					article
 						p.title Case Study Research: Transformative Learning Experiences
 						p.author Beth Wilkins (PhD student)
 						p.dept Instuctional Psychology &amp; Technology
@@ -168,30 +233,94 @@ block content
 						p.dept The Relevant Department
 				.scrollbottom
 			.detailBox
-				p.title Case Study Research: Transformative Learning Experiences
-				.authorPic
-				p.author Beth Wilkins#[br](PhD student, Instructional Psychology &amp; Technology)
-				article.abstract
-					p Description:
-					p I am interviewing a small number of professors to identify the transformative experiences that helped them become who they are today. There is more information I’d put here, but I don’t actually know that much about Beth’s project. The paragraph will be at least this long in most cases, so I’m still writing. Is that long enough? Probably. I’ll stop now.
-					hr
-				article.status
-					p Status:
-					p I’ve interviewed 3 different professors and am getting closer to finding the themes I will need to write my dissertation. I am learning a lot about this thing and that and having a lot of fun.
-				article.needs
-					p Needs:
-					p I need 2 more professors to interview about the cool stuff they did when they were undergrads and graduate students.
-				article.interests
-					p Other Research Interests:
-					p A few, but not a lot. In general, I like to be specific about the few things that I know relatively a moderate amount about.
-				p.moreLink To get involved, #[a(href="#email") contact Beth]
-			#contribute
-				#button-container
-					//- replace these links with google form links
-					form(action="#")
-						p Are you doing something related to faith &amp; learning?
-						button Let us know!
-
+				.details(style="height: 100%; background-image: url('images/research/introBox2.png')")
+				.details.hidden
+					p.title Case Study Research: Transformative Learning Experiences
+					.authorPic
+					p.author Beth Wilkins#[br](PhD student, Instructional Psychology &amp; Technology)
+					article.abstract
+						p Description:
+						p I am interviewing a small number of professors to identify the transformative experiences that helped them become who they are today. There is more information I’d put here, but I don’t actually know that much about Beth’s project. The paragraph will be at least this long in most cases, so I’m still writing. Is that long enough? Probably. I’ll stop now.
+						hr
+					article.status
+						p Status:
+						p I’ve interviewed 3 different professors and am getting closer to finding the themes I will need to write my dissertation. I am learning a lot about this thing and that and having a lot of fun.
+					article.needs
+						p Needs:
+						p I need 2 more professors to interview about the cool stuff they did when they were undergrads and graduate students.
+					article.interests
+						p Other Research Interests:
+						p A few, but not a lot. In general, I like to be specific about the few things that I know relatively a moderate amount about.
+					p.moreLink To get involved, #[a(href="#email") contact Beth]
+				.details.hidden
+					p.title Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed sapien quam. Sed dapibus est id enim facilisis, at posuere turpis adipiscing. Quisque sit amet dui dui. Duis rhoncus velit nec est condimentum feugiat. Donec aliquam augue nec gravida lobortis. Nunc arcu mi, pretium quis dolor id, iaculis euismod ligula. Donec tincidunt gravida lacus eget lacinia. Cras et dui mollis, tempus velit placerat, sodales tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque et venenatis sapien. Maecenas sem diam, lacinia in ipsum et, fermentum rutrum lacus.
+						hr
+					article.snippet
+						p Nulla nec varius dui. Aliquam erat volutpat. Nunc at viverra nisi, id lobortis quam. Aenean hendrerit fermentum nibh nec lobortis.
+						p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum. Nam auctor eget quam vitae fringilla. Vestibulum quam orci, porttitor in nisl aliquam, placerat gravida ligula. Quisque sed malesuada velit. Proin vulputate velit sed cursus feugiat.
+						p Mauris scelerisque nulla ut mauris iaculis, a euismod nulla eleifend. Maecenas consequat interdum nibh, at tincidunt justo commodo eget. Pellentesque ut pharetra tellus, eu pulvinar ligula. Duis ac nisl rhoncus, ultrices eros sed, consequat orci. Maecenas volutpat lacus vitae arcu semper, a bibendum urna viverra. Suspendisse congue dolor nec commodo volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Integer et rutrum leo, sed ornare velit.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Integer et rutrum leo, sed ornare velit. Donec et sollicitudin arcu, at luctus nibh. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices.
+						hr
+					article.snippet
+						p Maecenas sem diam, lacinia in ipsum et, fermentum rutrum lacus. Nulla facilisis, arcu ac facilisis tincidunt, tortor est congue ligula, eu adipiscing quam ligula ut purus.
+						p Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Ut sit amet magna orci. Integer sit amet varius ipsum.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum. Nam auctor eget quam vitae fringilla.
+						hr
+					article.snippet
+						p Ut sit amet magna orci. Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum. Integer pretium felis sit amet urna volutpat, ac elementum ante interdum. Nam auctor eget quam vitae fringilla. Vestibulum quam orci, porttitor in nisl aliquam, placerat gravida ligula. Quisque sed malesuada velit. Proin vulputate velit sed cursus feugiat. Mauris scelerisque nulla ut mauris iaculis, a euismod nulla eleifend. Maecenas consequat interdum nibh, at tincidunt justo commodo eget.
+						p Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Integer sit amet varius ipsum. Ut mattis ullamcorper fermentum.
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Fusce semper odio et gravida interdum. Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Fusce semper odio et gravida interdum. Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis.
+						hr
+					article.snippet
+						p Ut posuere elit non convallis blandit. Donec commodo fermentum neque, at sagittis libero faucibus nec. Nam dictum imperdiet dolor vel tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam mi orci, pellentesque a est id, rutrum luctus lacus. Nunc nec euismod risus, a vehicula nisi. Nunc porta velit vitae tortor vehicula, non ullamcorper enim pellentesque. Proin dapibus odio ut nisl porttitor pharetra. In et iaculis justo, a bibendum quam. Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper. Proin et accumsan felis, scelerisque molestie sapien. In vestibulum sapien sed eros cursus lacinia. Cras convallis nulla vitae est vestibulum sodales. Nullam congue ipsum diam, a volutpat lacus sollicitudin in. Ut posuere elit non convallis blandit. Donec commodo fermentum neque, at sagittis libero faucibus nec. Nam dictum imperdiet dolor vel tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam mi orci, pellentesque a est id, rutrum luctus lacus. Nunc nec euismod risus, a vehicula nisi. Nunc porta velit vitae tortor vehicula, non ullamcorper enim pellentesque. Proin dapibus odio ut nisl porttitor pharetra. In et iaculis justo, a bibendum quam. Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper. Proin et accumsan felis, scelerisque molestie sapien. In vestibulum sapien sed eros cursus lacinia. Cras convallis nulla vitae est vestibulum sodales. Nullam congue ipsum diam, a volutpat lacus sollicitudin in. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Curabitur accumsan ullamcorper sem, vitae consectetur elit pretium in. Aliquam tempus id risus eu ullamcorper
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus commodo vulputate elementum. Nam sed urna non tellus vulputate molestie sit amet at sapien. Vivamus massa odio, dignissim ac ante at, euismod dignissim risus. Cras ut blandit lorem. Maecenas nisl quam, cursus nec aliquet facilisis, mattis id augue.
+						hr
+					article.snippet
+						p Suspendisse quis lacus nulla. Nullam et nibh ligula. Nunc vitae nulla et arcu mollis iaculis. Vestibulum venenatis risus ut ligula lacinia malesuada. Pellentesque pulvinar ligula vitae tellus ornare, vitae suscipit est pretium. Sed vitae tincidunt mauris. Maecenas posuere, augue vitae bibendum commodo, ante mi laoreet nibh, a pulvinar massa metus eget arcu. Phasellus fermentum purus ac diam sodales dignissim. Nullam consequat at metus nec gravida. Sed dictum nisl sit amet lobortis ultricies. Vivamus non venenatis enim, sed fringilla tellus.
+						p Suspendisse rutrum quam vitae leo tempus luctus. Nullam sapien leo, egestas eget diam ac, vestibulum malesuada ipsum. Phasellus eget felis quam. Mauris ut lorem vel tortor ornare fermentum in non justo. Cras vel varius ligula. Vestibulum varius adipiscing tortor. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+				.details.hidden
+					p.title Sed vitae tincidunt mauris
+					p.author John Smith &amp; Jane Dixon, 2019 (Department)
+					article.abstract
+						p ABSTRACT: 
+						p Proin nibh arcu, consectetur a odio nec, aliquet suscipit enim. Suspendisse aliquam, libero ac tincidunt suscipit, lacus quam commodo odio, nec faucibus arcu ante in odio. Proin ornare luctus massa, id hendrerit tellus auctor eu. Nullam eget egestas orci. Proin feugiat, leo in sagittis suscipit, enim lorem adipiscing magna, id pellentesque ante quam nec quam.
+						hr
+					article.snippet
+						p Morbi lacus mi, pretium quis dolor viverra, imperdiet imperdiet ligula. Integer et rutrum leo, sed ornare velit. Donec et sollicitudin arcu, at luctus nibh. Nulla dictum tincidunt turpis eu consequat. Sed adipiscing eros a nisi dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus urna lorem, porta sed congue ut, sollicitudin quis erat. Phasellus condimentum odio elit, in placerat augue congue ac. Sed dictum a justo quis ultrices. Aenean congue orci quis tortor rhoncus fringilla. Mauris congue mi eu mollis faucibus.
+						p Vivamus felis tellus, imperdiet nec luctus id, sodales a dolor. Mauris est dolor, consequat sit amet ante ac, lobortis accumsan dui. In hac habitasse platea dictumst. Aenean nec velit et nibh cursus blandit. Nam nec augue quis nulla hendrerit consectetur a accumsan nulla. Aliquam ac dolor id nulla lobortis adipiscing id quis mauris. &hellip;
+					p.moreLink To continue reading, #[a(href="#file") download the PDF]
+	#contribute
+		p Want to add your research or other activity?
+		a(href="getinvolved.html") Tell us!
 
 
 

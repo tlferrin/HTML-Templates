@@ -1,0 +1,48 @@
+
+extends _layout
+
+block append styling
+	link(rel='stylesheet', href='css/getinvolved.css')
+
+block prepend contentwrapper
+	- var contentclasses = ''
+
+block nav
+	.nav-container
+
+		// Primary Nav
+		nav#primary-nav(role='navigation'): ul
+			li 
+				a(href='index.html') Home
+			li
+				a(href='examples.html') Examples
+			li
+				a(href='research.html') Research
+			li
+				a.current(href='getinvolved.html') Get Involved
+			li
+				a(href='about.html') About Us
+
+				
+block content
+		.pageIntro
+			//- 	p Help us spread the light by sharing your thoughts, experiences, and efforts related to faith and learning at BYU.
+			//- 	strong: p What do you want to contribute?
+			//- #contribute
+			//- 	button A faculty example
+			//- 	button A research article or project
+			p Get involved in our efforts to fulfill the unique mission of BYU
+		#getinvolved
+			#emaillist.way
+				p Join our mailing list!&nbsp;
+					a(target="_blank" href="mailto:jane_birch@byu.edu?subject=Faith and learning email list&body=I would like to receive emails from the Faith and Learning Initiative.%0D%0AMy name: %0D%0AMy email address: %0D%0A") Click here
+			.way
+				p Tell us what you are thinking/doing related to FL
+			.way
+				p Questions/suggestions
+			.way
+				p Concerns
+			.way
+				p Do research with us
+			.way
+				p Share your story, light, experience

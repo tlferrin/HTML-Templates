@@ -19,31 +19,12 @@
 }
 
 #contribute {
-    clear: both;
-    text-align: center;
-    padding: 0 6%;
-    margin: 0 auto;
-    p {
-        font-size: 1.4em;
-        line-height: 1.4em;
-    }
-    form {
-        display: inline;
-    }
-    button {
-        width: 30%;
-        font-size: 1.5em;
-        line-height: 4em;
-        color: $blue3;
-        background-color: $blue7;
-        border: none;
-        border-radius: 15px;
-        margin: 2% 1% 0;
-        outline: none;
-        transition: all .2s;
-    }
-    button:hover {
-        color: $blue7;
-        background-color: $blue3;
-    }
+	clear: both;
+	width: 40%;
+	padding-top: 1.5em;
+    padding-bottom: 1.5em;
+	margin: 3.5em auto 0;
+    border-top: 2px solid $blue6;
+    border-bottom: 2px solid $blue6;
+    p, a {margin-top: 0; font-size: 1.3em; display:inherit; text-align: center; line-height: 1.3em;}
 }
