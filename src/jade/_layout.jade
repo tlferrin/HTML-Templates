@@ -19,7 +19,7 @@ block head
 		meta(name='description', content='The Faith & Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: “to assist individuals in their quest for perfection and eternal life.”')
 		meta(name='author', content='The Faith & Learning Initiative')
 		meta(name='keywords', content='faith, learning, study, BYU, Brigham, Young, University')
-		meta(name='viewport', content='width=device-width, , initial-scale=1')
+		//- meta(name='viewport', content='width=device-width, , initial-scale=1')
 
 		// Place favicon.ico and apple-touch-icon.png in the root directory
 		link(rel='shortcut icon', href='favicon.ico')
@@ -30,13 +30,14 @@ block head
 			script.
 				// Use these settings to control the default scripts in the BYU template
 				window.pageSettings = {
-					jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
-					jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
+					//- jQueryURL:      "http://byuweb.github.io/Global-Assets/js/jquery-1.10.2.min.js", // Use this default, or load jQuery from somewhere else
+					//- jQueryVersion:  "1.10.2", // The jQuery version for fallback in case there's a problem loading jQuery
 					loadslider:     false, // Whether the image slider is present on the page
 					gcse_search:    false, // Use the Google Custom Search Engine for the site's search?
 					analytics_key:  'UA-59389403-1' // Insert your Google Analytics key
 				}
 		script(src='js/init.js')
+		
 
 		// Styles
 		block styling

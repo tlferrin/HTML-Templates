@@ -21,7 +21,6 @@ block navlinks
 	li
 		a(href='about.html') About Us
 
-
 block content
 	.pageIntro
 		p Every faculty member combines faith and learning in a unique way.
@@ -38,7 +37,7 @@ block content
 				p Text &amp; Quotes
 
 		#examplecontent
-			form.clearfix(action="#")
+			form.clearfix.hidden(action="#")
 				p Filter by&hellip;
 				input.sortSelected(type="button" value="Most Recent")
 				select(name="college" onchange="filterBy(0);")
@@ -71,37 +70,122 @@ block content
 				input.clearfilters(type="button" value="Clear All Filters")
 			#previewbox
 				#highlight.previewOption
-					//-
-					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
-					//-
-					//- iframe(src="https://www.youtube.com/embed/oezXLQqLVj0?rel=0" frameborder="0" allowfullscreen)
+					iframe#oezXLQqLVj0(src='https://www.youtube.com/embed/oezXLQqLVj0?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#BLOxdNzRLoQ(src='https://www.youtube.com/embed/BLOxdNzRLoQ?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#haMqBNf6U9w(src='https://www.youtube.com/embed/haMqBNf6U9w?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#x5qozeWPKrM(src='https://www.youtube.com/embed/x5qozeWPKrM?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#44UKjoRbMXU(src='https://www.youtube.com/embed/44UKjoRbMXU?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#C6j8UsGU__o(src='https://www.youtube.com/embed/C6j8UsGU__o?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#FcWh7s9wJpA(src='https://www.youtube.com/embed/FcWh7s9wJpA?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#ZFzuZeKZaGc(src='https://www.youtube.com/embed/ZFzuZeKZaGc?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#TAq7tKs6_5k(src='https://www.youtube.com/embed/TAq7tKs6_5k?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#3oMgzXSau0k(src='https://www.youtube.com/embed/3oMgzXSau0k?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					iframe#e7-Te_80YeY(src='https://www.youtube.com/embed/e7-Te_80YeY?rel=0', frameborder='0', allowfullscreen='true' width="560" height="315")
+					img(src="images/examples/introBoxSmall.png")
 				#speech.previewOption
 					//-
 					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
 					//-
-					//- iframe(src="https://www.youtube.com/embed/I5HOTZj1oWI?rel=0" frameborder="0" allowfullscreen)
+					//- iframe#I5HOTZj1oWI(src="https://www.youtube.com/embed/I5HOTZj1oWI?rel=0" frameborder="0" allowfullscreen)
 				#quote.previewOption
 					//-
 					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
 					//-
 					//- h2 &ldquo;
 					//- #quoteText
-					//- 	p "It is not enough to offer—or even require—our students to take courses in religious education. If the only insights that students receive on gospel truths are in their religion classes, we will not be that different from other good universities to which an institute of religion is attached. What will truly make us unique—and what we must uniquely do well—is to meet the challenge set forth by President Spencer W. Kimball: 
-					//- 	p That every professor and teacher in this institution would keep his [or her] subject matter bathed in the light and color of the restored gospel and have all his [or her] subject matter perfumed lightly with the spirit of the gospel (BYU Annual University Conference, August 2014)”
+					//- 	p "It is ... challenge set forth by President Spencer W. Kimball: 
+					//- 	p That e...r perfumed lightly with the spirit of the gospel (BYU Annual University Conference, August 2014)”
 					//- 	p Kevin J. Worthen, President of BYU
 					//- h2 &rdquo;
 			#highlights.articlebox
-					//-
-					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
-					//-
-					//- article.item.selected(onclick="bgSelect(this, 'item')")
-					//- 	.picture
-					//- 		img(src="https://i.ytimg.com/vi_webp/oezXLQqLVj0/mqdefault.webp")
-					//- 	.description
-					//- 		h3 How do you show students you care?
-					//- 		p Jeffrey Barrow
-					//- 		p Physiology &amp; Developmental Biology
-					//- 		p Added 17 Dec 2014
+				article.item#oezXLQqLVj0
+					.picture
+						img(src='http://img.youtube.com/vi/oezXLQqLVj0/mqdefault.jpg')
+					.description
+						h3 How do you show students you care?
+						p Jeffrey Barrow
+						p Physiology &amp; Developmental Biology
+						p 17 Dec 2014
+				article.item#BLOxdNzRLoQ
+					.picture
+						img(src='http://img.youtube.com/vi/BLOxdNzRLoQ/mqdefault.jpg')
+					.description
+						h3 Connecting the gospel to your discipline
+						p Anton Bowden
+						p Mechanical Engineering
+						p 14 Jan 2015
+				article.item#haMqBNf6U9w
+					.picture
+						img(src='http://img.youtube.com/vi/haMqBNf6U9w/mqdefault.jpg')
+					.description
+						h3 Prayer and research: A student&apos;s experience
+						p Tom Sederberg
+						p Computer Science
+						p 4 Feb 2015
+				article.item#x5qozeWPKrM
+					.picture
+						img(src='http://img.youtube.com/vi/x5qozeWPKrM/mqdefault.jpg')
+					.description
+						h3 What really matters: Helping students see their potential
+						p Kent Blad
+						p Nursing
+						p 6 Feb 2015
+				article.item#44UKjoRbMXU
+					.picture
+						img(src='http://img.youtube.com/vi/44UKjoRbMXU/mqdefault.jpg')
+					.description
+						h3 It is about the people, not the subject
+						p Mark Butler
+						p Family Life
+						p 12 Feb 2015
+				article.item#C6j8UsGU__o
+					.picture
+						img(src='http://img.youtube.com/vi/C6j8UsGU__o/mqdefault.jpg')
+					.description
+						h3 Modeling intellectual honesty and Christian scholarship
+						p George Handley
+						p Humanities
+						p 12 Feb 2015
+				article.item#FcWh7s9wJpA
+					.picture
+						img(src='http://img.youtube.com/vi/FcWh7s9wJpA/mqdefault.jpg')
+					.description
+						h3 Following the promptings of the Spirit
+						p Deborah Dean
+						p English
+						p 12 Feb 2015
+				article.item#ZFzuZeKZaGc
+					.picture
+						img(src='http://img.youtube.com/vi/ZFzuZeKZaGc/mqdefault.jpg')
+					.description
+						h3 Professor attributes students hope for
+						p BYU Students
+						p
+						p 20 Feb 2015
+				article.item#TAq7tKs6_5k
+					.picture
+						img(src='http://img.youtube.com/vi/TAq7tKs6_5k/mqdefault.jpg')
+					.description
+						h3 The importance of being honest
+						p Kristine Hansen
+						p English
+						p 2 Mar 2015
+				article.item#3oMgzXSau0k
+					.picture
+						img(src='http://img.youtube.com/vi/3oMgzXSau0k/mqdefault.jpg')
+					.description
+						h3 Inspiration is the objective
+						p Brad Bundy
+						p Chemical Engineering
+						p 11 Mar 2015
+				article.item#e7-Te_80YeY
+					.picture
+						img(src='http://img.youtube.com/vi/e7-Te_80YeY/mqdefault.jpg')
+					.description
+						h3 Integrating faith naturally
+						p Anton Bowden
+						p Mechanical Engineering
+						p 11 Mar 2015
 			#speeches.articlebox
 					//-
 					//- THIS IS A TEMPLATE FOR THE JAVASCRIPT TO FOLLOW. DON'T ERASE IT!
@@ -127,7 +211,7 @@ block content
 					//- 		p "It is not enough to offer—or even require—our students to take courses in religious education. If the only insights that students receive on &hellip;”
 	#contribute
 		p Is there a faculty member or question you would like to see featured here?
-		a(href="getinvolved.html") Let us know!
+		a(href="getinvolved.html#faculty") Let us know!
 
 
 

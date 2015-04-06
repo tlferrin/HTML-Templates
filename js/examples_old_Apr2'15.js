@@ -287,7 +287,7 @@ var buildHighlights = function() {
         article.appendChild(picture);
 
         var img = document.createElement("img");
-        img.src = "http://img.youtube.com/vi/" + hl.URLbit + "/mqdefault.jpg";
+        img.src = "https://i.ytimg.com/vi_webp/" + hl.URLbit + "/mqdefault.webp";
         picture.appendChild(img);
 
         var descr = document.createElement("div");
@@ -344,10 +344,7 @@ var buildHighlightsOnLoad = function() {
 	box.appendChild(introBox);
 };
 
-// window.onload = buildHighlightsOnLoad;
-		// (I commented that out because if you build it
-		// dynamically onload, there is no way to link to
-		// the videos with a #target link from the homepage.)
+window.onload = buildHighlightsOnLoad;
 
 
 
@@ -750,8 +747,6 @@ var setBgSelect = function() {
 	}
 };
 
-window.onload = setBgSelect;
-
 
 
 
@@ -858,14 +853,10 @@ var switchMediaContent = function(a, thisClass) {
 
 		//Create the video iframe
 		var hbit = highlights[index].URLbit;
-		// var vid = document.createElement("embed");
-		var vid = document.createElement("iframe");
+		var vid = document.createElement("embed");
 		vid.src = "https://www.youtube.com/embed/" + hbit + "?rel=0";
-		vid.setAttribute('height', '315')
-		vid.setAttribute('width', '560')
 		vid.setAttribute('frameborder', 0);
 		vid.setAttribute('allowfullscreen', true);
-		vid.style.display = "block";
 
 		document.getElementById("highlight").appendChild(vid);
 	}
@@ -874,14 +865,10 @@ var switchMediaContent = function(a, thisClass) {
 
 		//Create the video iframe
 		var sbit = speeches[index].URLbit;
-		// var vid = document.createElement("embed");
-		var vid = document.createElement("iframe");
+		var vid = document.createElement("embed");
 		vid.src = "https://www.youtube.com/embed/" + sbit + "?rel=0";
-		vid.setAttribute('height', '315')
-		vid.setAttribute('width', '560')
 		vid.setAttribute('frameborder', 0);
 		vid.setAttribute('allowfullscreen', true);
-		vid.style.display = "block";
 
 		document.getElementById("speech").appendChild(vid);
 	}

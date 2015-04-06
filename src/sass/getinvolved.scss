@@ -5,3 +5,41 @@
 @import "colors";
 @import "mixins";
 @import "pages";
+
+#getinvolved {
+	margin-top: 2em;
+	.way {
+		display: block;
+		width: 30%;
+		height: 200px;
+		box-sizing: border-box;
+		padding: 5px;
+		margin: 20px 0;
+		margin-right: 5%;
+		text-align: center;
+		font-size: 1.1em;
+		a:hover {
+			text-decoration: none;
+		}
+		img {
+			display: block;
+			margin: auto;
+			height: 60%;
+			margin-top: .5em;
+		}
+		p {
+			color: white;
+			margin: .5em 0;
+		}
+		// border: 2px solid $blue3;
+		background-color: $blue4;
+		float: left;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		&:hover {
+			// border: 2px solid $blue2;
+			background-color: $blue3;
+		}
+	}
+}

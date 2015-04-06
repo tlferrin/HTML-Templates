@@ -10,15 +10,25 @@
 //———————————————————————————————————————
 
 var switchPages = function(a) {
-	var research = document.getElementById("completedResearch");
-	var projects = document.getElementById("currentProjects");
+	var research = document.getElementById("completed");
+	var projects = document.getElementById("current");
+	var meetings = document.getElementById("meetings");
+	var pages = [research, projects, meetings]
+	
+	for(var i = 0; i<pages.length; i++) {
+		var page = pages[i];
+		if(!page.classList.contains("hidden")) {
+			page.classList.add("hidden");
+		}
+	}
 	if(a === "completed") {
 		research.classList.remove("hidden");
-		projects.classList.add("hidden");
 	}
-	else {
-		research.classList.add("hidden");
+	else if(a === "current") {
 		projects.classList.remove("hidden");
+	}
+	else if(a === "meetings") {
+		meetings.classList.remove("hidden");
 	}
 };
 
@@ -30,8 +40,8 @@ var switchPages = function(a) {
 //———————————————————————————————————————
 
 var selectable = function(){
-	var research = document.getElementById("completedResearch");
-	var projects = document.getElementById("currentProjects");
+	var research = document.getElementById("completed");
+	var projects = document.getElementById("current");
 	var rOptions = research.getElementsByClassName("scrollcontainer")[0].getElementsByTagName("article");
 	var pOptions = projects.getElementsByClassName("scrollcontainer")[0].getElementsByTagName("article");
 	for (var i = 0; i<rOptions.length; i++) {
@@ -48,6 +58,7 @@ window.onload = function() {
 }
 
 
+
 //———————————————————————————————————————
 //
 //	SWITCHES THE ARROW WHEN YOU CLICK
@@ -56,8 +67,8 @@ window.onload = function() {
 //———————————————————————————————————————
 
 var switchProjects = function(index, page) {
-	var research = document.getElementById("completedResearch");
-	var projects = document.getElementById("currentProjects");
+	var research = document.getElementById("completed");
+	var projects = document.getElementById("current");
 	var rOptions = research.getElementsByClassName("scrollcontainer")[0].getElementsByTagName("article");
 	var pOptions = projects.getElementsByClassName("scrollcontainer")[0].getElementsByTagName("article");
 	var rDetails = research.getElementsByClassName("detailBox")[0].getElementsByClassName("details");

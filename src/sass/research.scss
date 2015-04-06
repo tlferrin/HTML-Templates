@@ -6,6 +6,7 @@
 @import "mixins";
 @import "pages";
 
+
 #research {
     .hidden {
         display: none;
@@ -17,14 +18,57 @@
         color: $blue4;
         text-shadow: 1px 1px 5px $blue8;
         text-align: center;
+        font-size: 2.5em;
     }
-    p.researchLink a {
-        font-size: .9em;
-        display: block;
-        width: 25%;
-        text-align: center;
-        color: #444;
-        margin: -1em auto 2em auto;
+    // Styling for the links to switch pages
+    .switchPage {
+        width: 80%;
+        margin: -3em auto 3em;
+        a {
+            font-size: .8em;
+            display: block;
+            width: 165px;
+            text-align: center;
+            padding: 2px;
+            border-radius: 6px;
+            box-sizing: border-box;
+            &:hover {
+                text-decoration: none;
+            }
+            &:first-child {
+                float: left;
+                &:hover {
+                    transform: translateX(-3px);
+                }
+            }
+            &:last-child {
+                float: right;
+                &:hover {
+                    transform: translateX(3px);
+                }
+            }
+            &.curr {
+                background-color: $tan5;
+                color: #444;
+                &:hover {
+                    background-color: $tan4;
+                }
+            }
+            &.comp {
+                background-color: $blue4;
+                color: white;
+                &:hover {
+                    background-color: $blue3;
+                }
+            }
+            &.meet {
+                background-color: $gray6;
+                color: white;
+                &:hover {
+                    background-color: $gray5;
+                }
+            }
+        }
     }
     .sortBox {
         width: 80%;
@@ -120,6 +164,7 @@
             }
             article:hover, article:active {
                 background-color: $blue10;
+                cursor: pointer;
             }
             article.selected {
                 background: $blue10 url(../images/research/selected_triangle3.png) 95% 50% no-repeat;
@@ -191,7 +236,7 @@
         }
     }
     // different colors for the Current Projects page
-    #currentProjects {
+    #current {
         h2 {
 	        color: $tan0;
 	        text-shadow: 1px 1px 5px $tan10;
@@ -240,31 +285,56 @@
             border: 2px solid $tan11;
             background-color: $tan12;
             }
+            article.abstract {font-size: 1em;}
+            p.author:first-line {font-weight: bold;}
             p.moreLink {
                 a {color: $tan2;}
             }
         }
 
-    #currentProjects {
-		article.abstract {font-size: 1em;}
-		p.author:first-line {font-weight: bold;}
-	}
-    #button-container {
-        p {
-            text-align: center;
-            font-weight: normal;
-            font-size: 1.5em;
+    // different colors for the Open Meetings page
+    #meetings {
+        h2 {
+            color: $gray6;
+            text-shadow: 1px 1px 5px $grayD;
         }
-        button {
-            width: 30%;
-            line-height: 3em;
-            color: $blue3;
-            background-color: $blue7;
-            transition: all .2s;
+        #meetingsbox {
+            height: 500px;
+            overflow: auto;
+            margin: auto;
+            width: 80%;
         }
-        button:hover {
-            color: $blue7;
-            background-color: $blue3;
+        .meeting {
+            width: 95%;
+            margin: 0 auto 2em;
+            border: 1px solid $grayD;
+            padding: 1em;
+            box-sizing: border-box;
+            background-color: $grayE;
+            h4 {
+                margin-top: 0;
+                font-size: 1.5em;
+            }
+            p {
+                margin: .3em 0;
+                span {font-weight: bold; display: block;}
+                &.desc {
+                    margin: .5em;
+                    width: 90%;
+                }
+                &.det {
+                    float: left;
+                    width: 33%;
+                    padding: 0 1em;
+                    font-size: .9em;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+            }
+            .details {
+                border: 1px solid $lightgray;
+                background-color: #fbfbfb;
+            }
         }
     }
 }

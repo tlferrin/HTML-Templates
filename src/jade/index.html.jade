@@ -8,13 +8,13 @@ block prepend contentwrapper
 
 block content
 
-	#feature
-		.feature-image
-			img(src="images/slider/be_the_whole_person.jpg", alt='Doug Prawitt in his office with a student', href='https://www.youtube.com/watch?v=WfaLeC0NNXU', target='_blank')
+	#feature.clearfix
+		a.feature-image(href='examples.html#C6j8UsGU__o', style="background: url('http://img.youtube.com/vi/C6j8UsGU__o/sddefault.jpg') no-repeat left center;")
+			//- using 'sddefault' instead of 'mqdefault' in the URL gives a bigger picture.
 		.feature-description(data-background="#d1e4f6", data-shadow="#91b2d2")
 			h2
-				a(href='https://www.youtube.com/watch?v=WfaLeC0NNXU', target="_blank") Be the Whole Person
-			p Doug Prawitt (Accountancy) and his students discuss what happens when professors bring their whole self into the classroom and allow themselves to be vulnerable.
+				a(href='examples.html#C6j8UsGU__o', target="_blank") Modeling intellectual honesty and Christian scholarship
+			p George Handley (Humanities) discusses maintaining our faith while meeting difficult ideas with intellectual integrity.
 	
 	#intro
 		p.justfull The Faith &amp; Learning Initiative is an effort to spotlight, support, and inspire faculty as they fulfill the unique mission of BYU: &ldquo;to assist individuals in their quest for perfection and eternal life.&rdquo;
@@ -25,34 +25,33 @@ block content
 			h2 Faculty Examples
 			p Every faculty member combines faith and learning in a unique way.
 			a(href="examples.html") see all examples &rarr;
-			// NOTE: news images should be 262x157px
 		.contentbox
 			.newExample
-				img(src='images/news/jeffbarrow.jpg', alt='Jeff Barrow')
+				a(href='examples.html#oezXLQqLVj0')
+					img(src='http://img.youtube.com/vi/oezXLQqLVj0/mqdefault.jpg')
 				h3
-					a(href='#') “It all started from knowing their name”
+					a(href='examples.html#oezXLQqLVj0') How do you show students you care?
 				p.name Jeffrey Barrow
 				p.dept Physiological &amp; Developmental Biology
-
 			.newExample
-				img(src='images/news/sarahcoyne.jpg', alt='Sarah Coyne')
+				a(href='examples.html#FcWh7s9wJpA')
+					img(src='http://img.youtube.com/vi/FcWh7s9wJpA/mqdefault.jpg')
 				h3
-					a(href='#') “He suggested I share myself”
-				p.name Sarah Coyne
-				p.dept Family Life
-
+					a(href='examples.html#FcWh7s9wJpA') Following the promptings of the Spirit
+				p.name Deborah Dean
+				p.dept English
 			.newExample
-				img(src='images/news/kentblad.jpg', alt='Kent Blad')
+				a(href='examples.html#x5qozeWPKrM')
+					img(src='http://img.youtube.com/vi/x5qozeWPKrM/mqdefault.jpg')
 				h3
-					a(href='#') What Really Matters: Helping Students See Their Potential
+					a(href='examples.html#x5qozeWPKrM') What Really Matters: Helping Students See Their Potential
 				p.name Kent Blad
 				p.dept Nursing
-	
 	#calendar
 		.titlebox
 			h2 Upcoming Events
 			//- replace this link with a google form.
-			a(href='http://byu.edu') Submit an event&rarr;
+			a(target="_blank" href='http://goo.gl/forms/94ZBGsGyiR') Submit an event&rarr;
 			a(href='http://calendar.byu.edu/') Full BYU Calendar
 		.contentbox
 			.event

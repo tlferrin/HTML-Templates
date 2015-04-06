@@ -1,6 +1,3 @@
-/* Base.css
-* The lowest common demoninator style definitions which all browsers will load. No CSS3.
-*/
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 8/9. */
@@ -45,49 +42,6 @@ dfn { font-style: italic; }
 /** Address differences between Firefox and other browsers. */
 hr { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; height: 0; }
 
-/** Address styling not present in IE 8/9. */
-mark { background: #ff0; color: #000; }
-
-/** Correct font family set oddly in Safari 5 and Chrome. */
-code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em; }
-
-/** Improve readability of pre-formatted text in all browsers. */
-pre { white-space: pre-wrap; }
-
-/** Set consistent quote types. */
-q { quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-/** Address inconsistent and variable font size in all browsers. */
-small { font-size: 80%; }
-
-/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-
-sup { top: -0.5em; }
-
-sub { bottom: -0.25em; }
-
-/* ========================================================================== Embedded content ========================================================================== */
-/** Remove border when inside `a` element in IE 8/9. */
-img { border: 0; }
-
-/** Correct overflow displayed oddly in IE 9. */
-svg:not(:root) { overflow: hidden; }
-
-/* ========================================================================== Figures ========================================================================== */
-/** Address margin not present in IE 8/9 and Safari 5. */
-figure { margin: 0; }
-
-/* ========================================================================== Forms ========================================================================== */
-/** Define consistent border, margin, and padding. */
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
-
-/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
-legend { border: 0; /* 1 */ padding: 0; /* 2 */ }
-
-/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
-button, input, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 2 */ margin: 0; /* 3 */ }
-
 /** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
 button, input { line-height: normal; }
 
@@ -111,13 +65,6 @@ input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webki
 
 /** Remove inner padding and border in Firefox 4+. */
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-
-/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
-textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
-
-/* ========================================================================== Tables ========================================================================== */
-/** Remove most spacing between table cells. */
-table { border-collapse: collapse; border-spacing: 0; }
 
 /* HTML5 Boilerplate  What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
 /* ========================================================================== Base styles: opinionated defaults ========================================================================== */
@@ -147,6 +94,13 @@ img { vertical-align: middle; }
 /* For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
 .clearfix { *zoom: 1; }
 
+body { background: url("../img/background-patterns/redox_01.png") top center repeat; color: #444; }
+
+.wrapper { width: 80%; margin: 0 auto; }
+
+#content { position: relative; min-height: 100%; width: 940px; padding-left: 103px; padding-right: 103px; padding-bottom: 5em; -webkit-box-shadow: 0 0 30px 0px rgba(222, 222, 222, 0.7); box-shadow: 0 0 30px 0px rgba(222, 222, 222, 0.7); }
+#content h1 { color: #025; }
+
 /*** Base tags ***/
 html, body { width: 100%; overflow-x: hidden; }
 
@@ -174,157 +128,102 @@ a:hover { color: #025; text-decoration: underline; }
 
 a:active { color: #c00; }
 
-/* Images */
-img { max-width: 100%; }
-
-/* Tables */
-table { border-collapse: collapse; border-spacing: 0; margin: 0 0 9px; }
-
-table, td, th { border: 1px solid #ddd; }
-
-td, th { padding: .125em .5em; text-align: left; vertical-align: top; }
-
-td { border-left: 1px dotted #eee; border-right: 1px dotted #eee; }
-
-th { background: #f9f9f9; border-right: 1px solid #e9e9e9; border-left: 1px solid #e9e9e9; }
-
-table caption { color: #888; text-align: left; margin: .15em .25em; font-style: italic; }
-
-tfoot { font-weight: bold; }
-tfoot td { color: #666; border-top-color: #666; }
-
-td, td img { vertical-align: top; }
-
-/* Lists */
-ol { list-style-type: decimal; margin-left: 2em; }
-ol ol { list-style-type: lower-alpha; }
-ol ol ol { list-style-type: lower-roman; }
-ol ol ol ol { list-style-type: decimal; }
-ol ol ol ol ol { list-style-type: lower-alpha; }
-ol ol ol ol ol ol { list-style-type: lower-roman; }
-
-ul { list-style-type: disc; margin-left: 2em; }
-ul ul { list-style-type: circle; }
-ul ul ul { list-style-type: disc; }
-ul ul ul ul { list-style-type: circle; }
-ul ul ul ul ul { list-style-type: disc; }
-ul ul ul ul ul ul { list-style-type: circle; }
-
-ul ul { margin-top: .25em; margin-bottom: .25em; }
-
-nav ul, nav ul ul { list-style: none; }
-
-nav ul, nav li { margin: 0; }
-
-dt { font-weight: bold; }
-
-dd { padding: 0 0 0.75em 1em; }
-
-dl, menu, ol, ul { padding: 0; }
-
-/*** Type ***/
 /* Make this the same color as the bottom footer */
 html { background-color: #dddddd; }
 
 body { background-color: #fff; }
 
-body, button, input, select, textarea { color: #444; font-family: "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; -webkit-text-size-adjust: 100%; }
+#header-top h1, #tagline { color: white; font-family: "Requiem Text A", "Requiem Text B", "Palatino", Georgia, serif; font-weight: 400; }
 
-h1, h2, h3, h4, h5, h6 { font-family: "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; margin: 10px 0; line-height: 1.2; }
+h1, h2, h3, h4, h5, h6 { margin: 10px 0; line-height: 1.2; }
 
 h2, h3, h4, h5, h6 { color: #444; }
 
-h1 { font-size: 2em; margin: 20px 0 10px; line-height: 1.1; }
+h1, h2 { font-family: "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 500; }
 
-h2 { font-size: 1.65em; margin: 15px 0 10px; line-height: 1.1; }
+h2 .parentlink { font-family: "Requiem Text A", "Requiem Text B", "Palatino", Georgia, serif; font-weight: 400; }
 
-h3 { font-size: 1.25em; }
+h3, h4, h5, h6 { font-family: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 600; }
 
-h4 { font-size: 1.1em; }
+#intro { font-family: "Sentinel SSm A", "Sentinel SSm B", "Sentinel A", "Sentinel B", "CreteRound", "Palatino", "DroidSerif", "Droid Serif", Georgia, serif; font-weight: 300; font-size: 1.2em; line-height: 1.7em; letter-spacing: -.5px; padding: 1px; }
+#intro .justfull:first-letter { font-size: 1.5em; }
+#intro .justright { font-size: .86em; letter-spacing: 0px; line-height: 1em; }
 
-h5 { font-size: 1em; }
+a.sign-in, .nav-container a { font-family: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; }
 
-h6 { font-size: .9em; }
+strong { font-weight: 600; }
 
-p, pre { margin: 10px 0; }
+#page-footer h2 { font-family: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 600; }
+
+body, button, input, select, textarea { color: #444; font-size: 15px; line-height: 20px; font-family: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; -webkit-text-size-adjust: 100%; }
+
+h1 { font-size: 2.2em; line-height: 40px; margin: 30px 0px 20px; }
+
+h2 { font-size: 1.8em; line-height: 30px; margin: 30px 0px 20px; }
+
+h3 { font-size: 1.3em; line-height: 25px; margin: 25px 0px 10px; }
+
+h4 { font-size: 1.15em; line-height: 20px; margin: 25px 0px 10px; }
+
+h5 { font-size: 1em; line-height: 20px; margin: 20px 0px 10px; }
+
+h6 { font-size: .9em; line-height: 20px; margin: 15px 0px 10px; }
 
 code { color: #d14; }
 
-/** Positioning **/
 #main-header, #content, #page-footer, .nav-container { position: relative; }
 
-/*** Header ***/
-#main-header { background-color: #036; border-bottom: 1px solid #036; }
+#content { background-color: white; }
 
-#header-top { position: relative; }
-#header-top h1 { font-size: 2.2em; margin: 0 5% .25em; }
-#header-top h1 a { color: #fff; }
-#header-top a.sign-in { position: absolute; top: .35em; right: 5%; }
+#main-header { background-color: #036; -webkit-background-size: 100% 120px; background-size: 100% 120px; border-bottom: 1px solid #036; }
+#main-header #header-top { position: relative; max-width: 1008px; height: 130px; margin-right: auto; margin-bottom: 38px; }
+#main-header #header-top h1 { position: relative; font-size: 2.3em; margin: 0 5% .25em; }
+#main-header #header-top h1 a { color: #fff; }
+#main-header #header-top h1 #tagline { position: absolute; font-size: .44em; top: 15px; }
 
-#logo { padding: .35em 0 .45em; }
-#logo a.byu, #logo a.byulink { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; display: inline-block; height: 26px; width: 70px; background: transparent url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.png") 0px 0px no-repeat; }
-.svg #logo a.byu, .svg #logo a.byulink { background-image: url("//home.byu.edu/home/sites/default/files/global/img/byu-logo-header.svg"); }
-#logo a.parentlink { text-transform: uppercase; font-size: 14px; display: inline-block; padding: 6px 3px 2px; color: #e0edf9; line-height: 1.2; letter-spacing: 2px; vertical-align: top; }
-#logo h2 { margin: 0; margin-right: 100px; line-height: 26px; }
-#logo a { display: block; }
+#logo { padding: .35em 0 .45em 1%; display: inline-block; margin: 0 100px 0 -9px; line-height: 30px; }
+#logo img { height: 30px; width: 70px; width: 350px; }
 
-a.sign-in { background-color: #628cb6; border: none; color: #fff; font-weight: bold; padding: 5px 18px; text-decoration: none; border-radius: 14px; }
-a.sign-in:hover, a.sign-in:active { margin: -2px; background-color: #369; border: 2px solid #abc8e4; cursor: pointer; border-radius: 16px; }
+a.sign-in { position: absolute; top: .35em; right: 5%; background-color: #628cb6; border: none; color: #fff; font-weight: bold; padding: 5px 18px; text-decoration: none; border-radius: 14px; right: 3%; -webkit-transition: background-color 0.3s; transition: background-color 0.3s; background: #4a79a7; background: -webkit-linear-gradient(top, #628cb6, #369); background: -webkit-gradient(linear, left top, left bottom, from(#628cb6), to(#369)); background: linear-gradient(top, #628cb6, #369); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 8px rgba(0, 0, 0, 0.2); }
+a.sign-in:hover, a.sign-in:active { background-color: #369; background: #366797; background: -webkit-linear-gradient(top, #4a79a7, #225588); background: -webkit-gradient(linear, left top, left bottom, from(#4a79a7), to(#225588)); background: linear-gradient(top, #4a79a7, #225588); cursor: pointer; color: white; text-decoration: none; }
 
-/*** Navigation ***/
+#site-name:hover { text-decoration: none; }
+
+#primary-nav, #secondary-nav { border-top: none; padding: 0; }
+
+.nav-container { width: 100%; position: absolute; font-size: .9em; display: block; top: 130px; height: 38px; z-index: 5; background-color: #1C4F82; -webkit-box-shadow: 0 2px 4px rgba(68, 119, 170, 0.9); box-shadow: 0 2px 4px rgba(68, 119, 170, 0.9); }
 .nav-container a { font-size: 16px; padding: .5em 0; display: block; font-weight: bold; padding-left: 5%; padding-right: 5%; }
 .nav-container a:hover, .nav-container a:active { background-color: #eeebe9; color: #001948; }
 
-#primary-nav, #secondary-nav { border-top: 1px solid #ddd; padding: 10px 0; }
+#primary-nav { width: 1008px; margin: 0 auto; padding-left: 0; font-size: 1em; }
+#primary-nav ul { border: none; padding: 0; margin: 0 auto; position: relative; }
+#primary-nav li { display: block; float: left; padding: 0; border: none; width: 20%; }
+#primary-nav a { padding: .6em 0; text-align: center; color: white; display: block; font-weight: bold; -webkit-transition: all .2s; transition: all .2s; }
+#primary-nav a.current, #primary-nav a:hover { color: white; background-color: #628cb6; text-decoration: none; }
 
-/*** Main Content ***/
-.wrapper { margin: 0; }
+#secondary-nav { right: 50%; margin-right: -504px; position: absolute; top: -41px; font-size: 1em; }
+#secondary-nav ul { padding: 0; background: transparent; border: none; }
+#secondary-nav li { display: block; float: left; border: none; padding: 0; overflow: hidden; }
+#secondary-nav a { padding: 0 12px; display: inline-block; font-weight: bold; color: #d1e4f6; }
+#secondary-nav a:hover { text-decoration: none; background-color: transparent; color: #fff; }
 
-#content { padding: 1em 5% 2em; }
-#content h1 { color: #025; }
-
-#feature { margin: 1em 0; display: block; }
-#feature .feature-image { text-align: center; }
-#feature .feature-description { margin: 0 5%; }
-#feature .feature-description h2 { font-size: 18px; line-height: 20px; margin: 20px 0px 10px; }
-
-#calendar h2 { margin-bottom: 0; }
-
-.day a, .day span { display: block; }
-.day span.date { margin-right: .33em; display: inline; font-weight: normal; }
-
-#calendars { margin: 0; padding: .5em 0 0; }
-
-#intro { margin-bottom: 1.5em; }
-
-#calendar, #news { margin-top: 1px; padding-bottom: 1em; }
-
-#calendar, #news, #feature { border-bottom: 1px solid #ccc; }
-
-ul#calendars { list-style: none; }
-
-.day { padding: .75em 0 0; }
-
-a.baseline, #calendar > strong, a.more { font-weight: bold; margin-top: 1.5em; padding-bottom: 1.5em; display: block; }
-
-.news-item { padding: .25em 0 0; }
-
-#page-footer { background-color: #e8e8e8; border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
-#page-footer a, #page-footer a:link, #page-footer a:visited { color: #6b6a69; display: block; padding: .35em 1%; font-size: .95em; }
-#page-footer a:hover, #page-footer a:active, #page-footer a:focus { color: #595857; }
-#page-footer #fclink { padding-bottom: 0px; }
-#page-footer h2 { color: #595857; margin-top: 1.5em; font-size: 1em; border-bottom: 1px solid #c7c7c7; }
-#page-footer h3 { font-weight: normal; color: #595857; font-size: .95em; margin: 1em 0 0; }
-#page-footer p { color: #6b6a69; font-size: .95em; }
-#page-footer .wrapper { margin: 9px 5%; }
+#page-footer { -webkit-box-shadow: 0 -1px 0px #dddddd; box-shadow: 0 -1px 0px #dddddd; font-family: "Whitney SSm A", "Whitney SSm B", "OpenSans", "Thonburi", "DroidSans", "Droid Sans", "sans-serif", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Helvetica, Arial, sans-serif; font-weight: 500; border-top: 1px solid #fff; background-color: #e8e8e8; border-top: 2px solid #dddddd; border-top: 1px solid white; border-bottom: 1px solid #dddddd; }
+#page-footer h2 { color: #595857; margin: 1em 0; font-size: 1em; border-bottom: 1px solid #c7c7c7; }
 
 #footer-links { border-bottom: 1px solid #ccc; padding-bottom: 1.5em; }
-#footer-links div.alpha { margin-top: 0; border-top: none; }
-#footer-links .addthis_default_style a { clear: left; padding: 0; }
-#footer-links .addthis_toolbox a { padding-left: 0; }
-#footer-links .addthis_toolbox a span { padding-right: 10px; margin: 0; }
-
-#footer-bottom { background-color: #dddddd; border-top: 1px solid #fff; padding-bottom: 1.5em; }
-#footer-bottom a, #footer-bottom a:link, #footer-bottom a:visited { color: #595857; }
+#footer-links .wrapper { width: 1146px; max-width: 1146px; padding-left: 103px; margin: 9px 5%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+#footer-links .col { display: inline-block; vertical-align: top; width: 20%; margin-left: 5%; }
+#footer-links .col ul { padding-left: 2%; margin-top: -.5em; margin-left: 0; list-style-type: none; }
+#footer-links .col ul li { line-height: 12px; }
+#footer-links .col ul a, #footer-links .col ul a:link, #footer-links .col ul a:visited { color: #6b6a69; display: block; padding: .35em 1%; font-size: .95em; }
+#footer-links .col ul a:hover, #footer-links .col ul a:active, #footer-links .col ul a:focus { color: #595857; }
+#footer-links .col ul p { color: #6b6a69; font-size: .95em; }
+#footer-links .double { width: 45%; }
+#footer-links .col.alpha, #footer-links .col:first-child { margin-left: 0; margin-top: 0; border-top: none; }
+#footer-links .site-links-small { font-size: .8em; }
+#footer-links #fclink { padding-bottom: 0px; }
+#footer-links .outboundlinks { height: 30px; }
+#footer-links .outboundlinks .linklogo { width: 40px; float: left; margin-right: .3em; }
+#footer-links .outboundlinks .linklogo img { height: 25px; display: block; margin: auto; position: relative; top: 3px; }
 
 /*# sourceMappingURL=base.css.map */
