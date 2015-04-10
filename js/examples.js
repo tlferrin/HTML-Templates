@@ -9,10 +9,10 @@
 var youtubeFixer = function() {
     var videos = document.getElementsByClassName("youtube-player");
     for (var i = 0; i < videos.length; i++) {
-        var p = document.createElement("div");
-        p.innerHTML = labnolThumb(videos[i].dataset.id);
-        p.onclick = labnolIframe;
-        videos[i].appendChild(p);
+        var div = document.createElement("div");
+        div.innerHTML = labnolThumb(videos[i].dataset.id);
+        div.onclick = labnolIframe;
+        videos[i].appendChild(div);
     }
 };
  
@@ -176,12 +176,30 @@ var switchMediaContent = function(a, thisClass) {
 	// NOW, TIME TO MAKE THE RIGHT THING SHOW UP!
 	//
 
+
+
 	// First, count which child the selected element is.
-	var parent = a.parentNode;
-	var index = Array.prototype.indexOf.call(parent.children, a);
+	var index = Array.prototype.indexOf.call(a.parentNode.children, a);
+	
+	// This is a function to be used later. It replaces previously loaded iframes
+	// with the youtube thumb divs created by youtubeFixer()
 
+	var vidToThumb = function() {
+			if(document.getElementsByTagName("iframe")[0]) {
+			//get the only iframe
+			var iframe = document.getElementsByTagName("iframe")[0];
+			//replace the iframe with a placeholder
+			var div = document.createElement("div");
+			//get the iframe's parent and use that data-id for the placeholder
+	        div.innerHTML = labnolThumb(iframe.parentNode.dataset.id);
+	        div.onclick = labnolIframe;
+	        iframe.parentNode.replaceChild(div, iframe);
+	    }
+	};
 
-	//Next, make the preview box show up, hide all of the items, and make the right one show up.
+	//	Next, make the preview box show up, hide all of the items,
+	// 	and make the right one show up.
+
 	if(a.parentElement.id === "highlights") {
 		var box = document.getElementById("highlight");
 		box.style.display = "block";
@@ -192,6 +210,10 @@ var switchMediaContent = function(a, thisClass) {
 			vids[i].style.display = "none";
 		}
 		vids[index].style.display = "block";
+
+		// Replace the previously loaded iframe with a placeholder
+		vidToThumb();
+
 	}
 
 	else if(a.parentElement.id === "speeches") {
@@ -204,7 +226,11 @@ var switchMediaContent = function(a, thisClass) {
 			vids[i].style.display = "none";
 		}
 		vids[index].style.display = "block";
+
+		// Replace the previously loaded iframe with a placeholder
+		vidToThumb();
 	}
+	
 	else if(a.parentElement.id === "quotes") {
 		var box = document.getElementById("quote");
 		box.style.display = "block";
