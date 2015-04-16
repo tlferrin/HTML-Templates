@@ -70,11 +70,15 @@ var setBgSelect = function() {
 };
 
 var hideStuff = function() {
-	var stuffToHide = ["speeches", "speech", "quotes", "quote"];
+	var stuffToHide = ["speeches", "speech", "quotes"];
     for(var i=0; i<stuffToHide.length; i++) {
 	    var thisThing = document.getElementById(stuffToHide[i]);
     	thisThing.style.display = "none";
 	}
+	// var quotes = document.getElementsByClassName("quoteText");
+	// for(var j=0; j<quotes.length; j++) {
+	// 	quotes[j].style.display = "none";
+	// }
 }
 
 var loader = function() {
