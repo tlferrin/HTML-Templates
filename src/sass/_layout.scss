@@ -191,69 +191,64 @@ a.sign-in {
     border-top:2px solid $brown4;
     border-top: 1px solid white;
     border-bottom:1px solid $brown4;
-    h2 {
-    color:$brown0;
-    margin:1em 0;
-    font-size:1em;
-    border-bottom:1px solid $brown3;
-    }
-}
-
-#footer-links{
-    border-bottom:1px solid #ccc;
     padding-bottom:1.5em;
     .wrapper {
         width: 1146px;
         max-width: 1146px;
-        padding-left: 103px;
-        margin: 9px 5%;
-        @include box-sizing(border-box);
+        margin: 9px auto;
     }
+}
+
+#footer-links{
+    width: 80%;
+    margin: auto;
     .col {
         display:inline-block;
         vertical-align:top;
-        width: 20%;
-        margin-left: 5%;
+        width: 23%;
+        margin-right: 7%;
+        h2 {
+            color:$brown0;
+            margin:1em 0;
+            font-size:1em;
+            border-bottom:1px solid $brown3;
+        }
         ul {
-            padding-left: 2%;
+            padding-left: 2em;
             margin-top: -.5em;
             margin-left: 0;
             list-style-type: none;
+            box-sizing: border-box;
             li {line-height: 12px;}
-            a, a:link, a:visited {
+            p, a, a:link, a:visited {
                 color: $brown1;
+                margin: 0px;
                 display: block;
                 padding:.35em 1%;
                 font-size:.95em;
             }
             a:hover, a:active, a:focus {color:$brown0;}
-            p {
-                color:$brown1;
-                font-size:.95em;
-            }
+            .site-links-small {font-size: .8em;}
         }
     }
-    .double {width: 45%;}
-    .col.alpha, .col:first-child {
-        margin-left: 0;
-        margin-top: 0;
-        border-top: none;
-    }
-    .site-links-small {font-size: .8em;}
-    #fclink {padding-bottom: 0px;}
-    .outboundlinks {
-        height: 30px;
-        .linklogo {
-            width: 40px;
-            float: left;
-            margin-right: .3em;
-            img {
-                height: 25px;
-                display: block;
-                margin: auto;
-                position: relative;
-                top: 3px;
+    .double {
+        width: 39%;
+        margin-right: 0;
+        .outboundlinks {
+            height: 30px;
+            .linklogo {
+                width: 40px;
+                float: left;
+                margin-right: .3em;
+                img {
+                    height: 25px;
+                    display: block;
+                    margin: auto;
+                    position: relative;
+                    top: 3px;
+                }
             }
+            p {margin-top: .3333em;}
         }
     }
 }

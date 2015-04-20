@@ -247,7 +247,7 @@
 				h3 {font-size: 1.2em;}
 				p:nth-child(2) {font-size: 1.2em; margin-top: .5em;}
 				p:nth-child(3) {font-size: .9em;}
-				p:last-child {font-size: .7em;}
+				p:last-child {font-size: .75em; color: $gray9;}
 			}
 			&:hover {
 				background-color: $blue9;
@@ -277,7 +277,7 @@
 	//
 	#articlebox #quotes .description {
 		p:nth-child(2) {font-size: .9em;}
-		p:last-child {font-size: 1.1em; margin-top: .5em;}
+		p:last-child {font-size: 1.1em; margin-top: .5em; color: #444;}
 	}
 
 	//
