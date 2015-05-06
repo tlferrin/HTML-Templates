@@ -1,0 +1,388 @@
+// 
+// EXAMPLES PAGE STYLES
+// 
+@import "variables";
+@import "colors";
+@import "mixins";
+@import "pages";
+
+//
+//Styling for the selected elements
+//
+#mediatypes, #highlights, #speeches, #quotes {
+	.selected {
+		background-color: $blue9;
+	}
+}
+
+
+//
+// Styling for the page
+//
+
+#examples {
+    margin-top: 1em;
+    box-sizing: border-box;
+    position: relative;
+	form {
+	    width: 66.66666%;
+  		margin: 1em auto;
+	    * {
+	        outline: none;
+	    }
+	    p,
+	    input,
+	    select {
+	        display: block;
+	        float: left;
+	        font-size: .8em;
+	        height: 1.8em;
+	        border-radius: 3px;
+	        box-sizing: border-box;
+	        margin: 0;
+	    }
+	    input,
+	    select {
+	        background-color: $blue8;
+	        border: none;
+	    }
+	    input[type="button"] {
+	        color: white;
+	        background-color: $blue4;
+	        line-height: 1.3em;
+	        &:active {
+	            background-color: $blue5;
+	            box-shadow: 0 0 1px $blue4 inset;
+	        }
+	    }
+
+	    p {
+	        font-size: .9em;
+	        width: 14%;
+	    }
+	    input[type="button"] {
+			width: 17%;
+	    }
+	    select {
+	        width: 20%;
+	        margin-right: 3%;
+	    }
+
+	    input.clearfilters {
+	        float: none;
+	        clear: both;
+	        width: 120px;
+	        margin: 2.4em auto 0 auto;
+	        background-color: $grayA;
+	        border: 1px solid $gray9;
+	    }
+	}
+	
+	#articlebox {
+		// dividers
+		h4 {
+			font-size: 1.6em;
+			width: 40%;
+			margin: auto;
+			text-align: center;
+			line-height: .7em;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+			border-bottom: 5px solid #abc8e4;
+			padding-top: 2em;
+			margin-bottom: .3em;
+			clear: both;
+		}
+		// cards
+		article {
+			width: 24%;
+			height: 250px;
+			margin: 1em .5%;
+			float: left;
+			box-shadow: 0 0 3px #bbb;
+			transition: all .2s;
+			.picture, .description {
+				box-sizing: border-box;
+				width: 80%;
+				margin: auto;
+				padding-top: 10px;
+			}
+			.picture {
+				overflow: hidden;
+				img {width: 100%;}
+			}
+			.description {
+				h3, p {margin:0;}
+				h3 {
+					font-size: .95em;
+  					line-height: 1.3em;
+  				}
+				p:nth-child(2) {margin-top: .5em;}
+				p:nth-child(3) {font-size: .8em; line-height: 1.1em; font-style: italic;}
+				p:last-child {font-size: .6em; color: $gray9;}
+			}
+			&:hover {
+				background-color: $blue8;
+				cursor: pointer;
+			}
+		}
+
+		// Change width of picture and description box for the speeches and quotes cards. Also centers pictures.
+		#speeches, #quotes {
+			.picture {
+			    width: 100px;
+			    height: 100px;
+			    position: relative;
+			    margin-top: .5em;
+			}
+			img {
+			  position: absolute;
+			  top: -8%;
+			}
+		}
+		#speeches .description {width: 80%;}
+		
+		// Change the sizes of text for quote descriptions
+		#quotes .description {
+			width: 85%;
+			p:first-child {font-size: .83em; line-height: 1.15em;}
+		}
+
+
+
+		// pop-up preview box
+		.previewBox {
+			display: none;
+			position: fixed;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    background-color: rgba(17, 68, 119, 0.9); // $blue3
+		    z-index: 100;
+		    &:target {
+				display: block;
+			}
+
+			// Share link
+			.shareLink {
+				position: fixed;
+				top: 0;
+				height: 20px;
+				font-size: 12px;
+				width: 100%;
+				text-align: center;
+				margin: auto;
+				background-color: $blue2;
+				box-shadow: 0 0 10px $blue2;
+				p {
+					color: white;
+					margin: 0;
+					line-height: 20px;
+					a {
+						color: $blue7;
+						text-decoration: none;
+						cursor: pointer;
+						&:hover {text-decoration: none;}
+					}
+					span {font-style: italic; font-size: 11px;}
+				}
+			}
+
+
+			// Title and Transcript positioning
+			.previewTitle, .transcript {
+				position: absolute;
+				margin: auto;
+				left: 0;
+				right: 0;
+				width: 640px;
+			}
+
+			// Title
+			.previewTitle {
+				top: -60px;
+				height: 60px;
+				overflow: hidden;
+				h3, p {
+					color: white;
+					text-align: center;
+					margin: 0;
+				}
+				p {
+					font-size: 1.1em;
+					margin-top: .15em;
+					span {font-style: italic;}
+				}
+				h3 {
+					font-size: 1.4em;
+				}
+			}
+
+			// Transcript
+			.transcript {
+				top: 360px;
+				height: 160px;
+
+				h5 {
+					color: white;
+					font-size: 18px;
+					border: none;
+					// margin-top: 10px;
+					// margin-bottom: 5px;
+					-webkit-transform-origin: 0;
+					transform-origin: 0;
+					-webkit-transform: rotate(-90deg);
+			        transform: rotate(-90deg);
+					position: absolute;
+					top: 109px;
+					left: -16px;
+				}
+				.transcriptText {
+					padding: 10px;
+					height: 160px;
+					margin-top: 10px;
+					box-sizing: border-box;
+					box-shadow: inset 0 0 2px $blue6;
+					overflow: auto;
+					z-index: 1000;
+					background-color: $blue9;
+					border-radius: 5px;
+					// Make the scrollbar show up
+					&::-webkit-scrollbar {
+					    -webkit-appearance: none;
+					    margin-top: 5px;
+					    width: 8px;
+					}
+					&::-webkit-scrollbar-thumb {
+					    border-radius: 5px;
+					    background-color: #999;
+					    -webkit-box-shadow: inset 0 0 2px #444;
+					}
+					p {
+						margin: 0;
+						margin-bottom: .5em;
+						&.bold {font-weight: bold;}
+					}
+				}
+			}
+
+			// Close button
+			a.closer {
+				color: white;
+				position: absolute;
+				top: 5%;
+				right: 5%;
+				font-size: 1.1em;
+				width: 80px;
+				line-height: 2em;
+				text-align: center;
+				text-shadow: 0 0 10px $blue2;
+				background-color: $blue3-4;
+				border-radius: 100px;
+				border: 2px solid white;
+				box-shadow: inset 0 0 18px $blue2;
+				transition: all .2s;
+				&:hover {
+					text-decoration: none;
+					background-color: $blue5;
+					box-shadow: inset 0 0 18px $blue4;
+
+				}
+				&:active {
+					background-color: $blue3-4;
+					box-shadow: inset 0 0 18px $blue3;
+				}
+			}
+
+			// videos and their thumbnails
+			.youtube-player {
+			    margin: auto;
+			    position: relative;
+			    width: 640px;
+			    background-color: black;
+			}	
+			.youtube-thumb {
+			    height: 360px;
+				width: 640px;
+				margin: 20vh auto;
+			}	
+			div.play-button {
+				cursor: pointer;
+				height: 360px;
+				width: 640px;
+				top: 0;
+				margin: 0 auto;
+				position: absolute;
+				background: url("http://i.imgur.com/TxzC70f.png") no-repeat center center;
+			}
+			iframe {
+				width: 640px;
+				height: 360px;
+				margin: 20vh auto;
+				// iframes are inline.
+				display: block;
+			}
+		}
+			
+			//Changes for quote previews
+		#quotes {
+			.quotePreview {
+				width: 1000px;
+				height: 50vh;
+				margin: 20vh auto;
+				.quoted {
+					float: left;
+					width: 25%;
+					.picture {
+						width: 200px;
+						height: 200px;
+						margin: auto;
+						overflow: hidden;
+						img {width: 100%;}
+					}
+					p {
+						color: white;
+						width: 200px;
+						margin: .5em auto 0;
+						font-size: 1.3em;
+						text-align: center;
+						font-weight: bold;
+						&:last-child {
+							font-size: 1.2em;
+							font-weight: normal;
+							font-style: italic;
+							margin-top: .2em;
+						}
+					}
+				}
+				.quoteText {
+					float: right;
+					width: 73%;
+					margin-left: 2%;
+					overflow: auto;
+					height: 100%;
+					padding-right: 4px;
+					box-sizing: border-box;
+					p {
+					    font-size: 1.25em;
+					    margin: auto;
+					    text-align: justify;
+					    line-height: 1.3em;
+					    color: white;
+					    text-shadow: 1px 1px 6px $blue3;
+					}
+					&::-webkit-scrollbar {
+					    -webkit-appearance: none;
+					    width: 7px;
+					}
+					&::-webkit-scrollbar-thumb {
+					    border-radius: 4px;
+					    background-color: rgba(171,200,228, 0.35);
+					    -webkit-box-shadow: 0 0 20px $blue3;
+					}
+				}
+			}
+		}
+	}
+}
+
