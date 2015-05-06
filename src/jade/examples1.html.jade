@@ -1,0 +1,664 @@
+extends _layout
+
+block append settings
+	script(src='js/examples1.js')
+
+block append styling
+	link(rel='stylesheet', href='css/examples1.css')
+
+block prepend contentwrapper
+	- var contentclasses = ''
+
+block navlinks
+	li 
+		a(href='index.html') Home
+	li
+		a.current(href='examples.html') Examples
+	li
+		a(href='research.html') Research
+	li
+		a(href='getinvolved.html') Get Involved
+	li
+		a(href='about.html') About Us
+
+block content
+	.pageIntro
+		p Every faculty member combines faith and learning in a unique way.
+	#examples.clearfix
+		#mediatypes.clearfix
+			.mediatype.selected(onclick="switchMediaType(this, 'mediatype')", onload="switchMediaType(this, 'mediatype')")
+				img(src="images/examples/highlights.png")
+				p Highlight Videos
+			.mediatype(onclick="switchMediaType(this, 'mediatype')")
+				img(src="images/examples/speeches.png")
+				p Speeches
+			.mediatype(onclick="switchMediaType(this, 'mediatype')")
+				img(src="images/examples/quotes.png")
+				p Text &amp; Quotes
+
+		#examplecontent
+			form.clearfix.hidden(action="#")
+				p Filter by&hellip;
+				input.sortSelected(type="button" value="Most Recent")
+				select(name="college" onchange="filterBy(0);")
+					option(value="all") All Colleges
+					option(value="edu") Education
+					option(value="et") Engineering &amp; Technology
+					option(value="fhss") Family, Home, &amp; Social Sciences
+					option(value="fac") Fine Arts &amp; Communications
+					option(value="hbll") Harold B. Lee Library
+					option(value="hum") Humanities
+					option(value="law") Law School
+					option(value="lifesci") Life Sciences
+					option(value="marriott") Marriott School
+					option(value="nursing") Nursing College
+					option(value="cpms") Physical &amp; Mathematical Sciences
+					option(value="RelEd") Religious Education
+					option(value="studlife") Student Life
+				select(name="person" onchange="filterBy(1)")
+					option(value="all") All People
+					option(value="awilkins") Alan Wilkins
+					option(value="jbirch") Jane Birch
+					option(value="syanchar") Stephen Yanchar
+					option(value="jreber") Jeffrey Reber
+				select(name="tag" onchange="filterBy(2)")
+					option(value="all") All Tags
+					option(value="faculty") Faculty voices
+					option(value="students") Student voices
+					option(value="share") Sharing yourself
+					option(value="gettoknow") Getting to know students
+				input.clearfilters(type="button" value="Clear All Filters")
+			#previewbox
+				img#introBox(src="images/examples/introBoxSmall.png")
+				#highlight
+					.youtube-player(data-id="ExKVmT9rIRQ")#ExKVmT9rIRQ
+					.youtube-player(data-id="QJvhZdj3rnE")#QJvhZdj3rnE
+					.youtube-player(data-id="MgwQ-HSqa_I")#MgwQ-HSqa_I
+					.youtube-player(data-id="iW_exLyHiTM")#iW_exLyHiTM
+					.youtube-player(data-id="e7-Te_80YeY")#e7-Te_80YeY
+					.youtube-player(data-id="3oMgzXSau0k")#3oMgzXSau0k
+					.youtube-player(data-id="EX5_j5In_Gc")#EX5_j5In_Gc
+					.youtube-player(data-id="TBMkQ1cLegs")#TBMkQ1cLegs
+					.youtube-player(data-id="TAq7tKs6_5k")#TAq7tKs6_5k
+					.youtube-player(data-id="ZFzuZeKZaGc")#ZFzuZeKZaGc
+					.youtube-player(data-id="FcWh7s9wJpA")#FcWh7s9wJpA
+					.youtube-player(data-id="C6j8UsGU__o")#C6j8UsGU__o
+					.youtube-player(data-id="44UKjoRbMXU")#44UKjoRbMXU
+					.youtube-player(data-id="CH3O51Exfpc")#CH3O51Exfpc
+					.youtube-player(data-id="x5qozeWPKrM")#x5qozeWPKrM
+					.youtube-player(data-id="HtlSkpH-TF0")#HtlSkpH-TF0
+					.youtube-player(data-id="haMqBNf6U9w")#haMqBNf6U9w
+					.youtube-player(data-id="WfaLeC0NNXU")#WfaLeC0NNXU
+					.youtube-player(data-id="BLOxdNzRLoQ")#BLOxdNzRLoQ
+					.youtube-player(data-id="oezXLQqLVj0")#oezXLQqLVj0
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+				#speech
+					.youtube-player(data-id="I5HOTZj1oWI")#I5HOTZj1oWI
+					.youtube-player(data-id="YIha_--_5_4")#YIha_--_5_4
+					.youtube-player(data-id="ja7U8OKWb1M")#ja7U8OKWb1M
+					.youtube-player(data-id="_5FsFYan3BE")#_5FsFYan3BE
+					.youtube-player(data-id="5jqBG6G5aPw")#5jqBG6G5aPw
+					.youtube-player(data-id="LvMtOljAu7I")#LvMtOljAu7I
+					.youtube-player(data-id="m_5EW6fIOKw")#m_5EW6fIOKw
+					.youtube-player(data-id="Yy3NCBh65aY")#Yy3NCBh65aY
+					.youtube-player(data-id="QSOgjG0nHtc")#QSOgjG0nHtc
+					.youtube-player(data-id="9HIFK6yn26U")#9HIFK6yn26U
+					.youtube-player(data-id="aXz3VzXokNI")#aXz3VzXokNI
+					.youtube-player(data-id="S7NNs6jPxww")#S7NNs6jPxww
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+					//- .youtube-player(data-id="")#
+				#quote
+					h2 &ldquo;
+					#quoteContainer
+						.quoteText
+							p The direction of Brigham Young University is firmly set. It is clearly stated in our mission statement. We are 'to assist individuals in their quest for perfection and eternal life' by providing 'a period of intensive learning' that includes not just 'the arts, letters, and sciences' but also 'the truths of the gospel of Jesus Christ.' (Inauguration, September 2014)
+							p &mdash; Kevin J. Worthen,&nbsp;
+								span President of BYU
+						.quoteText
+							p It is not enough to offer—or even require—our students to take courses in religious education. If the only insights that students receive on gospel truths are in their religion classes, we will not be that different from other good universities to which an institute of religion is attached. What will truly make us unique—and what we must uniquely do well—is to meet the challenge set forth by President Spencer W. Kimball:
+							p 'That every professor and teacher in this institution would keep his [or her] subject matter bathed in the light and color of the restored gospel and have all his [or her] subject matter perfumed lightly with the spirit of the gospel' (BYU Annual University Conference, August 2014).
+							p &mdash; Kevin J. Worthen,&nbsp;
+								span President of BYU
+						.quoteText
+							p Teaching means asking myself what matters. It means asking myself how to help students know what matters. More than anything else, it means remembering that in my experience character has always mattered more than content. The question for me, then, is how to bring character into class as an essential element.
+							p &mdash; James Faulconer,&nbsp;
+								span Philosophy
+						.quoteText
+							p Our work is about caring about that individual student and seeing that individual student as Heavenly Father sees that person. To be an instrument in the lives of these individuals, to help enlighten their lives, to help increase their capacity to appreciate who they are and the world around them and their capacity to engage with other people, to be an instrument in that process seems really an amazing opportunity. And I think if we can see it as a privilege that not just anybody would be entrusted with, I think it would be a much more enjoyable, meaningful experience.
+							p &mdash; Jini Roby,&nbsp;
+								span Social Work
+						.quoteText
+							p Maybe one of my real purposes as a teacher is not necessarily to teach the process of animation, but the principles behind a successful career in animation. … And so I started sharing experiences with the students. I started sharing with them times when I was laid off in between productions, because they all struggle with that exact same fear. And what do you do? … Well, I get on my mountain bike, I go pray to God that another animation film is around the corner, that’s what I did. And … when I started sharing those experiences and how they relate to the gospel, boy, their eyes just got huge, and they soaked up the information, and they became more and more receptive to that kind of a teaching of personal experience.
+							p &mdash; Ryan Woodward,&nbsp;
+								span Visual Arts
+						.quoteText
+							p We have to be striving to be the people that we need to be, and then we just need to love our students, and you can’t fake that. Either you do or you don’t. And if you do, you walk into the classroom, and the sharing—of who you are, and the effort that goes with it, and the openness, and everything that has to be there—will be there. And the students will trust you. They’ll open up their hearts and minds to be taught both the information and the more spiritual aspects of it. You know, you can put together a long list of things we should be doing, but unless (1) we’re striving to be who we need to be, and (2) we truly do love our students, I don’t know how much good the rest of the list does you.
+							p &mdash; Douglas Prawitt,&nbsp;
+								span Accountancy
+						.quoteText
+							p Here is what teaching through the Spirit feels like to me. My perspective comes from many years working with choirs. It may look different [for] different people; the means to the end may be different; but the result is the same. When a teacher serves as a conduit of the Spirit, there is a deep-seeded connection from one heart to another, where not only the concept, but also the love of God is communicated. The love of God is communicated either through miraculously knowing what [to say] or how to say something, or the miraculous empathic opening of your heart to the thoughts and feelings of another, or through the truth of a personal story that resonates for many others, or through the beauty and spirit of a piece of music, or through any other unique means and experience you bring to a situation. In addition to the concept, the love of God is also communicated.
+							p &mdash; Jean Applonie,&nbsp;
+								span Music
+						.quoteText
+							p One of the little lessons that I teach is about the value and purpose of homework. If you look at 3rd Nephi when Christ came, He taught them, ‘Go—pray and ponder and come back, and we’ll talk about it in the morning.' Why did he do that? Because the real learning doesn't take place in the lecture; it takes place when you do your homework; you have to put in the work to really internalize the lesson and make that knowledge and information your own. That's an eternal principle as much in religion as it is in mathematics, or whatever you are learning.
+							p &mdash; Jeffrey Humpherys,&nbsp;
+								span Mathematics
+						.quoteText
+							p The way I try to integrate the gospel is that at the very beginning I let the students know that I really, sincerely care about them, and I try to break down the barriers. But the point is that I show them that I care about them, and I don’t just say it, I try to express it. And so it’s very gratifying to see a student really believe me when I say, 'Yeah, come talk to me, and we’ll spend an hour, two hours, whatever it takes.' I just try to put myself in their position—which is easy to do, because I’ve spent most of my life at school or research and always feeling like I’m struggling. But I think the important thing, for me, is to really get them to believe that I care about them and then prove it by doing some things that are extra: leaving my door open, pleading with them to come see me. That’s what I offer the students.
+							p &mdash; John McBride,&nbsp;
+								span Geology
+						.quoteText
+							p As we walk into class, it’s important we understand that the journey the students are on, and the core principles they’re learning, are more important than any set of details. And if we allow enough time for the core principles, and be less concerned about every single last detail being communicated, and have faith that somewhere we’ll be able to make sure those details get covered, that gives us the flexibility in a class period to pursue a student’s question with a little more time and a little more depth than if we have the classroom period jammed with so many details and such a rigid structure that we don’t have any flexibility.
+							p &mdash; Ken Solen,&nbsp;
+								span Chemical Engineering
+						.quoteText
+							p We're typically the most challenging course that they have in the program [and] many of them come to us very nervous and frightened that we’re going to be hard on them. These students that are struggling, I’ll sit down with them, and I will emphasize with them, 'I know that some of the impressions you may receive in this program are that this program and the class that you’re in should be the number one priority in your life. I’ll go out on a limb and tell you that it is not. And if it’s even anywhere in your top three, you probably ought to reevaluate your life. If your family and your God and your church are not in your top three priorities in your life and this class is, there’s a problem right there. You must get a balance in your life with those things at the top of your list.' And I can’t tell you how many students come back to me to tell me about that one statement. They often state that they had lost that focus and that priority. ... I find when you can do that type of thing, they will eat out of your hand, and you can get them to operate at such a high level.
+							p &mdash; Kent Blad,&nbsp;
+								span Nursing
+						.quoteText
+							p I [tell] students, 'Maybe there’s a chance somewhere in your life where you’re going to take what you learn here and you’re going to give back to the Church. Maybe just in your ward, or maybe somewhere else, but hopefully you’re going to take your gifts, your talents, the things you’re given, and you’re going to be able to give them back.' And I hope I’m an example of that for them, and they can say, 'I’m going to go out and do something, but maybe I’ll come back and be able to really apply these things someday to help build the Kingdom.' I always say, 'You’re the salt, you guys, but don’t lose your savour, okay? Don’t blow it, don’t go out and not make a difference. Be a Mormon. Be proud of that.'
+							p &mdash; Kevin Kelly,&nbsp;
+								span Communications
+						.quoteText
+							p When I started teaching at BYU, I could see immediately that there was a need for prayer, because whatever happens in this class, we’ve got to have the Spirit with us. I pray every day in class, not just at the beginning of the week, but every class. We need it. I need it, especially in light of some of the subjects we discuss. We’re taught to pray. It is that simple, right?
+							p The students jump up and pray. Most of them are excited to do it. They know we’re going to pray, and it’s a great way to get started because everybody’s talking, someone’s going to pray, and everyone gets quiet, and then I have their attention, that’s also a benefit. It’s a simple thing. Let’s just pray every day. Let’s make sure whatever happens in here is going to be okay with Heavenly Father. That helps students to be more discriminating about the type of examples they bring into class. Maybe they’ll think: some are not such good examples now that I think about it, so they’ll maybe check them at the door.
+							p Some of those prayers are interesting because the students say things like, “We’re grateful for Professor Kelly for preparing…” Wow, what did I prepare? It’s like they’re counting on me. So sometimes that’s a call to action for me to prepare in a certain way. If we pray, they know I’m a praying person. At least they know that much about me, whatever else happens.
+							p &mdash; Kevin Kelly,&nbsp;
+								span Communications
+						.quoteText
+							p You have to have done your homework in the gospel area as well as you have in your discipline. You can’t draw from an empty well. And so what we do in our private faith and devotion is so imperative. An essential preparation for teaching is to make sure that the Spirit is in your home, before you come to class. In my experience, we carry the Spirit from home to work. Some days, a few extra minutes spent at home, getting your heart right there, doing what you need to do for there to be love at home, will be the most important preparation for teaching by the Spirit.
+							p &mdash; Mark Butler,&nbsp;
+								span Family Life
+						.quoteText
+							p You can’t serve them if you don’t know them. So that means no matter how large the class, we have to know who we’re talking to. Various professors approach that in various ways, but I think dedicated professors all over this campus, in one way or another, find out who their students are, find out what their concerns are. Maybe it’s short bios they have them write. Maybe it’s 'What’s the most pressing issue going on in your life?' Maybe it’s taking the opportunity to invite one student, or a small group of students, throughout the semester, to their office just to chat for a few minutes. ... Representative sampling will often serve our purposes well, so in a class of 200, we may not be able to meet and know each individual personally, but by meeting a few of them we can kind of know typical issues and typical struggles. In smaller classes such as I teach, I think it’s my duty to know them more intimately. When you know people, then you have the basis to begin to serve them as people. So that would be a starting point: know your students as individuals, as persons, their fears, their dreams, their troubles, their successes, their background. That is the beginning of being able to follow encouragement we all recently received: 'this semester, try teaching students, not the course.’
+							p &mdash; Mark Butler,&nbsp;
+								span Family Life
+						.quoteText
+							p I think there are two extremes you can go to here. We can easily get the one [extreme] where everything is just like any other university. It’s very rigorous: 'Here’s the facts, here’s how it works, learn it and that’s it.' The other extreme in my mind is [where] you’re so worried about bringing the Spirit in [that] it’s a seminary class and all the rigor vanishes, so it’s a spiritual high for the student, but they don’t learn anything. I think there’s a balance in there that we’ve got to find. We’ve got to have a rigorous class where it’s challenging, it’s educational, they’re learning things that the world is trying to learn, but they’re feeling the Spirit as they do it. And that’s not always an easy balance to get.
+							p &mdash; Scott Sommerfeldt,&nbsp;
+								span Dean of the College of Physical and Mathematical Sciences
+						.quoteText
+							p Brigham Young’s instruction to Karl G. Maeser was, 'Remember to not teach even the alphabet or the multiplication tables without the Spirit of God.' He did not say to always draw in gospel principles when teaching these secular topics. I believe that the Spirit can attend our teaching things that on the surface seem completely independent of the gospel, such as math and computer science, or engineering and physics even when we are not bearing explicit testimony of the gospel. I usually say a prayer before I go into the classroom and invite the Spirit in my preparation, in my delivery. I firmly believe that the Spirit can enlighten your teaching of material completely independent of what we normally think of as gospel doctrine. It can enlighten teaching of computer science and math and engineering and quicken our and our students' understanding. I’ve heard President Eyring speak of getting a testimony of the principle of thermodynamics. I believe that can happen, and it ought to be a commonplace experience at BYU when you invite the Spirit.
+							p &mdash; Tom Sederberg,&nbsp;
+								span Computer Science
+						.quoteText
+							p When it comes to providing a spiritually strengthening education, we can say, we can do, and we can be. While each is worthwhile, perhaps the most important thing, if we look at the Savior¹s teachings, is to be someone who truly treasures the gospel, to be someone who has a strong testimony, to be someone who is filled with faith, spirituality, and love. In short, to be as He is. Through your example as a teacher of being those things and not just outwardly saying or doing them, you will likely preach the greatest sermon.
+							p &mdash; Tim Leishman,&nbsp;
+								span Physics
+						.quoteText
+							p When coming to BYU, I was very interested in the idea that I could speak freely about the gospel. I certainly never try to wedge it in, like force it, but when it happens organically, I relish the academic freedom to bring in the gospel, and to talk about what the gospel would say about a situation we are discussing.
+							p For me it’s important that it never be forced. Students should never feel like “Now we’re trying to improve the spiritually inspiring portion of the evaluation.” If it ever feels that way to me, it feels fake. I never consciously think about it, I never plan ahead. But at the same time, if there’s a time to bear testimony or share my feelings that is natural, I take advantage of that. I seize those moments when they happen, and I keep an eye out for them. They come to mind, by only in the moment.
+							p It helps if I keep my own spirituality in check. Those moments won’t happen if I’m not going to the temple as often as I should, if I’m not reading my scriptures as often as I should, or not as engaged in my calling as I could be, or more argumentative with my children than I should be. Personal spirituality is a quest all of us, and it’s pretty hard to latch on to anything in the classroom spiritually if you’re not connected spiritually.
+							p &mdash; Glenn L. Christensen,&nbsp;
+								span Business Management
+						.quoteText
+							p It is important to to be authentic, to share who we are. Part of that is our testimony. When someone has a testimony, they don’t need to talk about it constantly, yet as you interact with them, you can feel their commitment to the gospel; that's communicated even without words. As teachers, we don’t always have to say, ‘I know this and this is true,’ however, sometimes it's crucial to be that honest and clear. If we feel something is significant, then we should stand up for it! We should own it. That kind of authenticity helps students learn how to do likewise in their own lives, careers, and families—in the places that matter most.
+							p &mdash; Jeffery Parkin,&nbsp;
+								span Theater &amp; Media Arts
+						.quoteText
+							p I sometimes get a little emotional in class. My voice breaks or I can’t talk. I try not to do that because it’s embarrassing, nonetheless it happens. But I think it’s not such a bad thing for people to see that you have a tender heart, that there are things that matter very deeply to you.
+							p &mdash; Jeffery Parkin,&nbsp;
+								span Theater &amp; Media Arts
+						.quoteText
+							p My course is traditionally identified by the students as the most challenging course that they take in the program, and I don’t excuse that. Right up front on the first day of orientation, I say to them, ‘I will be very clear that our expectations of you are very high.’ There’s no question, in my field, if we make a mistake, someone dies. So we take this very seriously. You must have the knowledge base to care for a critically ill patient. But I say, ‘Along with that high expectation that we have of you, we also expect that you have a high expectation of us. We are here to mentor you through this experience, so don’t you ever feel like you’re alone during this semester. We are here to guide you, to help you with whatever you need, whether it is something personal or academic, it doesn’t matter. We are here to help you, and we expect you to have high expectations of us.” Then we have to go forward and do as we’ve said, and if they come to us with a concern, we know it is our responsibility to address that until that student is satisfied. It’s okay to have a very rigorous class and have high expectations, but it’s not okay if you don’t expect yourself to perform at an equally high level for those students.
+							p &mdash; Kent Blad,&nbsp;
+								span Nursing
+						.quoteText
+							p I find the students love to be challenged. Too often we think that we have to hold their hand for them to have a good experience, but they love to be challenged and to have somebody expect a lot out of them. As faculty, we also need to have high expectations of ourselves. We need to be strong spiritually, but we must also be experts in our fields. We need to have credibility in what we’re teaching, and then bring the spiritual piece together with it. That’s what creates excellence in the classroom. It would be pretty tough for me to be a very poor clinician but expect high things out of the students. It doesn’t matter how much spirituality I have if I don’t know what I’m talking about, I’m not going to hold any weight. We have to have a high standards for ourselves and then high standards for our students, and it’ll come together.
+							p &mdash; Kent Blad,&nbsp;
+								span Nursing
+						//- 
+						//- This is a template for adding more:
+						//- 
+						//- .quoteText
+						//- 	p quote
+						//- 	p &mdash; name,&nbsp;
+						//- 		span dept
+					h2 &rdquo;
+			#articlebox
+				#highlights
+					article.item.ExKVmT9rIRQ
+						.picture
+							img(src='http://img.youtube.com/vi/ExKVmT9rIRQ/mqdefault.jpg')
+						.description
+							h3 How a prompting from the Spirit changed everything
+							p Ted Christensen
+							p Accountancy
+							p Added 14 Apr 2015
+					article.item.QJvhZdj3rnE
+						.picture
+							img(src='http://img.youtube.com/vi/QJvhZdj3rnE/mqdefault.jpg')
+						.description
+							h3 My Priorities Were Wrong ~ A Student Story 
+							p Ragen Porter
+							p A Nursing Student
+							p Added 3 Apr 2015
+					article.item.MgwQ-HSqa_I
+						.picture
+							img(src='http://img.youtube.com/vi/MgwQ-HSqa_I/mqdefault.jpg')
+						.description
+							h3 Trying new things
+							p Julie Haupt
+							p Organizational Leadership and Strategy
+							p Added 30 Mar 2015
+					article.item.iW_exLyHiTM
+						.picture
+							img(src='http://img.youtube.com/vi/iW_exLyHiTM/mqdefault.jpg')
+						.description
+							h3 She Prayed About Me ~ A Student Story 
+							p Donovan Gregory
+							p A History Student
+							p Added 27 Mar 2015
+					article.item.e7-Te_80YeY
+						.picture
+							img(src='http://img.youtube.com/vi/e7-Te_80YeY/mqdefault.jpg')
+						.description
+							h3 Integrating faith naturally
+							p Anton Bowden
+							p Mechanical Engineering
+							p Added 11 Mar 2015
+					article.item.3oMgzXSau0k
+						.picture
+							img(src='http://img.youtube.com/vi/3oMgzXSau0k/mqdefault.jpg')
+						.description
+							h3 Inspiration is the objective
+							p Brad Bundy
+							p Chemical Engineering
+							p Added 11 Mar 2015
+					article.item.EX5_j5In_Gc
+						.picture
+							img(src='http://img.youtube.com/vi/EX5_j5In_Gc/mqdefault.jpg')
+						.description
+							h3 Sharing myself
+							p Sarah Coyne
+							p Family Life
+							p Added 11 Mar 2015
+					article.item.TBMkQ1cLegs
+						.picture
+							img(src='http://img.youtube.com/vi/TBMkQ1cLegs/mqdefault.jpg')
+						.description
+							h3 Giving students the opportunity to share
+							p Brad Bundy
+							p Chemical Engineering
+							p Added 11 Mar 2015
+					article.item.TAq7tKs6_5k
+						.picture
+							img(src='http://img.youtube.com/vi/TAq7tKs6_5k/mqdefault.jpg')
+						.description
+							h3 The importance of being honest
+							p Kristine Hansen
+							p English
+							p Added 2 Mar 2015
+					article.item.ZFzuZeKZaGc
+						.picture
+							img(src='http://img.youtube.com/vi/ZFzuZeKZaGc/mqdefault.jpg')
+						.description
+							h3 Professor attributes students hope for
+							p BYU Students
+							p
+							p Added 20 Feb 2015
+					article.item.FcWh7s9wJpA
+						.picture
+							img(src='http://img.youtube.com/vi/FcWh7s9wJpA/mqdefault.jpg')
+						.description
+							h3 Following the promptings of the Spirit
+							p Deborah Dean
+							p English
+							p Added 12 Feb 2015
+					article.item.C6j8UsGU__o
+						.picture
+							img(src='http://img.youtube.com/vi/C6j8UsGU__o/mqdefault.jpg')
+						.description
+							h3 Modeling intellectual honesty and Christian scholarship
+							p George Handley
+							p Humanities
+							p Added 12 Feb 2015
+					article.item.44UKjoRbMXU
+						.picture
+							img(src='http://img.youtube.com/vi/44UKjoRbMXU/mqdefault.jpg')
+						.description
+							h3 It is about the people, not the subject
+							p Mark Butler
+							p Family Life
+							p Added 12 Feb 2015
+					article.item.CH3O51Exfpc
+						.picture
+							img(src='http://img.youtube.com/vi/CH3O51Exfpc/mqdefault.jpg')
+						.description
+							h3 An identity of faith
+							p Mark Butler
+							p Family Life
+							p Added 10 Feb 2015
+					article.item.x5qozeWPKrM
+						.picture
+							img(src='http://img.youtube.com/vi/x5qozeWPKrM/mqdefault.jpg')
+						.description
+							h3 What really matters: Helping students see their potential
+							p Kent Blad
+							p Nursing
+							p Added 6 Feb 2015
+					article.item.HtlSkpH-TF0
+						.picture
+							img(src='http://img.youtube.com/vi/HtlSkpH-TF0/mqdefault.jpg')
+						.description
+							h3 The Spirit is available to assist us
+							p Tom Sederberg
+							p Computer Science
+							p Added 4 Feb 2015
+					article.item.haMqBNf6U9w
+						.picture
+							img(src='http://img.youtube.com/vi/haMqBNf6U9w/mqdefault.jpg')
+						.description
+							h3 Prayer and research: A student&apos;s experience
+							p Tom Sederberg
+							p Computer Science
+							p Added 4 Feb 2015
+					article.item.WfaLeC0NNXU
+						.picture
+							img(src='http://img.youtube.com/vi/WfaLeC0NNXU/mqdefault.jpg')
+						.description
+							h3 Be the whole person
+							p Doug Prawitt
+							p Accountancy
+							p Added 30 Jan 2015
+					article.item.BLOxdNzRLoQ
+						.picture
+							img(src='http://img.youtube.com/vi/BLOxdNzRLoQ/mqdefault.jpg')
+						.description
+							h3 Connecting the gospel to your discipline
+							p Anton Bowden
+							p Mechanical Engineering
+							p Added 14 Jan 2015
+					article.item.oezXLQqLVj0
+						.picture
+							img(src='http://img.youtube.com/vi/oezXLQqLVj0/mqdefault.jpg')
+						.description
+							h3 How do you show students you care?
+							p Jeffery Barrow
+							p Physiology &amp; Developmental Biology
+							p Added 17 Dec 2014
+				#speeches
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="https://www.lds.org/bc/content/shared/content/images/leaders/cheryl-a-esplin-large.jpg")
+						.description
+							h3 The Abundant Life (BYU Devotional)
+							p Cheryl A. Esplin
+							p Second counselor in the Primary General Presidency (now released)
+							p Given on 3 Feb 2015
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/SandraRogers.jpg")
+						.description
+							h3 When You Are The Meniscus ("My Journey as a Scholar of Faith" Lecture)
+							p Sandra Rogers
+							p Former BYU International Vice President, Associate Academic Vice President, Women's Conference Chair, and Dean of the College of Nursing
+							p Given on 26 Mar 2014
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/RussOsguthorpe.jpg")
+						.description
+							h3 Questions of the Heart: When Faith, Love, &amp; Inquiry Meet ("My Journey as a Scholar of Faith" Lecture)
+							p Russell Osguthorpe
+							p Former Sunday School General President, Director of BYU's Center for Teaching and Learning, and McKay School of Education Associate Dean
+							p Given on 26 Mar 2014
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/MarilynBerrett.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p Marilyn Berrett
+							p Dance Department Chair
+							p Given on 20 Nov 2013
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/BrentSlife.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p Brent Slife
+							p Psychology
+							p Given 17 Oct 2013
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JohnRosenberg.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p John Rosenberg
+							p Spanish Literature
+							p Given 21 Mar 2013
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/DavidWhetten.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p David Whetten
+							p Former BYU Faculty Center Director and Jack Wheatley Professor of Organizational Studies
+							p Given 21 Feb 2013
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KenSolen.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith (Interview)
+							p Kenneth Solen
+							p Chemical Engineering
+							p Given December 2012
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/SusanEastonBlack.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p Susan Easton Black
+							p Former Eliza R. Snow Fellow, Associate Dean of General Education and Honors, and Director of Church History in the Religious Studies Center
+							p Given 15 Nov 2012
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JeffBarrow.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith (Interview)
+							p Jeffery Barrow
+							p Physiology and Developmental Biology
+							p Given July 2012
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/LarryStClair.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p Larry St. Clair
+							p Professor of Biology and Director of the Monte L. Bean Life Science Museum
+							p Given 28 Mar 2012
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JimFaulconer.jpg")
+						.description
+							h3 My Journey as a Scholar of Faith
+							p James Faulconer
+							p Former Philosophy Department Chair, Associate Dean of General Education and Honors, and Associate Director of the Faculty Center
+							p Given January 2012
+				#quotes
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KevinWorthen.jpg")
+						.description
+							h3 Kevin J. Worthen
+							p President of BYU
+							p "The direction of Brigham Young University is firmly set. It is clearly stated in our mission statement. We are 'to assist individuals in their quest for &hellip;'”
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KevinWorthen.jpg")
+						.description
+							h3 Kevin J. Worthen
+							p President of BYU
+							p "It is not enough to offer—or even require—our students to take courses in religious education. If the only insights that students receive on gospel truths are &hellip;”
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JimFaulconer.jpg")
+						.description
+							h3 James Faulconer
+							p Philosophy
+							p "Teaching means asking myself what matters. It means asking myself how to help students know what matters. More than anything else, it means remembering that in &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JiniRoby.jpg")
+						.description
+							h3 Jini Roby
+							p Social Work
+							p "Our work is about caring about that individual student and seeing that individual student as Heavenly Father sees that person. To be an instrument in the lives &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/RyanWoodward.jpg")
+						.description
+							h3 Ryan Woodward
+							p Visual Arts
+							p "Maybe one of my real purposes as a teacher is not necessarily to teach the process of animation, but the principles behind a successful career in animation. &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/DougPrawitt.jpg")
+						.description
+							h3 Douglas Prawitt
+							p Accountancy
+							p "We have to be striving to be the people that we need to be, and then we just need to love our students, and you can’t fake that. Either you do or you don’t. And if you do &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JeanApplonie.jpg")
+						.description
+							h3 Jean Applonie
+							p Music
+							p "Here is what teaching through the Spirit feels like to me. My perspective comes from many years working with choirs. It may look different [for] different people &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JeffHumpherys.jpg")
+						.description
+							h3 Jeffrey Humpherys
+							p Mathematics
+							p "One of the little lessons that I teach is about the value and purpose of homework. If you look at 3rd Nephi when Christ came, He taught them, ‘Go—pray and ponder &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JohnMcBride.jpg")
+						.description
+							h3 John McBride
+							p Geology
+							p "The way I try to integrate the gospel is that at the very beginning I let the students know that I really, sincerely care about them, and I try to break down the barriers &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KenSolen.jpg")
+						.description
+							h3 Ken Solen
+							p Chemical Engineering
+							p "As we walk into class, it’s important we understand that the journey the students are on, and the core principles they’re learning, are more important than any &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KentBlad.png")
+						.description
+							h3 Kent Blad
+							p Nursing
+							p "We're typically the most challenging course that they have in the program [and] many of them come to us very nervous and frightened that we’re going to be &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KevinKelly.jpg")
+						.description
+							h3 Kevin Kelly
+							p Communications
+							p "I [tell] students, 'Maybe there’s a chance somewhere in your life where you’re going to take what you learn here and you’re going to give back to the Church &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KevinKelly.jpg")
+						.description
+							h3 Kevin Kelly
+							p Communications
+							p "When I started teaching at BYU, I could see immediately that there was a need for prayer, because whatever happens in this class, we’ve got to have the Spirit with us &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/MarkButler.png")
+						.description
+							h3 Mark Butler
+							p Family Life
+							p "You have to have done your homework in the gospel area as well as you have in your discipline. You can’t draw from an empty well. And so what we do in our private faith &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/MarkButler.png")
+						.description
+							h3 Mark Butler
+							p Family Life
+							p "You can’t serve them if you don’t know them. So that means no matter how large the class, we have to know who we’re talking to. Various professors approach that &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/ScottSommerfeldt.jpg")
+						.description
+							h3 Scott Sommerfeldt
+							p Dean of the College of Physical and Mathematical Sciences
+							p "I think there are two extremes you can go to here. We can easily get the one [extreme] where everything is just like any other university. It’s very rigorous: &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/TomSederberg.jpg")
+						.description
+							h3 Tom Sederberg
+							p Computer Science
+							p "Brigham Young’s instruction to Karl G. Maeser was, 'Remember to not teach even the alphabet or the multiplication tables without the Spirit of God.' He did not &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/TimLeishman.jpg")
+						.description
+							h3 Tim Leishman
+							p Physics
+							p "When it comes to providing a spiritually strengthening education, we can say, we can do, and we can be. While each is worthwhile, perhaps the most important thing &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/GlennChristensen.jpg")
+						.description
+							h3 Glenn L. Christensen
+							p Business Management
+							p "When coming to BYU, I was very interested in the idea that I could speak freely about the gospel. I certainly never try to wedge it in, like force it, but when &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JeffParkin.jpg")
+						.description
+							h3 Jeffery Parkin
+							p Theater &amp; Media Arts
+							p "It is important to to be authentic, to share who we are. Part of that is our testimony. When someone has a testimony, they don’t need to talk about it constantly, yet  &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/JeffParkin.jpg")
+						.description
+							h3 Jeffery Parkin
+							p Theater &amp; Media Arts
+							p "I sometimes get a little emotional in class. My voice breaks or I can’t talk. I try not to do that because it’s embarrassing, nonetheless it happens. But I think &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KentBlad.png")
+						.description
+							h3 Kent Blad
+							p Nursing
+							p "My course is traditionally identified by the students as the most challenging course that they take in the program, and I don’t excuse that. Right up front &hellip;"
+					article.item(onclick="bgSelect(this, 'item')")
+						.picture
+							img(src="images/examples/peoplepics/KentBlad.png")
+						.description
+							h3 Kent Blad
+							p Nursing
+							p "I find the students love to be challenged. Too often we think that we have to hold their hand for them to have a good experience, but they love to be challenged &hellip;"
+					//- 
+					//- This is a template for adding more:
+					//-
+					//- article.item(onclick="bgSelect(this, 'item')")
+					//- 	.picture
+					//- 		img(src="images/examples/peoplepics/.jpg")
+					//- 	.description
+					//- 		h3 name
+					//- 		p dept
+					//- 		p "snippet &hellip;"
+	#contribute
+		p Is there a faculty member or question you would like to see featured here?
+		a(href="getinvolved.html") Let us know!
+
+
+
+
+
+

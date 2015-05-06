@@ -22,14 +22,29 @@ function labnolThumb(id) {
  
 function labnolIframe() {
     var iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&controls=1&allowfullscreen=true&width=640&height=360&rel=0");
+    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&controls=1&width=640&height=360&rel=0");
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("id", "youtube-iframe");
+    iframe.setAttribute("allowfullscreen", "1");
     this.parentNode.replaceChild(iframe, this);
 }
 
 
+// This is a function to be used later. It replaces previously loaded iframes
+// with the youtube thumb divs created by youtubeFixer()
 
+var vidToThumb = function() {
+		if(document.getElementsByTagName("iframe")[0]) {
+		//get the only iframe
+		var iframe = document.getElementsByTagName("iframe")[0];
+		//replace the iframe with a placeholder
+		var div = document.createElement("div");
+		//get the iframe's parent and use that data-id for the placeholder
+        div.innerHTML = labnolThumb(iframe.parentNode.dataset.id);
+        div.onclick = labnolIframe;
+        iframe.parentNode.replaceChild(div, iframe);
+    }
+};
 
 
 
@@ -130,6 +145,11 @@ var switchMediaType = function(a, thisClass) {
 
     //Changes the background color to make it look selected
     bgSelect(a, thisClass);
+    
+
+    //Replace iframes with thumbs
+    vidToThumb();
+
 
     //
     //	Hides all media lists and previewbox contents,
@@ -184,22 +204,6 @@ var switchMediaContent = function(a, thisClass) {
 
 	// First, count which child the selected element is.
 	var index = Array.prototype.indexOf.call(a.parentNode.children, a);
-	
-	// This is a function to be used later. It replaces previously loaded iframes
-	// with the youtube thumb divs created by youtubeFixer()
-
-	var vidToThumb = function() {
-			if(document.getElementsByTagName("iframe")[0]) {
-			//get the only iframe
-			var iframe = document.getElementsByTagName("iframe")[0];
-			//replace the iframe with a placeholder
-			var div = document.createElement("div");
-			//get the iframe's parent and use that data-id for the placeholder
-	        div.innerHTML = labnolThumb(iframe.parentNode.dataset.id);
-	        div.onclick = labnolIframe;
-	        iframe.parentNode.replaceChild(div, iframe);
-	    }
-	};
 
 	//	Next, make the preview box show up, hide all of the items,
 	// 	and make the right one show up.
