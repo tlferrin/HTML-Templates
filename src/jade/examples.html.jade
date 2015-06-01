@@ -25,13 +25,20 @@ block content
 	.pageIntro
 		p Every faculty member combines faith and learning in a unique way.
 	#examples.clearfix
+		#jumperwrapper
+			#jumper
+				p Jump to &hellip;
+				button(onclick="window.location.href='#'") Top of page
+				button(onclick="window.location.href='#highlights'") Highlight Videos
+				button(onclick="window.location.href='#speeches'") Lectures &amp; Speeches
+				button(onclick="window.location.href='#quotes'") Quotes
 		form.clearfix(action="#")
 			p Show me&hellip;
 			select(name="type" onchange="filterBy(0);")
 				option(value="all") All Categories
-				option(value="highlights") Highlight Videos (Short)
-				option(value="speeches") Lectures &amp; Speeches (Long)
-				option(value="quotes") Quotes (Text)
+				option(value="highlights") Highlight Videos (short)
+				option(value="speeches") Lectures &amp; Speeches (long)
+				option(value="quotes") Quotes (text)
 			select(name="college" onchange="filterBy(1);")
 				option(value="item") All Colleges
 				option(value="admin") Administration
@@ -98,8 +105,8 @@ block content
 
 
 		#articlebox.clearfix
-			#highlights.category
-				h4.first Highlight Videos (Short)
+			#highlights.category.clearfix
+				h4.first Highlight Videos (short)
 
 				article.item.highlight.ExKVmT9rIRQ.tChristensen.marriott
 					.picture
@@ -520,8 +527,9 @@ block content
 							p Jeffery Barrow,&nbsp;
 								span Physiology &amp; Developmental Biology
 
-			#speeches.category
-				h4 Lectures &amp; Speeches (Long)
+
+			#speeches.category.clearfix
+				h4 Lectures &amp; Speeches (long)
 				article.item.speech.I5HOTZj1oWI.cEsplin
 					.picture
 						img(src="https://www.lds.org/bc/content/shared/content/images/leaders/cheryl-a-esplin-large.jpg")
@@ -972,8 +980,125 @@ block content
 								p So it is with much wandering, I end up where I began, with David Yarn’s “Thank you.” I cannot thank him enough for that “Thank you.” I don’t know that I thank my students for their examinations and papers every time. I doubt that when I do I can do so as sincerely as Brother Yarn did. I do know that his simple gesture continues to define the way that I think about what I must do at BYU. It may not be what has defined my wandering, but it has certainly been a constant influence on that wandering. Thank you very much.
 
 
-			#quotes.category
-				h4 Quotes (Text)
+			#quotes.category.clearfix
+				h4 Quotes (text)
+				
+				//- ----------------
+				//- QUOTE TEMPLATE
+				//- -------------------
+				//- article.item.quote.hashtag.initialname.college
+				//- 	.picture
+				//- 		img(src="images/examples/peoplepics/name.jpg")
+				//- 	.description
+				//- 		p "Shortened quote &hellip;"
+				//- 		p Name
+				//- 		p Department
+				//- 		p Added on x Mon 201x
+				//- .previewBox#hashtag
+				//- 	.shareLink
+				//- 		p Share link:&nbsp;
+				//- 			a(href="#hashtag" target="_self") http://faithandlearning-dev.byu.edu/examples.html#hashtag
+				//- 			span &nbsp;(right click to copy)
+				//- 	.quotePreview
+				//- 		.quoted
+				//- 			.picture
+				//- 				img(src="images/examples/peoplepics/name.jpg")
+				//- 			p Name
+				//- 			p Department
+				//- 		.quoteText
+				//- 			p "Full quote"
+
+				article.item.quote.Butler2.mButler.fhss
+					.picture
+						img(src="images/examples/peoplepics/MarkButler.png")
+					.description
+						p "You can’t serve them if you don’t know them. So that means no matter how large the class, we have to know who we’re talking to &hellip;"
+						p Mark Butler
+						p Family Life
+						p Added on 1 Jun 2015
+				.previewBox#Butler2
+					.shareLink
+						p Share link:&nbsp;
+							a(href="#Butler2" target="_self") http://faithandlearning-dev.byu.edu/examples.html#Butler2
+							span &nbsp;(right click to copy)
+					.quotePreview
+						.quoted
+							.picture
+								img(src="images/examples/peoplepics/MarkButler.png")
+							p Mark Butler
+							p Family Life
+						.quoteText
+							p "You can’t serve them if you don’t know them. So that means no matter how large the class, we have to know who we’re talking to. Various professors approach that in various ways, but I think dedicated professors all over this campus, in one way or another, find out who their students are, find out what their concerns are. Maybe it’s short bios they have them write. Maybe it’s 'What’s the most pressing issue going on in your life?' Maybe it’s taking the opportunity to invite one student, or a small group of students, throughout the semester, to their office just to chat for a few minutes. &hellip; Representative sampling will often serve our purposes well, so in a class of 200, we may not be able to meet and know each individual personally, but by meeting a few of them we can kind of know typical issues and typical struggles. In smaller classes such as I teach, I think it’s my duty to know them more intimately. When you know people, then you have the basis to begin to serve them as people. So that would be a starting point: know your students as individuals, as persons, their fears, their dreams, their troubles, their successes, their background. That is the beginning of being able to follow encouragement we all recently received: 'this semester, try teaching students, not the course.'"
+
+
+				article.item.quote.Worthen3.kWorthen.admin
+					.picture
+						img(src="images/examples/peoplepics/KevinWorthen.jpg")
+					.description
+						p "Become more familiar with the mission statement [and Aims of a BYU Education documents]. &hellip; I urge each of you &hellip;"
+						p Kevin J. Worthen
+						p President of BYU
+						p Added on 26 May 2015
+				.previewBox#Worthen3
+					.shareLink
+						p Share link:&nbsp;
+							a(href="#Worthen3" target="_self") http://faithandlearning-dev.byu.edu/examples.html#Worthen3
+							span &nbsp;(right click to copy)
+					.quotePreview
+						.quoted
+							.picture
+								img(src="images/examples/peoplepics/KevinWorthen.jpg")
+							p Kevin J. Worthen
+							p President of BYU
+						.quoteText
+							p "Become more familiar with the mission statement [and Aims of a BYU Education documents]. &hellip; I urge each of you to read it and to reread it, even if you have read it many times before. As you do so, consider ways in which what you do can enhance the student experience and then strive to do that better. &hellip; Seek inspiration. I firmly believe that through prayerful study you will receive insights that will improve not only your individual efforts but also, in some cases, the institution itself.” ("The Why of the Y," Annual University Conference, August 2014)
+
+
+				article.item.quote.Woodward.rWoodward.fac
+					.picture
+						img(src="images/examples/peoplepics/RyanWoodward.jpg")
+					.description
+						p "Maybe one of my real purposes as a teacher is not necessarily to teach the process of animation, but the principles behind &hellip;"
+						p Ryan Woodward
+						p Visual Arts (Former Assoc. Prof.)
+						p Added on 18 May 2015
+				.previewBox#Woodward
+					.shareLink
+						p Share link:&nbsp;
+							a(href="#Woodward" target="_self") http://faithandlearning-dev.byu.edu/examples.html#Woodward
+							span &nbsp;(right click to copy)
+					.quotePreview
+						.quoted
+							.picture
+								img(src="images/examples/peoplepics/RyanWoodward.jpg")
+							p Ryan Woodward
+							p Visual Arts (Former Assoc. Prof.)
+						.quoteText
+							p "Maybe one of my real purposes as a teacher is not necessarily to teach the process of animation, but the principles behind a successful career in animation. … And so I started sharing experiences with the students. I started sharing with them times when I was laid off in-between productions, because they all struggle with that exact same fear. And what do you do? … Well, I get on my mountain bike, I go pray to God that another animation film is around the corner. When I started sharing those experiences and how they relate to the gospel, boy, their eyes just got huge, and they soaked up the information, and they became more and more receptive to that kind of teaching of personal experience."
+
+
+
+				article.item.quote.Holland2.jHolland.church
+					.picture
+						img(src="https://www.lds.org/bc/content/shared/content/images/leaders/jeffrey-r-holland-large.jpg")
+					.description
+						p "I am making an unabashed appeal for a distinctly LDS approach to education. &hellip; [As] one faculty member recently wrote me &hellip;"
+						p Jeffrey R. Holland
+						p President of BYU, 1980–1989
+						p Added on 12 May 2015
+				.previewBox#Holland2
+					.shareLink
+						p Share link:&nbsp;
+							a(href="#Holland2" target="_self") http://faithandlearning-dev.byu.edu/examples.html#Holland2
+							span &nbsp;(right click to copy)
+					.quotePreview
+						.quoted
+							.picture
+								img(src="https://www.lds.org/bc/content/shared/content/images/leaders/jeffrey-r-holland-large.jpg")
+							p Jeffrey R. Holland
+							p President of BYU, 1980–1989
+						.quoteText
+							p "I am making an unabashed appeal for a distinctly LDS approach to education. &hellip; [As] one faculty member recently wrote me saying, 'We need—without arrogance but with energy and daring—to try [to] integrate faith and scholarship in our writing and in our teaching and improve it until it stands on its own merit. &hellip; We especially need to get over merely trying to imitate others or win their approval. Too many [here] are still worrying whether what they write or say will pass the judgment of [a particular university] (of all places!).' 'We ought,' he concludes, 'to more fully find a way, a unique way, to combine the best of traditional scholarship with the religious and moral questions and perspectives intrinsic to that scholarship and to the restored gospel. That ought to be not an avocation, but a central part of our scholarly work.’” (”A School in Zion,” BYU Devotional, September, 1988)
 
 
 				article.item.quote.Parkin2.jParkin.fac
@@ -999,7 +1124,7 @@ block content
 							p "I sometimes get a little emotional in class. My voice breaks or I can’t talk. I try not to do that because it’s embarrassing, nonetheless it happens. But I think it’s not such a bad thing for people to see that you have a tender heart, that there are things that matter very deeply to you."
 
 
-				article.item.quote.Worthen.kWorthen.admin
+				article.item.quote.Worthen2.kWorthen.admin
 					.picture
 						img(src="images/examples/peoplepics/KevinWorthen.jpg")
 					.description
@@ -1138,7 +1263,7 @@ block content
 
 
 
-				article.item.quote.Worthen2.kWorthen.admin
+				article.item.quote.Worthen.kWorthen.admin
 					.picture
 						img(src="images/examples/peoplepics/KevinWorthen.jpg")
 					.description
@@ -1423,27 +1548,6 @@ block content
 
 
 
-				//- article.item.quote.Woodward.rWoodward.fac
-				//- 	.picture
-				//- 		img(src="images/examples/peoplepics/RyanWoodward.jpg")
-				//- 	.description
-				//- 		p "Maybe one of my real purposes as a teacher is not necessarily to teach the process of animation, but the principles behind &hellip;"
-				//- 		p Ryan Woodward
-				//- 		p Visual Arts
-				//- 		p Added on
-				//- .previewBox#Woodward
-				.shareLink
-					p Share link:&nbsp;
-						a(href=" .previewBox#Woodward" target="_self") http://faithandlearning-dev.byu.edu/examples.html .previewBox#Woodward
-						span &nbsp;(right click to copy)
-				//- 	.quotePreview
-				//- 		.quoted
-				//- 			.picture
-				//- 				img(src="images/examples/peoplepics/RyanWoodward.jpg")
-				//- 			p Ryan Woodward
-				//- 			p Visual Arts
-				//- 		.quoteText
-				//- 			p "Maybe one of my real purposes as a teacher is not necessarily to teach the process of animation, but the principles behind a successful career in animation. … And so I started sharing experiences with the students. I started sharing with them times when I was laid off in between productions, because they all struggle with that exact same fear. And what do you do? … Well, I get on my mountain bike, I go pray to God that another animation film is around the corner, that’s what I did. And … when I started sharing those experiences and how they relate to the gospel, boy, their eyes just got huge, and they soaked up the information, and they became more and more receptive to that kind of a teaching of personal experience."
 
 
 				//- article.item.quote.Prawitt.dPrawitt.marriott
@@ -1565,27 +1669,6 @@ block content
 
 
 
-				//- article.item.quote.Butler2.mButler.fhss
-				//- 	.picture
-				//- 		img(src="images/examples/peoplepics/MarkButler.png")
-				//- 	.description
-				//- 		p "You can’t serve them if you don’t know them. So that means no matter how large the class, we have to know who we’re talking to &hellip;"
-				//- 		p Mark Butler
-				//- 		p Family Life
-				//- 		p Added on
-				//- .previewBox#Butler2
-				.shareLink
-					p Share link:&nbsp;
-						a(href=" .previewBox#Butler2" target="_self") http://faithandlearning-dev.byu.edu/examples.html .previewBox#Butler2
-						span &nbsp;(right click to copy)
-				//- 	.quotePreview
-				//- 		.quoted
-				//- 			.picture
-				//- 				img(src="images/examples/peoplepics/MarkButler.png")
-				//- 			p Mark Butler
-				//- 			p Family Life
-				//- 		.quoteText
-				//- 			p "You can’t serve them if you don’t know them. So that means no matter how large the class, we have to know who we’re talking to. Various professors approach that in various ways, but I think dedicated professors all over this campus, in one way or another, find out who their students are, find out what their concerns are. Maybe it’s short bios they have them write. Maybe it’s 'What’s the most pressing issue going on in your life?' Maybe it’s taking the opportunity to invite one student, or a small group of students, throughout the semester, to their office just to chat for a few minutes. ... Representative sampling will often serve our purposes well, so in a class of 200, we may not be able to meet and know each individual personally, but by meeting a few of them we can kind of know typical issues and typical struggles. In smaller classes such as I teach, I think it’s my duty to know them more intimately. When you know people, then you have the basis to begin to serve them as people. So that would be a starting point: know your students as individuals, as persons, their fears, their dreams, their troubles, their successes, their background. That is the beginning of being able to follow encouragement we all recently received: 'this semester, try teaching students, not the course.’"
 
 
 
