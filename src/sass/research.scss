@@ -138,9 +138,9 @@
         width: 33%;
         margin-right: 2%;
         float: left;
-        height: 500px;
+        height: 760px;
         .scrollbar {
-            height: 480px;
+            height: 740px;
             overflow: auto;
             article {
                 padding: 1em 10% 3% 1em;
@@ -180,12 +180,12 @@
     .detailBox {
         width: 65%;
         float: right;
-        padding: 2em;
+        padding: 0 2em;
         box-sizing: border-box;
         border: 2px solid $blue8;
         border-radius: 1px;
         background-color: $blue10;
-        height: 500px;
+        height: 760px;
         overflow: auto;
         p.title {
             font-size: 1.3em;
@@ -296,7 +296,7 @@
             text-shadow: 1px 1px 5px $grayD;
         }
         #meetingsbox {
-            height: 500px;
+            // height: 500px;
             overflow: auto;
             margin: auto;
             width: 80%;
