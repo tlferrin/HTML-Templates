@@ -96,6 +96,7 @@ var closeButton = function(){
 		closer.classList.add("closer");
 		closer.onclick = function() {
 			hidePreviews();
+			parent.location.hash = "";
 		};
 		previews[i].appendChild(closer);
 	}
@@ -177,6 +178,11 @@ var showPreview = function(a, thisClass) {
 	// Make the right previewBox show up
 	var rightPreview = a.parentElement.getElementsByClassName("previewBox");
 		rightPreview[index].style.display = "block";
+
+	var rightId = rightPreview[index].id;
+
+	// Change the URL
+	parent.location.hash = rightId;
 };
 
 
@@ -188,6 +194,9 @@ document.onkeydown = function(evt) {
     if (evt.keyCode == 27) {
         hidePreviews();
     }
+
+    // Remove URL hash
+    parent.location.hash = "";
 };
 
 
