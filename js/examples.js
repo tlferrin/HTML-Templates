@@ -96,7 +96,6 @@ var closeButton = function(){
 		closer.classList.add("closer");
 		closer.onclick = function() {
 			hidePreviews();
-			parent.location.hash = "";
 		};
 		previews[i].appendChild(closer);
 	}
@@ -194,9 +193,6 @@ document.onkeydown = function(evt) {
     if (evt.keyCode == 27) {
         hidePreviews();
     }
-
-    // Remove URL hash
-    parent.location.hash = "";
 };
 
 
