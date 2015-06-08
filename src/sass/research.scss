@@ -220,12 +220,24 @@
             }
         }
         .authorPic {
-        	background: url(../images/profile_pics/beth_wilkins.jpg) 50% 50% no-repeat;
-        	overflow: hidden;
-        	width: 200px;
-        	height: 200px;
-        	margin: .5em auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: .5em auto;
+            overflow: hidden;
+            img {
+              position: absolute;
+              top: -8%;
+              width: 100%;
+            }
         }
+        // .authorPic {
+        // 	background: url(http://upload.wikimedia.org/wikipedia/en/b/b1/Portrait_placeholder.png) 50% 50% no-repeat;
+        // 	overflow: hidden;
+        // 	width: 200px;
+        // 	height: 200px;
+        // 	margin: .5em auto;
+        // }
         article.status, article.needs, article.interests, article.abstract {
         	p {display:inline;}
         	p:first-child {font-weight: bold;}
