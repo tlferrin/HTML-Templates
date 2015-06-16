@@ -22,7 +22,8 @@ function labnolThumb(id) {
  
 function labnolIframe() {
     var iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=1&border=0&wmode=opaque&controls=1&width=640&height=360&rel=0");
+    //showinfo=0 gets rid of Watch Later and Share buttons.
+    iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=1&border=0&showinfo=0&wmode=opaque&controls=1&width=640&height=360&rel=0");
     iframe.setAttribute("frameborder", "0");
     iframe.setAttribute("id", "youtube-iframe");
     iframe.setAttribute("allowfullscreen", "1");
@@ -244,17 +245,19 @@ var filterBy = function(a) {
 	if (a===0) {
 		var cats = document.getElementsByClassName("category");
 		
-		//hide all categories
-		for (var i=0; i<cats.length; i++) {
-			cats[i].style.display = "none";
-		}
 
-		//show the right one
-		document.getElementById(selectedOption).style.display = "block";
-
-		// //If it's "all", show all
+		//If it's "all", show all
 		if (selectedOption==="all"){
 			showAll();
+		}
+		else {
+			//hide all categories
+			for (var i=0; i<cats.length; i++) {
+				cats[i].style.display = "none";
+			}
+
+			//show the right one
+			document.getElementById(selectedOption).style.display = "block";
 		}
 	}
 
