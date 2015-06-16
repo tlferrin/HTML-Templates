@@ -207,26 +207,21 @@
 
 			// Share link
 			.shareLink {
-				position: fixed;
-				top: 0;
-				height: 20px;
-				font-size: 12px;
-				width: 100%;
-				text-align: center;
-				margin: auto;
-				background-color: $blue2;
-				box-shadow: 0 0 10px $blue2;
-				p {
-					color: white;
-					margin: 0;
-					line-height: 20px;
-					a {
-						color: $blue7;
-						text-decoration: none;
-						cursor: pointer;
-						&:hover {text-decoration: none;}
-					}
-					span {font-style: italic; font-size: 11px;}
+				position: absolute;
+				right: -55px;
+				height: 40px;
+				width: 50px;
+				background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Email_social_icon.svg/500px-Email_social_icon.svg.png) no-repeat;
+				background-size: 100% 100%;
+				opacity: .6;
+				transition: all .3s;
+				&:hover {
+					opacity: 1;
+				}
+				a {
+					position: absolute;
+					height: 40px;
+					width: 50px;
 				}
 			}
 
