@@ -208,20 +208,30 @@
 			// Share link
 			.shareLink {
 				position: absolute;
-				right: -55px;
-				height: 40px;
-				width: 50px;
+				right: 5%;
+				top: 20%;
+				height: 60px;
+				width: 80px;
 				background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Email_social_icon.svg/500px-Email_social_icon.svg.png) no-repeat;
 				background-size: 100% 100%;
-				opacity: .6;
+				opacity: .8;
 				transition: all .3s;
 				&:hover {
 					opacity: 1;
+					cursor: pointer;
 				}
 				a {
 					position: absolute;
 					height: 40px;
 					width: 50px;
+				}
+				p {
+					color: white;
+					text-align: center;
+					width: 100px;
+					position: absolute;
+					top: 47px;
+					left: -11px;
 				}
 			}
 
@@ -393,8 +403,9 @@
 					}
 				}
 				.quoteText {
-					float: right;
-					width: 73%;
+					float: left;
+					width: 50vw;
+					max-width: 700px;
 					margin-left: 2%;
 					overflow: auto;
 					height: 100%;
