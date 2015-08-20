@@ -73,13 +73,14 @@
     .profile {
         padding: 1% 0;
         width: 49%;
+        margin-bottom: 8px;
         float: left;
         img, article {
             vertical-align: middle;
         }
     }
     .profile:nth-child(2n) {
-        margin-right: 1%;
+        margin-right: 0.5%;
         img, article {
             float: right;
             margin-right: 2%;
@@ -90,7 +91,7 @@
         }
     }
     .profile:nth-child(2n+1) {
-        margin-left: 1%;
+        margin-left: 0.5%;
         img, article {
             float: left;
             margin-left: 2%;
