@@ -419,6 +419,13 @@
 					    color: white;
 					    text-shadow: 1px 1px 6px $blue3;
 					}
+					a {
+						color: $blue7;
+						&:hover {
+							text-decoration: none;
+							color: $blue8;
+						}
+					}
 					&::-webkit-scrollbar {
 					    -webkit-appearance: none;
 					    width: 7px;
