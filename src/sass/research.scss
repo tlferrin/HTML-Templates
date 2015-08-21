@@ -92,14 +92,18 @@
                 	background-color: #ddd;
                 }
             }
-            article.snippet {
+            article.status, article.snippet {
             	font-size: .9em;
             }
             p.moreLink {
                 float: right;
+                // font-style: italic;
                 a {
                     color: $blue3;
                     text-decoration: underline;
+                    &:hover {
+                        color: $blue5;
+                    }
                 }
             }
             .authorPic {
@@ -114,7 +118,7 @@
                   width: 100%;
                 }
             }
-            article.status, article.needs, article.interests, article.abstract {
+            article.status, article.abstract {
             	p {display:inline;}
             	p:first-child {font-weight: bold;}
             	margin-bottom: 1em;
