@@ -20,3 +20,5 @@ Gruntfile.js
 *.html
 
 *.css
+
+*.map
