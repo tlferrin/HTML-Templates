@@ -1,0 +1,74 @@
+// 
+// RESEARCH PAGE STYLES
+// 
+@import "variables";
+@import "colors";
+@import "mixins";
+@import "pages";
+
+
+#meetings {
+    position: relative;
+    a:hover {
+        cursor: pointer;
+        text-decoration: none;
+        color: $blue5;
+    }
+    h2 {
+        position: relative;
+        color: $blue4;
+        text-shadow: 1px 1px 5px $blue8;
+        text-align: center;
+        font-size: 2.5em;
+    }
+    .minimenu {
+        width: 70%;
+        margin: .3em auto;
+    }
+    a.sub {
+        font-size: .6em;
+        text-shadow: none;
+        display: block;
+        
+        &:nth-child(1) {float:left;}
+        &:nth-child(2) {float:right;}
+    }
+    #meetingsbox {
+        // height: 500px;
+        overflow: auto;
+        margin: auto;
+        width: 80%;
+    }
+    .meeting {
+        width: 95%;
+        margin: 0 auto 2em;
+        border: 1px solid $grayD;
+        padding: 1em;
+        box-sizing: border-box;
+        background-color: $grayE;
+        h4 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        p {
+            margin: .3em 0;
+            span {font-weight: bold; display: block;}
+            &.desc {
+                margin: .5em;
+                width: 90%;
+            }
+            &.det {
+                float: left;
+                width: 33%;
+                padding: 0 1em;
+                font-size: .9em;
+                text-align: center;
+                box-sizing: border-box;
+            }
+        }
+        .details {
+            border: 1px solid $lightgray;
+            background-color: #fbfbfb;
+        }
+    }
+}

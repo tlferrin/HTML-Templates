@@ -25,13 +25,26 @@ block content
 	.pageIntro
 		p Every faculty member combines faith and learning in a unique way.
 	#examples.clearfix
+		//- #jumperwrapper
+		//- 	#jumper
+		//- 		p Jump to &hellip;
+		//- 		button(onclick="window.location.href='#'") Top of page
+		//- 		button(onclick="window.location.href='#highlights'") Highlight Videos
+		//- 		button(onclick="window.location.href='#speeches'") Lectures &amp; Speeches
+		//- 		button(onclick="window.location.href='#quotes'") Quotes
 		form.clearfix(action="#")
-			//- p Filter by&hellip;
-			select.filter(name="college" onchange="filterBy(0);")
-				option(value="item") Choose a College
+			p Show me&hellip;
+			//- select(name="type" onchange="filterBy(0);")
+			//- 	option(value="all") All Categories
+			//- 	option(value="highlights") Highlight Videos (short)
+			//- 	option(value="speeches") Lectures &amp; Speeches (long)
+				option(value="quotes") Quotes (text)
+			select(name="college" onchange="filterBy(1);")
+				option(value="item") All Colleges
+				option(value="admin") Administration
 				option(value="edu") Education
 				option(value="et") Engineering &amp; Technology
-				option(value="fhss") Family, Home, &amp;<br/> Social Sciences
+				option(value="fhss") Family, Home, &amp; Social Sciences
 				option(value="fac") Fine Arts &amp; Communications
 				//- option(value="hbll") Harold B. Lee Library
 				option(value="hum") Humanities
@@ -41,8 +54,10 @@ block content
 				option(value="nursing") Nursing College
 				option(value="cpms") Physical &amp; Mathematical Sciences
 				option(value="rel") Religious Education
-			select.filter(name="person" onchange="filterBy(1)")
-				option(value="item") Choose a Person
+			select(name="person" onchange="filterBy(2)")
+				option(value="item") All People
+				option(value="Students") BYU Students
+				option(value="church") Church Leaders
 				option(value="jApplonie") Applonie, Jean 
 				option(value="jBarrow") Barrow, Jeffery 
 				option(value="mBerrett") Berrett, Marilyn 
@@ -64,30 +79,31 @@ block content
 				option(value="jHumpherys") Humpherys, Jeffrey 
 				option(value="kKelly") Kelly, Kevin 
 				option(value="sKimball") Kimball, Spencer W. 
-				option(value="tLeishman") Leishman, Tim
-				option(value="nMaxwell") Maxwell, Neal A
+				option(value="tLeishman") Leishman, Tim 
+				option(value="nMaxwell") Maxwell, Neal A.
 				option(value="kMatthews") Matthews, Kristin
-				option(value="jMcBride") McBride, John
-				option(value="rOsguthorpe") Osguthorpe, Russell
+				option(value="jMcBride") McBride, John 
+				option(value="rOsguthorpe") Osguthorpe, Russell 
 				option(value="jParkin") Parkin, Jeffrey
 				option(value="lPerry") Perry, L. Tom
-				option(value="dPrawitt") Prawitt, Doug
-				option(value="jRoby") Roby, Jini
-				option(value="sRogers") Rogers, Sandra
-				option(value="jRosenberg") Rosenberg, John
-				option(value="tSederberg") Sederberg, Tom
-				option(value="bSlife") Slife, Brent
-				option(value="kSolen") Solen, Ken
-				option(value="sSommerfeldt") Sommerfeldt, Scott
+				option(value="dPrawitt") Prawitt, Doug 
+				option(value="jRoby") Roby, Jini 
+				option(value="sRogers") Rogers, Sandra 
+				option(value="jRosenberg") Rosenberg, John 
+				option(value="tSederberg") Sederberg, Tom 
+				option(value="bSlife") Slife, Brent 
+				option(value="kSolen") Solen, Ken 
+				option(value="sSommerfeldt") Sommerfeldt, Scott 
 				option(value="lClair") St. Clair, Larry
 				option(value="gStallings") Stallings, Greg
 				option(value="sWang") Wang, Shu Pei
 				option(value="dWhetten") Whetten, David
 				option(value="rWoodward") Woodward, Ryan
 				option(value="kWorthen") Worthen, Kevin
-			button.filter.studs(onclick="showStudents()") BYU Students
-			button.filter.leads(onclick="showLeaders()") Administrators &amp; Church Leaders
-			button.reset(onclick="showAll()") Show All
+
+
+			input.sortSelected(type="button" value="Reset filters" onclick="showAll()")
+			//- input.clearfilters(type="button" value="Clear All Filters")
 
 
 

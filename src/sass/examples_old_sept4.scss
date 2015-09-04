@@ -25,44 +25,98 @@
     box-sizing: border-box;
     position: relative;
 
-    // FILTER BY...
+    // // JUMP TO...
+    // #jumperwrapper {
+    // 	position: fixed;
+    // 	z-index: 50;
+    // 	width: 1146px;
+    // 	left: 50%;
+    // 	margin-left: -573px;
+    // }
+    // #jumper {
+    // 	position: absolute;
+    // 	width: 80px;
+    // 	top: -80px;
+    // 	right: 13px;
+	   //  * {
+	   //      outline: none;
+	   //  }
+    // 	p, button {
+    // 		display: block;
+    // 		width: 100%;
+    // 		text-align: center;
+    // 	}
+    // 	p {font-size: .9em;}
+    // 	button {
+    // 		margin-bottom: 12px;
+    // 		background-color: $tan8;
+    // 		border: 2px solid $tan5;
+    // 		border-radius: 7px;
+    // 		transition: all .2s;
+    // 		color: #444;
+    // 		font-size: .8em;
+    // 		line-height: 1.4em;
+    // 		height: 40px;
+    // 		&:hover {
+    // 			background-color: $tan6;
+    // 			border: 2px solid $tan3;
+    // 			text-decoration: none;
+    // 		}
+    // 	}
+    // }
+
+    // SORT BY...
 	form {
-	    width: 800px;
-  		margin: 0 auto 1em;
+	    width: 66.66666%;
+  		margin: 1em auto;
 	    * {
 	        outline: none;
 	    }
-	    button,
+	    p,
+	    input,
 	    select {
 	        display: block;
-	        width: 150px;
-	        margin: 0;
-	        margin-right: 12px;
 	        float: left;
 	        font-size: .8em;
-	        height: 3em;
+	        height: 1.8em;
 	        border-radius: 3px;
 	        box-sizing: border-box;
-	        &:last-child {
-				margin-right: 0;
-			}
+	        margin: 0;
 	    }
+	    input,
 	    select {
 	        background-color: $blue8;
 	        border: none;
 	    }
-	    button {
-	        border: none;
-	        background-color: $blue8;
+	    input[type="button"] {
+	        color: white;
+	        background-color: $blue4;
 	        line-height: 1.3em;
-	        &.reset {
-	        	background-color: $blue5;
-	        	color: white;
-	        }
 	        &:active {
-	            background-color: $blue7;
-	            // box-shadow: 0 0 1px $blue5 inset;
+	            background-color: $blue5;
+	            box-shadow: 0 0 1px $blue4 inset;
 	        }
+	    }
+
+	    p {
+	        font-size: .9em;
+	        width: 14%;
+	    }
+	    input[type="button"] {
+			width: 17%;
+	    }
+	    select {
+	        width: 20%;
+	        margin-right: 3%;
+	    }
+
+	    input.clearfilters {
+	        float: none;
+	        clear: both;
+	        width: 120px;
+	        margin: 2.4em auto 0 auto;
+	        background-color: $grayA;
+	        border: 1px solid $gray9;
 	    }
 	}
 

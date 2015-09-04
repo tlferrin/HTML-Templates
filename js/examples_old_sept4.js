@@ -240,22 +240,6 @@ document.onkeydown = function(evt) {
 //
 //———————————————————————————————————————
 
-//functions for changing the background of an active filter
-var filters = document.getElementsByClassName("filter");
-	
-//for resetting background colors
-var resetColors = function() {
-	for (var i = 0; i < filters.length; i++) {
-		filters[i].style.backgroundColor = "#d1e4f6";
-	};
-}
-
-var activeFilter = function(b) {
-	resetColors();
-	b.style.backgroundColor = "#91b2d2";
-}
-
-
 //function for resetting filters
 var showAll = function() {
 	var cards = document.getElementsByTagName("article");
@@ -270,8 +254,6 @@ var showAll = function() {
 	for (var i = 0; i < menus.length; i++) {
 		menus[i].selectedIndex = 0;
 	};
-
-	resetColors();
 }
 
 //function for hiding all cards
@@ -283,24 +265,8 @@ var hideCards = function() {
 }
 
 
-//functions for resetting the filtering menus
-var collegeReset = function() {
-	document.getElementsByTagName("select")[0].selectedIndex=0;
-}
-
-var personReset = function() {
-	document.getElementsByTagName("select")[1].selectedIndex=0;
-}
-
-var resetBoth = function() {
-	collegeReset();
-	personReset();
-}
-
-
-//menu filtering functions
 var filterBy = function(a) {
-
+  
 	//get the right menu
 	var menu = document.getElementsByTagName("select")[a];
 
@@ -308,59 +274,43 @@ var filterBy = function(a) {
 	var opt = menu.getElementsByTagName("option");
 	var selectedOption = opt[menu.selectedIndex].value;
 
-	hideCards();
-	
-	//show appropriate cards
-	var theseCards = document.getElementsByClassName(selectedOption);
-	for (var i = 0; i < theseCards.length; i++) {
-		theseCards[i].style.display = "block";
-	};
+	//Category menu
+	if (a===0) {
+		var cats = document.getElementsByClassName("category");
+		
 
-	//color the active filter
-	activeFilter(menu);
+		//If it's "all", show all
+		if (selectedOption==="all"){
+			showAll();
+		}
+		else {
+			//hide all categories
+			for (var i=0; i<cats.length; i++) {
+				cats[i].style.display = "none";
+			}
 
-	//if they select the "all" option, reset the color
-	if(selectedOption==="item") {
-		resetColors();
+			//show the right one
+			document.getElementById(selectedOption).style.display = "block";
+		}
 	}
-	
-	//When they choose a person or college, reset the other menu
-	if(a===0) {
-		personReset();
-	}
-	else if(a===1) {
-		collegeReset();
+
+	//College and Person menus
+	else if(a===1|a===2) {
+		hideCards();
+		
+		//show appropriate cards
+		var theseCards = document.getElementsByClassName(selectedOption);
+		for (var i = 0; i < theseCards.length; i++) {
+			theseCards[i].style.display = "block";
+		};
+
+		//When they choose a person or college, make the other "all colleges"
+		if(a===1) {
+			document.getElementsByTagName("select")[2].selectedIndex=0;
+		}
+		else if(a===2) {
+			document.getElementsByTagName("select")[1].selectedIndex=0;
+		}
 	}
 };
-
-//functions for showing only Students or Leaders ("input" buttons)
-var showStudents = function() {
-	hideCards();
-	resetBoth();
-
-	//color the active filter
-	activeFilter(document.getElementsByClassName("studs")[0]);
-	
-	var theseCards = document.getElementsByClassName("Students");
-	for (var i = 0; i < theseCards.length; i++) {
-		theseCards[i].style.display = "block";
-	}
-}
-
-var showLeaders = function() {
-	hideCards();
-	resetBoth();
-
-	//color the active filter
-	activeFilter(document.getElementsByClassName("leads")[0]);
-
-	var adminCards = document.getElementsByClassName("admin");
-	for (var i = 0; i < adminCards.length; i++) {
-		adminCards[i].style.display = "block";
-	}
-	var churchCards = document.getElementsByClassName("church");
-	for (var i = 0; i < churchCards.length; i++) {
-		churchCards[i].style.display = "block";
-	}
-}
 

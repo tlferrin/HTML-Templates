@@ -1,0 +1,81 @@
+extends _layout
+
+block append styling
+	link(rel='stylesheet', href='css/discussions.css')
+
+block prepend contentwrapper
+	- var contentclasses = ''
+
+block navlinks
+	li 
+		a(href='index.html') Home
+	li
+		a(href='examples.html') Videos &amp; Quotes
+	li
+		a(href='research.html') Research
+	li
+		a.current(href='getinvolved.html') Get Involved
+	li
+		a(href='about.html') About Us
+
+block content
+	#meetings.clearfix
+		.pageIntro
+			p Faculty also host discussions related to faith and learning. These may be recurring brown bag meetings or online discussion boards. 
+		h2 Discussions
+			.minimenu.clearfix
+				a.sub(href="getinvolved.html") &larr; Go Back
+				a.sub(target="_blank" href="http://goo.gl/forms/OeiJvQNmXC") Submit your own
+		#meetingsbox
+			.meeting.clearfix
+				h4 Weekly Meeting: A Spiritual Approach to Scholarship
+				p.desc Every Wednesday, Charles Voss (English) and Janson Johansen (Arabic) and their friends get together to discuss spiritual approaches to scholarship. Bring your own lunch.
+				.details.clearfix
+					p.det
+						span When:
+						| Every Wednesday at 12pm in 555 JFSB
+					p.det
+						span Who is invited:
+						| All faculty and students
+					p.det
+						span Who to contact:
+						a(href="mailto:email@address.com" target="_blank") Charles Voss (email@address.com)
+			.meeting.clearfix
+				h4 Online Discussion Board: How do we Engage Students Spiritually in GE Classes?
+				p.desc Here's a description of who comes to the meeting, how often we meet, what we do when we meet, etc. There is a lot of stuff that could go here.
+				.details.clearfix
+					p.det
+						span When:
+						| Every Tuesday at 10am in 111 JFSB
+					p.det
+						span Who is invited:
+						| Faculty in the FHSS college
+					p.det
+						span Who to contact:
+						a(href="mailto:email@address.com" target="_blank") Anders Anderson (email@address.com)
+			.meeting.clearfix
+				h4 Title of meeting
+				p.desc Here's a description of who comes to the meeting, how often we meet, what we do when we meet, etc.
+				.details.clearfix
+					p.det
+						span When:
+						| Every Tuesday at 10am in 1313 SWKT
+					p.det
+						span Who is invited:
+						| Faculty in the FHSS college
+					p.det
+						span Who to contact:
+						a(href="mailto:email@address.com" target="_blank") John Smith (email@address.com)
+			.meeting.clearfix
+				h4 Title of a different meeting
+				p.desc Here's a description of who comes to the meeting, how often we meet, what we do when we meet, etc.
+				.details.clearfix
+					p.det
+						span When:
+						| Every Tuesday at 10am in 240 JKB
+					p.det
+						span Who is invited:
+						| Faculty in the Nursing college
+					p.det
+						span Who to contact:
+						a(href="mailto:email@address.com" target="_blank") George Smith (email@address.com)
