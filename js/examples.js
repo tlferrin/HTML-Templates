@@ -140,20 +140,20 @@ var expandContract = function(a) {
 
 	var section = a.parentElement;
 	var title = a.innerHTML;
-	var sHeight = section.style.height;
+	var sHeight = section.style.maxHeight;
 
 	// EXPAND
 	if(sHeight === "345px" || sHeight === "") {
 		title = title.replace('▸','▾');
 		a.innerHTML = title;
-		section.style.height = "auto";
+		section.style.maxHeight = "none";
 	}
 	
 	// COLLAPSE
 	else {
 		title = title.replace('▾','▸');
 		a.innerHTML = title;
-		section.style.height = "345px";
+		section.style.maxHeight = "345px";
 	}
 	
 }
