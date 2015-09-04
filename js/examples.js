@@ -130,6 +130,39 @@ window.onload = loader;
 
 //———————————————————————————————————————
 //
+//		EXPANDS OR COLLAPSES
+// 		SELECTED SECTION
+//
+//———————————————————————————————————————
+
+
+var expandContract = function(a) {
+
+	var section = a.parentElement;
+	var title = a.innerHTML;
+	var sHeight = section.style.height;
+
+	// EXPAND
+	if(sHeight === "345px" || sHeight === "") {
+		title = title.replace('▸','▾');
+		a.innerHTML = title;
+		section.style.height = "auto";
+	}
+	
+	// COLLAPSE
+	else {
+		title = title.replace('▾','▸');
+		a.innerHTML = title;
+		section.style.height = "345px";
+	}
+	
+}
+
+
+
+
+//———————————————————————————————————————
+//
 //		SWITCHES BACKGROUND COLOR FOR
 // 		SELECTED ITEM
 //

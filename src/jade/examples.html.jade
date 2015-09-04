@@ -25,13 +25,13 @@ block content
 	.pageIntro
 		p Every faculty member combines faith and learning in a unique way.
 	#examples.clearfix
-		#jumperwrapper
-			#jumper
-				p Jump to &hellip;
-				button(onclick="window.location.href='#'") Top of page
-				button(onclick="window.location.href='#highlights'") Highlight Videos
-				button(onclick="window.location.href='#speeches'") Lectures &amp; Speeches
-				button(onclick="window.location.href='#quotes'") Quotes
+		//- #jumperwrapper
+		//- 	#jumper
+		//- 		p Jump to &hellip;
+		//- 		button(onclick="window.location.href='#'") Top of page
+		//- 		button(onclick="window.location.href='#highlights'") Highlight Videos
+		//- 		button(onclick="window.location.href='#speeches'") Lectures &amp; Speeches
+		//- 		button(onclick="window.location.href='#quotes'") Quotes
 		form.clearfix(action="#")
 			p Show me&hellip;
 			select(name="type" onchange="filterBy(0);")
@@ -102,15 +102,14 @@ block content
 				option(value="kWorthen") Worthen, Kevin 
 
 
-
-
 			input.sortSelected(type="button" value="Reset filters" onclick="showAll()")
 			//- input.clearfilters(type="button" value="Clear All Filters")
 
 
+
 		#articlebox.clearfix
 			#highlights.category.clearfix
-				h4.first Short Videos
+				h4(onclick = "expandContract(this)") Short Videos &#9656;
 
 				article.item.highlight.b1cxFPox2N8.kMatthews.hum
 					.picture
@@ -120,6 +119,8 @@ block content
 						p Kristin Matthews
 						p English
 						p Added 11 Jun 2015
+					.new
+						p NEW
 				.previewBox#b1cxFPox2N8
 					.shareLink
 						a(href="mailto:?subject=Faith and Learning&body=Check out this video I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#b1cxFPox2N8" target="_blank")
@@ -141,6 +142,8 @@ block content
 						p Greg Stallings
 						p Spanish
 						p Added 11 Jun 2015
+					.new
+						p NEW
 				.previewBox#DHBEC4B0018
 					.shareLink
 						a(href="mailto:?subject=Faith and Learning&body=Check out this video I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#DHBEC4B0018" target="_blank")
@@ -162,6 +165,8 @@ block content
 						p Shu Pei Wang
 						p Asian and Near Eastern Languages
 						p Added 11 Jun 2015
+					.new
+						p NEW
 				.previewBox#X6yXCEWLbeI
 					.shareLink
 						a(href="mailto:?subject=Faith and Learning&body=Check out this video I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#X6yXCEWLbeI" target="_blank")
@@ -595,7 +600,7 @@ block content
 
 
 			#speeches.category.clearfix
-				h4 Selected Speeches
+				h4(onclick = "expandContract(this)") Selected Speeches &#9656;
 				article.item.speech.I5HOTZj1oWI.cEsplin
 					.picture
 						img(src="https://www.lds.org/bc/content/shared/content/images/leaders/cheryl-a-esplin-large.jpg")
@@ -604,6 +609,8 @@ block content
 						p Cheryl A. Esplin
 						p Second counselor in the Primary General Presidency
 						p Given on 3 Feb 2015
+					.new
+						p NEW
 				.previewBox#I5HOTZj1oWI
 					.shareLink
 						a(href="mailto:?subject=Faith and Learning&body=Check out this video I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#I5HOTZj1oWI" target="_blank")
@@ -1047,7 +1054,7 @@ block content
 
 
 			#quotes.category.clearfix
-				h4 Quotes				
+				h4(onclick = "expandContract(this)") Quotes &#9656;		
 
 
 				article.item.quote.Perry.lPerry.church
@@ -1058,6 +1065,8 @@ block content
 						p L. Tom Perry
 						p LDS Apostle, 1974-2015
 						p Added on 1 Jul 2015
+					.new
+						p NEW
 				.previewBox#Perry
 					.shareLink
 						a(href="mailto:?subject=Faith and Learning&body=Check out this quote I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#Perry" target="_blank")
@@ -1083,6 +1092,8 @@ block content
 						p Douglas Prawitt
 						p Accountancy
 						p Added on 22 Jun 2015
+					.new
+						p NEW
 				.previewBox#Prawitt
 					.shareLink
 						a(href="mailto:?subject=Faith and Learning&body=Check out this quote I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#Prawitt" target="_blank")
