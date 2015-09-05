@@ -1,0 +1,1053 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getElem",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"geteleme",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"getElement",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"background",
+				"backgroundColor	Style CSS"
+			],
+			[
+				"note",
+				"nodeType	Node"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"H",
+				"Humanities"
+			],
+			[
+				"prof",
+				"profile_pics"
+			],
+			[
+				"Abstract",
+				"ABSTRACT"
+			],
+			[
+				"get",
+				"getinvolved"
+			],
+			[
+				"auth",
+				"authorPic"
+			],
+			[
+				"elementid",
+				"description-Element.id"
+			],
+			[
+				"Worthen",
+				"Worthen3"
+			],
+			[
+				"Kev",
+				"KevinWorthen"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"has",
+				"hashtag"
+			],
+			[
+				"tex-",
+				"text-decoration"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"lif",
+				"lifesci"
+			],
+			[
+				"Jo",
+				"John"
+			],
+			[
+				"Stude",
+				"Students"
+			],
+			[
+				"getElementsby",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"box-s",
+				"box-sizing"
+			],
+			[
+				"getlemen",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"getElements",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"Ken",
+				"KenSolen"
+			],
+			[
+				"getelemen",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"last",
+				"last-child"
+			],
+			[
+				"pare",
+				"parentNode	Node"
+			],
+			[
+				"getelements",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"youtu",
+				"youtube-player"
+			],
+			[
+				"Math",
+				"Mathematics"
+			],
+			[
+				"Kent",
+				"KentBlad"
+			],
+			[
+				"Bui",
+				"Business"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"bacg",
+				"background-color"
+			],
+			[
+				"getEle",
+				"getElementById(${0:id})	Element"
+			],
+			[
+				"borde",
+				"border-box"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"article",
+				"articlebox"
+			],
+			[
+				"node",
+				"nodeType	Node"
+			],
+			[
+				"attri",
+				"hasAttribute(${0:attrName})	Element"
+			],
+			[
+				"class",
+				"classList	Element"
+			],
+			[
+				"getelement",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"font",
+				"fontStyle	Style CSS"
+			],
+			[
+				"buildHigh",
+				"buildHighlightsOnLoad"
+			],
+			[
+				"setTim",
+				"setTimeout(${0:func}, delay)	Window"
+			],
+			[
+				"highli",
+				"highlightSelected"
+			],
+			[
+				"parent",
+				"parentElement	Node"
+			],
+			[
+				"doc",
+				"doctype	Document"
+			],
+			[
+				"type",
+				"contentType	Document"
+			],
+			[
+				"no",
+				"nodeValue	Node"
+			],
+			[
+				"filename",
+				"description-File.name"
+			],
+			[
+				"childNodes",
+				"hasChildNodes()	Node"
+			],
+			[
+				"value",
+				"nodeValue	Node"
+			],
+			[
+				"getelem",
+				"getElementsByClassName(${0:names})	Element"
+			],
+			[
+				"prev",
+				"previousSibling	Node"
+			],
+			[
+				"n",
+				"nextSibling	Node"
+			],
+			[
+				"getEl",
+				"getElementById(${0:id})	Element"
+			],
+			[
+				"nod",
+				"nodeType	Node"
+			],
+			[
+				"visible",
+				"visibility	Style CSS"
+			],
+			[
+				"clas",
+				"className	Element"
+			],
+			[
+				"fon-t",
+				"font-style"
+			],
+			[
+				"scroll",
+				"scroll_shadow_top"
+			],
+			[
+				"eve",
+				"Events"
+			],
+			[
+				"ev",
+				"Events"
+			],
+			[
+				"img",
+				"images"
+			],
+			[
+				"event",
+				"eventinfo"
+			],
+			[
+				"ser",
+				"serif-ssm-font-stack"
+			],
+			[
+				"ctl",
+				"ctl_logo"
+			],
+			[
+				"list-style-",
+				"list-style-position"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "color ",
+		"selected_items":
+		[
+			[
+				"color ",
+				"Color Picker"
+			],
+			[
+				"",
+				"Camaleón: Random Colour Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Snippet: background-color"
+			],
+			[
+				"html",
+				"Snippet: Blank HTML Page"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"for",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"i",
+				"Snippet: for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"CONVERT",
+				"Convert Case: Upper Case"
+			],
+			[
+				"MINI",
+				"View: Toggle Minimap"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"WORD",
+				"Word Wrap: Toggle"
+			],
+			[
+				"csv",
+				"Set Syntax: Advanced CSV"
+			],
+			[
+				"toggle",
+				"View: Toggle Minimap"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"wo",
+				"Word Wrap: Toggle"
+			],
+			[
+				"case",
+				"Convert Case: Lower Case"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"prefix",
+				"Autoprefix CSS"
+			],
+			[
+				"worl",
+				"Word Wrap: Toggle"
+			],
+			[
+				"conv",
+				"Convert Case: Upper Case"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"convert",
+				"Convert Case: Lower Case"
+			],
+			[
+				"refre",
+				"Project: Refresh Folders"
+			],
+			[
+				"projec",
+				"Project: Edit Project"
+			],
+			[
+				"project",
+				"Project: Edit Project"
+			],
+			[
+				"conver",
+				"Convert Case: Lower Case"
+			],
+			[
+				"tog",
+				"Word Wrap: Toggle"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"togg",
+				"Word Wrap: Toggle"
+			],
+			[
+				"js",
+				"JSHint"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"hint",
+				"JSHint"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"sche",
+				"Camaleón: Random Colour Scheme"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"scheme",
+				"Schemr: List all schemes"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"sch",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"th",
+				"QuickThemes: next"
+			],
+			[
+				"minif",
+				"HTML Minfier: Minify File (create new)"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"toggl",
+				"Word Wrap: Toggle"
+			],
+			[
+				"theme",
+				"QuickThemes: next"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"side",
+				"Preferences: Settings - Default"
+			],
+			[
+				"consol",
+				"Package Control: Install Package"
+			],
+			[
+				"rev",
+				"File: Revert"
+			],
+			[
+				"wordp",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"tab",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"beaut",
+				"SassBeautify"
+			],
+			[
+				"packages",
+				"Package Control: Install Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/thomasferrin/Sites/thomasferrin-dot-com"
+	],
+	"file_history":
+	[
+		"/Users/thomasferrin/Sites/thomasferrin-dot-com/src/sass/_colors.scss",
+		"/Users/thomasferrin/Sites/thomasferrin-dot-com/src/jade/_layout.jade",
+		"/Users/thomasferrin/Sites/thomasferrin-dot-com/src/jade/index.html.jade",
+		"/Users/thomasferrin/Sites/thomasferrin-dot-com/src/jade/404.html.jade",
+		"/Users/thomasferrin/Sites/thomasferrin-dot-com/src/jade/about.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/examples.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/examples.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/examples.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/examples_old_sept4.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/getinvolved.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/examples_old_sept4.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/examples_old_sept4.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/research.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/discussions.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/discussions.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/about.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/data/Content_data/About.csv",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/data/Content_data/Get_involved.csv",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/data/Content_data/Quotes.csv",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/data/Content_data/Short_videos.csv",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/data/Content_data/Selected_speeches.csv",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_pages.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_colors.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/index.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/research.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/aboutus.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/getinvolved.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/research.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/_layout.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/research_old_jul17.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/index.html",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/examples.html",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/examples1.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/examples1.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/examples_old_9Apr15.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_basics.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_normalize.scss",
+		"/Users/thomasferrin/Google Drive/School/IP&T/Product Development/FLI.sublime-project",
+		"/Users/thomasferrin/Desktop/Becca.js",
+		"/Users/thomasferrin/Desktop/jsBecca.html",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_layout.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/examples_new.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/examples_old_9Apr15.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/examples_new.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/examples_old_9Apr'15.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/index.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/examples_old_2Apr'15.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/404.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/research.html",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/examples.xml",
+		"/Users/thomasferrin/Library/Application Support/Sublime Text 3/Packages/JSHint Gutter/Default (OSX).sublime-keymap",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base.scss",
+		"/Users/thomasferrin/Desktop/examples.csv/speech-Table 1.csv",
+		"/Users/thomasferrin/Desktop/examples.csv/quote-Table 1.csv",
+		"/Users/thomasferrin/Desktop/examples.csv/highlight-Table 1.csv",
+		"/System/Library/Input Methods/PressAndHold.app/Contents/Resources/Keyboard-en.plist",
+		"/Users/thomasferrin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/thomasferrin/Library/Application Support/Sublime Text 3/Packages/Camaleon/Camaleon.sublime-settings",
+		"/Users/thomasferrin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/data/examples.xml",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/examples.min.css",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/css/examples.css",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/package.json",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/Gruntfile.coffee",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/node_modules/grunt-html-minify/package.json",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/script.min.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/prettify.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/500.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/contribute.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_variables.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_mixins.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_content.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_type.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_nav.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_header-footer.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/_type2.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_content.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_pages.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_nav.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_close.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/shared/_variables.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/shared/_mixins.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_basics.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_mixins.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_variables.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_reset.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_normalize.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_query-larger.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/.htaccess",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/header.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/header-nav.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_query-larger.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_nav.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_type.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_type.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_header-footer.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_header-footer.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_slider.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_content.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_type.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_scaffolding.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_header.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_navbar.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_pages.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/byu-header-bar.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/responsive/_byu-bar.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/base/_h5bp.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/fontawesome/font-awesome.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_utilities.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_navs.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_dropdowns.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_responsive-1200px-min.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_forms.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_carousel.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_button-groups.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_buttons.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_alerts.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/bootstrap/_accordion.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/sample5-application-sidenav.html.jade",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/js/script.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/js/touch.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/js/slider-update.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass/shared/_colors.scss",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/css/fonts.css",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/js/modernizr.js",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/css/bootstrap/responsive.css",
+		"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade/explore.html.jade"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"",
+			"/Users/thomasferrin/Dropbox (BYU Faculty Center)/Faith and Learning Research/Studies/Bob Ridge Studies/2013 Bob Ridge Study on Character",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/js",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/jade",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src/sass",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/css",
+			"/Users/thomasferrin/Sites/faithandlearninginitiative/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"li\n							",
+			"li ",
+			"li",
+			".form",
+			"replace",
+			"resetColors()",
+			"item",
+			"clearfil",
+			"| )",
+			"\\n",
+			"button",
+			"input",
+			".Students",
+			"adminCards",
+			"in progress",
+			"#email",
+			"Description",
+			"progress",
+			"onclick",
+			"first",
+			"h4 ",
+			"h4",
+			".category",
+			".first",
+			"h4.first",
+			"button.expander",
+			"p.expander ",
+			".category",
+			"category",
+			".former",
+			".profile",
+			".way",
+			"\n",
+			"SHORTENED\n	",
+			"href",
+			"SOURCE\n	",
+			"POSITION\n	",
+			"PERSON\n	",
+			"\nHORTENED",
+			"HORTENED",
+			"Theater and Media Arts",
+			"holland",
+			"“",
+			"&amp;",
+			"”",
+			"			p ",
+			"&hellip;",
+			"| )",
+			"target=\"_blank\"",
+			" (\nSOURCE",
+			"a(href",
+			"2015\nQUOTE",
+			"	.quoteText",
+			"			.quoteText\n",
+			"target=\"_blank\")",
+			"	| )",
+			"article.item.quote",
+			"&amp;",
+			"				DATE",
+			"				TITLE",
+			"	DEPARTMENT",
+			"DEPARTMENT",
+			"Department",
+			"DEPARTMENT",
+			"TITLE",
+			"SNIPPET",
+			"	p ",
+			"	p S",
+			"[",
+			"“",
+			"	p.bold",
+			"\"",
+			"	p ",
+			"p.bold",
+			"[",
+			"	p ",
+			"p.bold",
+			"SNIPPET",
+			"PERSON",
+			"article",
+			"TITLE",
+			"DEPARTMENT",
+			"interest",
+			"needs",
+			"annual unive",
+			"quotes",
+			"quote",
+			"maxwell",
+			".way",
+			"color",
+			"Jane Dixon, 2019 (Department)",
+			"pOptions",
+			"rOptions",
+			"current",
+			"completed",
+			"projects",
+			"Projects",
+			"projects",
+			"Projects",
+			"projects",
+			"Projects",
+			"projects",
+			"Projects",
+			"projects",
+			"research",
+			"pageIntro",
+			"introbox",
+			"span",
+			"comple",
+			"switch",
+			"						p.dept BYU Faculty Center\n",
+			",&nbsp;\n								span",
+			"X6yXCEWLbeI",
+			"EP7d_R-X-9Q",
+			"improve",
+			"shareLink",
+			"					.shareLink\n						a(href=\"mailto:?subject=Faith and Learning&body=Check out this quote I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#",
+			"						.shareLink\n							a(href=\"mailto:?subject=Faith and Learning&body=Check out this quote I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#",
+			"					.shareLink\n						a(href=\"mailto:?subject=Faith and Learning&body=Check out this video I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#",
+			"						.shareLink\n							a(href=\"mailto:?subject=Faith and Learning&body=Check out this video I found: http%3A%2F%2Ffaithandlearning-dev.byu.edu%2Fexamples.html#",
+			"prawitt",
+			"Holland3",
+			".Prawitt",
+			"ExKVmT9rIRQ",
+			"shareLink",
+			"select",
+			"quotePreview",
+			".shareLink"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"and",
+			"CUxmHeJoMqc",
+			"Transcript not available",
+			"t\n								p Transcrip not a",
+			"”",
+			"h6 Trans",
+			"h5 Trans",
+			"hidePreviews",
+			"showPreview",
+			"",
+			"Jeffery Barrow",
+			"+",
+			"ToHide",
+			"&hellip;\"",
+			"",
+			".quoteText",
+			"Discussions",
+			"iframe#",
+			"http://img.youtube.com/vi/",
+			".jpg",
+			"http://img.youtube.com/vi/",
+			".jpg",
+			":",
+			"switchPage",
+			"",
+			"completed",
+			"current",
+			"\\n",
+			"'",
+			"…",
+			"\",",
+			"			",
+			"onclick",
+			"article.item(on",
+			"article class=\"item\" on",
+			"onclick",
+			"	article(onload=\"bgSelect(this, 'item')\")",
+			".article",
+			"article.mediaoption(onclick=\"bgSelect(this, 'mediaoption')\")",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 88.0
+	},
+	"pinned_build_system": "",
+	"project": "FLI.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/thomasferrin-dot-com/thomasferrin.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 504.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 258.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

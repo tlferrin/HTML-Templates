@@ -220,7 +220,7 @@ a.sign-in:hover, a.sign-in:active { background-color: #369; background: #366797;
 #footer-links .col ul .site-links-small { font-size: .8em; }
 #footer-links .double { width: 39%; margin-right: 0; }
 #footer-links .double .outboundlinks { height: 30px; }
-#footer-links .double .outboundlinks .linklogo { width: 40px; float: left; margin-right: .3em; }
+#footer-links .double .outboundlinks .linklogo { width: 60px; float: left; margin-right: .3em; }
 #footer-links .double .outboundlinks .linklogo img { height: 25px; display: block; margin: auto; position: relative; top: 3px; }
 #footer-links .double .outboundlinks p { margin-top: .3333em; }
 
